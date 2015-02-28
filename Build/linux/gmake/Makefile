@@ -6,7 +6,7 @@ ifndef config
 endif
 export config
 
-PROJECTS := catch_example gmock gmock_main gmock_example
+PROJECTS := catch_example gmock gmock_main gmock_example cucumber-cpp cucumber-cpp-main cppspec cucumber-cpp-cppspec-driver cucumber_example
 
 .PHONY: all clean help $(PROJECTS)
 
@@ -28,11 +28,36 @@ gmock_example: gmock gmock_main
 	@echo "==== Building gmock_example ($(config)) ===="
 	@${MAKE} --no-print-directory -C . -f gmock_example.make
 
+cucumber-cpp: 
+	@echo "==== Building cucumber-cpp ($(config)) ===="
+	@${MAKE} --no-print-directory -C . -f cucumber-cpp.make
+
+cucumber-cpp-main: 
+	@echo "==== Building cucumber-cpp-main ($(config)) ===="
+	@${MAKE} --no-print-directory -C . -f cucumber-cpp-main.make
+
+cppspec: 
+	@echo "==== Building cppspec ($(config)) ===="
+	@${MAKE} --no-print-directory -C . -f cppspec.make
+
+cucumber-cpp-cppspec-driver: 
+	@echo "==== Building cucumber-cpp-cppspec-driver ($(config)) ===="
+	@${MAKE} --no-print-directory -C . -f cucumber-cpp-cppspec-driver.make
+
+cucumber_example: cucumber-cpp-main cucumber-cpp cppspec cucumber-cpp-cppspec-driver
+	@echo "==== Building cucumber_example ($(config)) ===="
+	@${MAKE} --no-print-directory -C . -f cucumber_example.make
+
 clean:
 	@${MAKE} --no-print-directory -C . -f catch_example.make clean
 	@${MAKE} --no-print-directory -C . -f gmock.make clean
 	@${MAKE} --no-print-directory -C . -f gmock_main.make clean
 	@${MAKE} --no-print-directory -C . -f gmock_example.make clean
+	@${MAKE} --no-print-directory -C . -f cucumber-cpp.make clean
+	@${MAKE} --no-print-directory -C . -f cucumber-cpp-main.make clean
+	@${MAKE} --no-print-directory -C . -f cppspec.make clean
+	@${MAKE} --no-print-directory -C . -f cucumber-cpp-cppspec-driver.make clean
+	@${MAKE} --no-print-directory -C . -f cucumber_example.make clean
 
 help:
 	@echo "Usage: make [config=name] [target]"
@@ -50,5 +75,10 @@ help:
 	@echo "   gmock"
 	@echo "   gmock_main"
 	@echo "   gmock_example"
+	@echo "   cucumber-cpp"
+	@echo "   cucumber-cpp-main"
+	@echo "   cppspec"
+	@echo "   cucumber-cpp-cppspec-driver"
+	@echo "   cucumber_example"
 	@echo ""
 	@echo "For more information, see http://industriousone.com/premake/quick-start"

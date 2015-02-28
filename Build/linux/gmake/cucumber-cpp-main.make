@@ -20,13 +20,13 @@ ifndef RESCOMP
 endif
 
 ifeq ($(config),debug32)
-  OBJDIR     = ../../../obj/linux/gmake/x32/Debug/gmock_main/x32
+  OBJDIR     = ../../../obj/linux/gmake/x32/Debug/cucumber-cpp-main/x32
   TARGETDIR  = ../../../bin/linux/gmake/x32/Debug
-  TARGET     = $(TARGETDIR)/libgmock_main.a
+  TARGET     = $(TARGETDIR)/libcucumber-cpp-main.a
   DEFINES   += -DDEBUG -D_DEBUG
   INCLUDES  += -I../../../deps/Catch/single_include -I../../../deps/gmock/fused-src -I../../../deps/cucumber-cpp/cucumber-cpp/include -I../../../deps/cucumber-cpp/cppspec/include -I../../../src
   ALL_CPPFLAGS  += $(CPPFLAGS) -MMD -MP $(DEFINES) $(INCLUDES)
-  ALL_CFLAGS    += $(CFLAGS) $(ALL_CPPFLAGS) $(ARCH) -g -m32 -std=c++0x
+  ALL_CFLAGS    += $(CFLAGS) $(ALL_CPPFLAGS) $(ARCH) -g -m32
   ALL_CXXFLAGS  += $(CXXFLAGS) $(ALL_CFLAGS)
   ALL_RESFLAGS  += $(RESFLAGS) $(DEFINES) $(INCLUDES)
   ALL_LDFLAGS   += $(LDFLAGS) -m32 -L/usr/lib32
@@ -42,13 +42,13 @@ ifeq ($(config),debug32)
 endif
 
 ifeq ($(config),release32)
-  OBJDIR     = ../../../obj/linux/gmake/x32/Release/gmock_main/x32
+  OBJDIR     = ../../../obj/linux/gmake/x32/Release/cucumber-cpp-main/x32
   TARGETDIR  = ../../../bin/linux/gmake/x32/Release
-  TARGET     = $(TARGETDIR)/libgmock_main.a
+  TARGET     = $(TARGETDIR)/libcucumber-cpp-main.a
   DEFINES   += -DRELEASE
   INCLUDES  += -I../../../deps/Catch/single_include -I../../../deps/gmock/fused-src -I../../../deps/cucumber-cpp/cucumber-cpp/include -I../../../deps/cucumber-cpp/cppspec/include -I../../../src
   ALL_CPPFLAGS  += $(CPPFLAGS) -MMD -MP $(DEFINES) $(INCLUDES)
-  ALL_CFLAGS    += $(CFLAGS) $(ALL_CPPFLAGS) $(ARCH) -O2 -m32 -std=c++0x
+  ALL_CFLAGS    += $(CFLAGS) $(ALL_CPPFLAGS) $(ARCH) -O2 -m32
   ALL_CXXFLAGS  += $(CXXFLAGS) $(ALL_CFLAGS)
   ALL_RESFLAGS  += $(RESFLAGS) $(DEFINES) $(INCLUDES)
   ALL_LDFLAGS   += $(LDFLAGS) -s -m32 -L/usr/lib32
@@ -64,13 +64,13 @@ ifeq ($(config),release32)
 endif
 
 ifeq ($(config),debug64)
-  OBJDIR     = ../../../obj/linux/gmake/x64/Debug/gmock_main/x64
+  OBJDIR     = ../../../obj/linux/gmake/x64/Debug/cucumber-cpp-main/x64
   TARGETDIR  = ../../../bin/linux/gmake/x64/Debug
-  TARGET     = $(TARGETDIR)/libgmock_main.a
+  TARGET     = $(TARGETDIR)/libcucumber-cpp-main.a
   DEFINES   += -DDEBUG -D_DEBUG
   INCLUDES  += -I../../../deps/Catch/single_include -I../../../deps/gmock/fused-src -I../../../deps/cucumber-cpp/cucumber-cpp/include -I../../../deps/cucumber-cpp/cppspec/include -I../../../src
   ALL_CPPFLAGS  += $(CPPFLAGS) -MMD -MP $(DEFINES) $(INCLUDES)
-  ALL_CFLAGS    += $(CFLAGS) $(ALL_CPPFLAGS) $(ARCH) -g -m64 -std=c++0x
+  ALL_CFLAGS    += $(CFLAGS) $(ALL_CPPFLAGS) $(ARCH) -g -m64
   ALL_CXXFLAGS  += $(CXXFLAGS) $(ALL_CFLAGS)
   ALL_RESFLAGS  += $(RESFLAGS) $(DEFINES) $(INCLUDES)
   ALL_LDFLAGS   += $(LDFLAGS) -m64 -L/usr/lib64
@@ -86,13 +86,13 @@ ifeq ($(config),debug64)
 endif
 
 ifeq ($(config),release64)
-  OBJDIR     = ../../../obj/linux/gmake/x64/Release/gmock_main/x64
+  OBJDIR     = ../../../obj/linux/gmake/x64/Release/cucumber-cpp-main/x64
   TARGETDIR  = ../../../bin/linux/gmake/x64/Release
-  TARGET     = $(TARGETDIR)/libgmock_main.a
+  TARGET     = $(TARGETDIR)/libcucumber-cpp-main.a
   DEFINES   += -DRELEASE
   INCLUDES  += -I../../../deps/Catch/single_include -I../../../deps/gmock/fused-src -I../../../deps/cucumber-cpp/cucumber-cpp/include -I../../../deps/cucumber-cpp/cppspec/include -I../../../src
   ALL_CPPFLAGS  += $(CPPFLAGS) -MMD -MP $(DEFINES) $(INCLUDES)
-  ALL_CFLAGS    += $(CFLAGS) $(ALL_CPPFLAGS) $(ARCH) -O2 -m64 -std=c++0x
+  ALL_CFLAGS    += $(CFLAGS) $(ALL_CPPFLAGS) $(ARCH) -O2 -m64
   ALL_CXXFLAGS  += $(CXXFLAGS) $(ALL_CFLAGS)
   ALL_RESFLAGS  += $(RESFLAGS) $(DEFINES) $(INCLUDES)
   ALL_LDFLAGS   += $(LDFLAGS) -s -m64 -L/usr/lib64
@@ -108,7 +108,7 @@ ifeq ($(config),release64)
 endif
 
 OBJECTS := \
-	$(OBJDIR)/gmock_main.o \
+	$(OBJDIR)/main.o \
 
 RESOURCES := \
 
@@ -126,7 +126,7 @@ all: $(TARGETDIR) $(OBJDIR) prebuild prelink $(TARGET)
 	@:
 
 $(TARGET): $(GCH) $(OBJECTS) $(LDDEPS) $(RESOURCES)
-	@echo Linking gmock_main
+	@echo Linking cucumber-cpp-main
 	$(SILENT) $(LINKCMD)
 	$(POSTBUILDCMDS)
 
@@ -147,7 +147,7 @@ else
 endif
 
 clean:
-	@echo Cleaning gmock_main
+	@echo Cleaning cucumber-cpp-main
 ifeq (posix,$(SHELLTYPE))
 	$(SILENT) rm -f  $(TARGET)
 	$(SILENT) rm -rf $(OBJDIR)
@@ -168,7 +168,7 @@ $(GCH): $(PCH)
 	$(SILENT) $(CXX) -x c++-header $(ALL_CXXFLAGS) -MMD -MP $(DEFINES) $(INCLUDES) -o "$@" -MF "$(@:%.gch=%.d)" -c "$<"
 endif
 
-$(OBJDIR)/gmock_main.o: ../../../deps/gmock/fused-src/gmock_main.cc
+$(OBJDIR)/main.o: ../../../deps/cucumber-cpp/cucumber-cpp/src/main.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 

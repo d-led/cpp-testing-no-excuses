@@ -20,13 +20,13 @@ ifndef RESCOMP
 endif
 
 ifeq ($(config),debug32)
-  OBJDIR     = ../../../obj/linux/gmake/x32/Debug/gmock_main/x32
+  OBJDIR     = ../../../obj/linux/gmake/x32/Debug/cucumber-cpp/x32
   TARGETDIR  = ../../../bin/linux/gmake/x32/Debug
-  TARGET     = $(TARGETDIR)/libgmock_main.a
+  TARGET     = $(TARGETDIR)/libcucumber-cpp.a
   DEFINES   += -DDEBUG -D_DEBUG
   INCLUDES  += -I../../../deps/Catch/single_include -I../../../deps/gmock/fused-src -I../../../deps/cucumber-cpp/cucumber-cpp/include -I../../../deps/cucumber-cpp/cppspec/include -I../../../src
   ALL_CPPFLAGS  += $(CPPFLAGS) -MMD -MP $(DEFINES) $(INCLUDES)
-  ALL_CFLAGS    += $(CFLAGS) $(ALL_CPPFLAGS) $(ARCH) -g -m32 -std=c++0x
+  ALL_CFLAGS    += $(CFLAGS) $(ALL_CPPFLAGS) $(ARCH) -g -m32
   ALL_CXXFLAGS  += $(CXXFLAGS) $(ALL_CFLAGS)
   ALL_RESFLAGS  += $(RESFLAGS) $(DEFINES) $(INCLUDES)
   ALL_LDFLAGS   += $(LDFLAGS) -m32 -L/usr/lib32
@@ -42,13 +42,13 @@ ifeq ($(config),debug32)
 endif
 
 ifeq ($(config),release32)
-  OBJDIR     = ../../../obj/linux/gmake/x32/Release/gmock_main/x32
+  OBJDIR     = ../../../obj/linux/gmake/x32/Release/cucumber-cpp/x32
   TARGETDIR  = ../../../bin/linux/gmake/x32/Release
-  TARGET     = $(TARGETDIR)/libgmock_main.a
+  TARGET     = $(TARGETDIR)/libcucumber-cpp.a
   DEFINES   += -DRELEASE
   INCLUDES  += -I../../../deps/Catch/single_include -I../../../deps/gmock/fused-src -I../../../deps/cucumber-cpp/cucumber-cpp/include -I../../../deps/cucumber-cpp/cppspec/include -I../../../src
   ALL_CPPFLAGS  += $(CPPFLAGS) -MMD -MP $(DEFINES) $(INCLUDES)
-  ALL_CFLAGS    += $(CFLAGS) $(ALL_CPPFLAGS) $(ARCH) -O2 -m32 -std=c++0x
+  ALL_CFLAGS    += $(CFLAGS) $(ALL_CPPFLAGS) $(ARCH) -O2 -m32
   ALL_CXXFLAGS  += $(CXXFLAGS) $(ALL_CFLAGS)
   ALL_RESFLAGS  += $(RESFLAGS) $(DEFINES) $(INCLUDES)
   ALL_LDFLAGS   += $(LDFLAGS) -s -m32 -L/usr/lib32
@@ -64,13 +64,13 @@ ifeq ($(config),release32)
 endif
 
 ifeq ($(config),debug64)
-  OBJDIR     = ../../../obj/linux/gmake/x64/Debug/gmock_main/x64
+  OBJDIR     = ../../../obj/linux/gmake/x64/Debug/cucumber-cpp/x64
   TARGETDIR  = ../../../bin/linux/gmake/x64/Debug
-  TARGET     = $(TARGETDIR)/libgmock_main.a
+  TARGET     = $(TARGETDIR)/libcucumber-cpp.a
   DEFINES   += -DDEBUG -D_DEBUG
   INCLUDES  += -I../../../deps/Catch/single_include -I../../../deps/gmock/fused-src -I../../../deps/cucumber-cpp/cucumber-cpp/include -I../../../deps/cucumber-cpp/cppspec/include -I../../../src
   ALL_CPPFLAGS  += $(CPPFLAGS) -MMD -MP $(DEFINES) $(INCLUDES)
-  ALL_CFLAGS    += $(CFLAGS) $(ALL_CPPFLAGS) $(ARCH) -g -m64 -std=c++0x
+  ALL_CFLAGS    += $(CFLAGS) $(ALL_CPPFLAGS) $(ARCH) -g -m64
   ALL_CXXFLAGS  += $(CXXFLAGS) $(ALL_CFLAGS)
   ALL_RESFLAGS  += $(RESFLAGS) $(DEFINES) $(INCLUDES)
   ALL_LDFLAGS   += $(LDFLAGS) -m64 -L/usr/lib64
@@ -86,13 +86,13 @@ ifeq ($(config),debug64)
 endif
 
 ifeq ($(config),release64)
-  OBJDIR     = ../../../obj/linux/gmake/x64/Release/gmock_main/x64
+  OBJDIR     = ../../../obj/linux/gmake/x64/Release/cucumber-cpp/x64
   TARGETDIR  = ../../../bin/linux/gmake/x64/Release
-  TARGET     = $(TARGETDIR)/libgmock_main.a
+  TARGET     = $(TARGETDIR)/libcucumber-cpp.a
   DEFINES   += -DRELEASE
   INCLUDES  += -I../../../deps/Catch/single_include -I../../../deps/gmock/fused-src -I../../../deps/cucumber-cpp/cucumber-cpp/include -I../../../deps/cucumber-cpp/cppspec/include -I../../../src
   ALL_CPPFLAGS  += $(CPPFLAGS) -MMD -MP $(DEFINES) $(INCLUDES)
-  ALL_CFLAGS    += $(CFLAGS) $(ALL_CPPFLAGS) $(ARCH) -O2 -m64 -std=c++0x
+  ALL_CFLAGS    += $(CFLAGS) $(ALL_CPPFLAGS) $(ARCH) -O2 -m64
   ALL_CXXFLAGS  += $(CXXFLAGS) $(ALL_CFLAGS)
   ALL_RESFLAGS  += $(RESFLAGS) $(DEFINES) $(INCLUDES)
   ALL_LDFLAGS   += $(LDFLAGS) -s -m64 -L/usr/lib64
@@ -108,7 +108,19 @@ ifeq ($(config),release64)
 endif
 
 OBJECTS := \
-	$(OBJDIR)/gmock_main.o \
+	$(OBJDIR)/ContextManager.o \
+	$(OBJDIR)/CukeEngineImpl.o \
+	$(OBJDIR)/Scenario.o \
+	$(OBJDIR)/HookRegistrar.o \
+	$(OBJDIR)/CukeEngine.o \
+	$(OBJDIR)/Tag.o \
+	$(OBJDIR)/Table.o \
+	$(OBJDIR)/CukeCommands.o \
+	$(OBJDIR)/Regex.o \
+	$(OBJDIR)/StepManager.o \
+	$(OBJDIR)/WireProtocolCommands.o \
+	$(OBJDIR)/WireProtocol.o \
+	$(OBJDIR)/WireServer.o \
 
 RESOURCES := \
 
@@ -126,7 +138,7 @@ all: $(TARGETDIR) $(OBJDIR) prebuild prelink $(TARGET)
 	@:
 
 $(TARGET): $(GCH) $(OBJECTS) $(LDDEPS) $(RESOURCES)
-	@echo Linking gmock_main
+	@echo Linking cucumber-cpp
 	$(SILENT) $(LINKCMD)
 	$(POSTBUILDCMDS)
 
@@ -147,7 +159,7 @@ else
 endif
 
 clean:
-	@echo Cleaning gmock_main
+	@echo Cleaning cucumber-cpp
 ifeq (posix,$(SHELLTYPE))
 	$(SILENT) rm -f  $(TARGET)
 	$(SILENT) rm -rf $(OBJDIR)
@@ -168,7 +180,55 @@ $(GCH): $(PCH)
 	$(SILENT) $(CXX) -x c++-header $(ALL_CXXFLAGS) -MMD -MP $(DEFINES) $(INCLUDES) -o "$@" -MF "$(@:%.gch=%.d)" -c "$<"
 endif
 
-$(OBJDIR)/gmock_main.o: ../../../deps/gmock/fused-src/gmock_main.cc
+$(OBJDIR)/ContextManager.o: ../../../deps/cucumber-cpp/cucumber-cpp/src/ContextManager.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+
+$(OBJDIR)/CukeEngineImpl.o: ../../../deps/cucumber-cpp/cucumber-cpp/src/CukeEngineImpl.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+
+$(OBJDIR)/Scenario.o: ../../../deps/cucumber-cpp/cucumber-cpp/src/Scenario.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+
+$(OBJDIR)/HookRegistrar.o: ../../../deps/cucumber-cpp/cucumber-cpp/src/HookRegistrar.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+
+$(OBJDIR)/CukeEngine.o: ../../../deps/cucumber-cpp/cucumber-cpp/src/CukeEngine.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+
+$(OBJDIR)/Tag.o: ../../../deps/cucumber-cpp/cucumber-cpp/src/Tag.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+
+$(OBJDIR)/Table.o: ../../../deps/cucumber-cpp/cucumber-cpp/src/Table.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+
+$(OBJDIR)/CukeCommands.o: ../../../deps/cucumber-cpp/cucumber-cpp/src/CukeCommands.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+
+$(OBJDIR)/Regex.o: ../../../deps/cucumber-cpp/cucumber-cpp/src/Regex.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+
+$(OBJDIR)/StepManager.o: ../../../deps/cucumber-cpp/cucumber-cpp/src/StepManager.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+
+$(OBJDIR)/WireProtocolCommands.o: ../../../deps/cucumber-cpp/cucumber-cpp/src/connectors/wire/WireProtocolCommands.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+
+$(OBJDIR)/WireProtocol.o: ../../../deps/cucumber-cpp/cucumber-cpp/src/connectors/wire/WireProtocol.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
+
+$(OBJDIR)/WireServer.o: ../../../deps/cucumber-cpp/cucumber-cpp/src/connectors/wire/WireServer.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 
