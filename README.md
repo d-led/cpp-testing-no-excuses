@@ -15,7 +15,7 @@ see [commits](commits/master) and:
 - lightweight testing based on [catch](http://catch-lib.net): [src/catch/simple.cpp](src/catch/simple.cpp)
 - polymorphic mocks based on [googlemock](https://code.google.com/p/googlemock/): [src/gmock/mocks.cpp](src/gmock/mocks.cpp)
 - lightweight bdd-style tests using [catch](http://catch-lib.net): [src/catch/bdd_style.cpp](src/catch/bdd_style.cpp)
-- [cucumber-cpp](https://github.com/cucumber/cucumber-cpp) based behavior-style [spec/tests](https://cukes.info): [features/elements.feature](features/elements.feature), [src/cucumber/cppspec_steps.cpp](src/cucumber/cppspec_steps.cpp)
+- [cucumber-cpp](https://github.com/cucumber/cucumber-cpp)-based behavior-style [spec/tests](https://cukes.info): [features/elements.feature](features/elements.feature), [src/cucumber/cppspec_steps.cpp](src/cucumber/cppspec_steps.cpp)
 - [hayai](https://github.com/nickbruun/hayai)-based simple and informative microbenchmarking: [src/hayai/to_string_benchmark.cpp](src/hayai/to_string_benchmark.cpp)
 
 ## generating build files
@@ -23,6 +23,10 @@ see [commits](commits/master) and:
 `[path_to]/premake5 [build_target]`
 
 run `[path_to]/premake5 --help` to find a suitable `[build_target]`
+
+### customizing BOOST location (MS Windows)
+
+in [premake4.lua](premake4.lua) prior to `boost:set_*` calls, the paths to BOOST can be customized. Either the environment variable `BOOST` should be set to the BOOST root, or it can be set directly, i.e. `boost.includedirs.windows = [[d:\\my_boost\1.55]]`. The library paths are typically more complex, thus `boost:set_libdirs()` uses a pattern (see [boost.lua](https://github.com/d-led/cpp-testing-no-excuses/blob/master/premake/recipes/boost.lua#L60-L72), based on [BOOST binaries](http://sourceforge.net/projects/boost/files/boost-binaries/)). Thus, `boost.libdirs_pattern` can be modified according to the installation. 
 
 ## running cucumber steps
 
