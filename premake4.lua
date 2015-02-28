@@ -93,3 +93,6 @@ make_console_app('hayai_benchmark', {
 run_target_after_build()
 use_standard 'c++0x'
 boost:set_links()
+configuration 'linux'
+	links 'rt'
+configuration '*'
