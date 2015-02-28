@@ -6,7 +6,7 @@ ifndef config
 endif
 export config
 
-PROJECTS := catch_example
+PROJECTS := catch_example gmock gmock_main gmock_example
 
 .PHONY: all clean help $(PROJECTS)
 
@@ -16,8 +16,23 @@ catch_example:
 	@echo "==== Building catch_example ($(config)) ===="
 	@${MAKE} --no-print-directory -C . -f catch_example.make
 
+gmock: 
+	@echo "==== Building gmock ($(config)) ===="
+	@${MAKE} --no-print-directory -C . -f gmock.make
+
+gmock_main: 
+	@echo "==== Building gmock_main ($(config)) ===="
+	@${MAKE} --no-print-directory -C . -f gmock_main.make
+
+gmock_example: gmock gmock_main
+	@echo "==== Building gmock_example ($(config)) ===="
+	@${MAKE} --no-print-directory -C . -f gmock_example.make
+
 clean:
 	@${MAKE} --no-print-directory -C . -f catch_example.make clean
+	@${MAKE} --no-print-directory -C . -f gmock.make clean
+	@${MAKE} --no-print-directory -C . -f gmock_main.make clean
+	@${MAKE} --no-print-directory -C . -f gmock_example.make clean
 
 help:
 	@echo "Usage: make [config=name] [target]"
@@ -32,5 +47,8 @@ help:
 	@echo "   all (default)"
 	@echo "   clean"
 	@echo "   catch_example"
+	@echo "   gmock"
+	@echo "   gmock_main"
+	@echo "   gmock_example"
 	@echo ""
 	@echo "For more information, see http://industriousone.com/premake/quick-start"

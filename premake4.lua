@@ -31,3 +31,6 @@ make_console_app('gmock_example', {
 run_target_after_build()
 use_standard 'c++0x'
 links { 'gmock', 'gmock_main' }
+configuration 'linux'
+	links 'pthread'
+configuration '*'
