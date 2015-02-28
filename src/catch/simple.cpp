@@ -1,7 +1,10 @@
 #define CATCH_CONFIG_MAIN
 #include <catch.hpp>
 
-TEST_CASE("adding basics","[basics]") {
-	// not testing anything useful yet
-	CHECK( (0+1) == 1 );
+#include <counter/counter.h>
+
+TEST_CASE("counting up","[basics]") {
+    auto c = counter<>();
+    REQUIRE(c.next() == 0);
+    CHECK(c.next() == 1);
 }
