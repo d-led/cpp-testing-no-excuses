@@ -16,7 +16,7 @@ public:
         public:
             element_impl(std::string const& i) : id_(i) {}
         public:
-            std::string id() override {
+            std::string id() {
                 return id_;
             }
         };
