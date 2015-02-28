@@ -116,6 +116,7 @@ ifeq ($(config),release64)
 endif
 
 OBJECTS := \
+	$(OBJDIR)/bdd_style.o \
 	$(OBJDIR)/simple.o \
 
 RESOURCES := \
@@ -175,6 +176,10 @@ $(GCH): $(PCH)
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) -x c++-header $(ALL_CXXFLAGS) -MMD -MP $(DEFINES) $(INCLUDES) -o "$@" -MF "$(@:%.gch=%.d)" -c "$<"
 endif
+
+$(OBJDIR)/bdd_style.o: ../../../src/catch/bdd_style.cpp
+	@echo $(notdir $<)
+	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 
 $(OBJDIR)/simple.o: ../../../src/catch/simple.cpp
 	@echo $(notdir $<)

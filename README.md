@@ -11,5 +11,6 @@ see [commits](commits/master) and:
 - simple [premake](industriousone.com/premake)-based build config: [premake4.lua](premake4.lua)
 - lightweight testing based on [catch](catch-lib.net): [src/catch/simple.cpp](src/catch/simple.cpp)
 - polymorphic mocks based on [googlemock](https://code.google.com/p/googlemock/): [src/gmock/mocks.cpp](src/gmock/mocks.cpp)
+- lightweight bdd-style tests using [catch](catch-lib.net): [src/catch/bdd_style.cpp](src/catch/bdd_style.cpp)
 - [cucumber-cpp](https://github.com/cucumber/cucumber-cpp) based behavior-style [spec/tests](cukes.info): [features/elements.feature](features/elements.feature), [src/cucumber/cppspec_steps.cpp](src/cucumber/cppspec_steps.cpp)
 - [hayai](https://github.com/nickbruun/hayai)-based simple and informative microbenchmarking: [src/hayai/to_string_benchmark.cpp](src/hayai/to_string_benchmark.cpp)

@@ -19,8 +19,9 @@ includedirs {
 
 -----------------------------------
 make_console_app('catch_example', {
-	'src/counter/counter.h',
-	'src/catch/simple.cpp'
+	'src/counter/*.h',
+	'src/element/*.h',
+	'src/catch/*.cpp'
 }) 
 run_target_after_build()
 use_standard 'c++0x'
