@@ -18,6 +18,12 @@ see [commits](commits/master) and:
 - [cucumber-cpp](https://github.com/cucumber/cucumber-cpp) based behavior-style [spec/tests](https://cukes.info): [features/elements.feature](features/elements.feature), [src/cucumber/cppspec_steps.cpp](src/cucumber/cppspec_steps.cpp)
 - [hayai](https://github.com/nickbruun/hayai)-based simple and informative microbenchmarking: [src/hayai/to_string_benchmark.cpp](src/hayai/to_string_benchmark.cpp)
 
+## generating build files
+
+`[path_to]/premake5 [build_target]`
+
+run `[path_to]/premake5 --help` to find a suitable `[build_target]`
+
 ## running cucumber steps
 
 prerequisite: [cucumber](https://cukes.info) should be installed, and the submodules of the [cucumber-cpp-premake](https://github.com/d-led/cucumber-cpp-premake) project should be checked out: `[path_to]/premake4 prepare`
