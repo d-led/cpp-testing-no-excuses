@@ -7,13 +7,28 @@
     <Filter Include="counter">
       <UniqueIdentifier>{6539F5D3-D118-746F-DA30-FF45468FDAD0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="element">
+      <UniqueIdentifier>{EFE5C765-5BC5-4601-64DD-D1D7D03BAD62}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\src\counter\counter.h">
       <Filter>counter</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\src\element\element.h">
+      <Filter>element</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\element\factory.h">
+      <Filter>element</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\element\id_source.h">
+      <Filter>element</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\src\catch\bdd_style.cpp">
+      <Filter>catch</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\..\src\catch\simple.cpp">
       <Filter>catch</Filter>
     </ClCompile>
