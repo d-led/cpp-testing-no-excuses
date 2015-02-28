@@ -108,7 +108,6 @@ ifeq ($(config),release64)
 endif
 
 OBJECTS := \
-	$(OBJDIR)/steps_elsewhere.o \
 	$(OBJDIR)/cppspec_steps.o \
 
 RESOURCES := \
@@ -168,10 +167,6 @@ $(GCH): $(PCH)
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) -x c++-header $(ALL_CXXFLAGS) -MMD -MP $(DEFINES) $(INCLUDES) -o "$@" -MF "$(@:%.gch=%.d)" -c "$<"
 endif
-
-$(OBJDIR)/steps_elsewhere.o: ../../../features/step_definitions/steps_elsewhere.cpp
-	@echo $(notdir $<)
-	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 
 $(OBJDIR)/cppspec_steps.o: ../../../src/cucumber/cppspec_steps.cpp
 	@echo $(notdir $<)
