@@ -13,6 +13,7 @@ includedirs {
 	'deps/gmock/fused-src',
 	'deps/cucumber-cpp/cucumber-cpp/include',
 	'deps/cucumber-cpp/cppspec/include',
+	'deps/hayai/src',
 	'src'
 }
 
@@ -81,3 +82,13 @@ newaction {
 	end
 }
 -----------
+
+
+-----------------------------------
+make_console_app('hayai_benchmark', {
+	'src/hayai/*.cpp',
+	'deps/hayai/src/*.cpp'
+})
+run_target_after_build()
+use_standard 'c++0x'
+boost:set_links()
