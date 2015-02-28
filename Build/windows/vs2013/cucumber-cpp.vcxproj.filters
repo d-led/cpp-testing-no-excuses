@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="connectors">
+      <UniqueIdentifier>{C39662D2-AF4E-A41F-1856-7D7B042D3F10}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="connectors\wire">
+      <UniqueIdentifier>{29D7E34F-9562-5114-9E73-D4080A7EAD14}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\deps\cucumber-cpp\cucumber-cpp\src\ContextManager.cpp" />
+    <ClCompile Include="..\..\..\deps\cucumber-cpp\cucumber-cpp\src\CukeCommands.cpp" />
+    <ClCompile Include="..\..\..\deps\cucumber-cpp\cucumber-cpp\src\CukeEngine.cpp" />
+    <ClCompile Include="..\..\..\deps\cucumber-cpp\cucumber-cpp\src\CukeEngineImpl.cpp" />
+    <ClCompile Include="..\..\..\deps\cucumber-cpp\cucumber-cpp\src\HookRegistrar.cpp" />
+    <ClCompile Include="..\..\..\deps\cucumber-cpp\cucumber-cpp\src\Regex.cpp" />
+    <ClCompile Include="..\..\..\deps\cucumber-cpp\cucumber-cpp\src\Scenario.cpp" />
+    <ClCompile Include="..\..\..\deps\cucumber-cpp\cucumber-cpp\src\StepManager.cpp" />
+    <ClCompile Include="..\..\..\deps\cucumber-cpp\cucumber-cpp\src\Table.cpp" />
+    <ClCompile Include="..\..\..\deps\cucumber-cpp\cucumber-cpp\src\Tag.cpp" />
+    <ClCompile Include="..\..\..\deps\cucumber-cpp\cucumber-cpp\src\connectors\wire\WireProtocol.cpp">
+      <Filter>connectors\wire</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\deps\cucumber-cpp\cucumber-cpp\src\connectors\wire\WireProtocolCommands.cpp">
+      <Filter>connectors\wire</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\deps\cucumber-cpp\cucumber-cpp\src\connectors\wire\WireServer.cpp">
+      <Filter>connectors\wire</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

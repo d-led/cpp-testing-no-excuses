@@ -19,10 +19,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{3AB0C7A4-2668-09F2-8F6F-E24D7B46A4E2}</ProjectGuid>
+    <ProjectGuid>{5394F2D5-BF73-7171-C88B-FC4734EAD7D2}</ProjectGuid>
     <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>gmock_main</RootNamespace>
+    <RootNamespace>cppspec</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -67,26 +67,26 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <OutDir>..\..\..\bin\windows\vs2013\x32\Debug\</OutDir>
-    <IntDir>..\..\..\obj\windows\vs2013\x32\Debug\gmock_main\</IntDir>
-    <TargetName>gmock_main</TargetName>
+    <IntDir>..\..\..\obj\windows\vs2013\x32\Debug\cppspec\</IntDir>
+    <TargetName>cppspec</TargetName>
     <TargetExt>.lib</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <OutDir>..\..\..\bin\windows\vs2013\x64\Debug\</OutDir>
-    <IntDir>..\..\..\obj\windows\vs2013\x64\Debug\gmock_main\</IntDir>
-    <TargetName>gmock_main</TargetName>
+    <IntDir>..\..\..\obj\windows\vs2013\x64\Debug\cppspec\</IntDir>
+    <TargetName>cppspec</TargetName>
     <TargetExt>.lib</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>..\..\..\bin\windows\vs2013\x32\Release\</OutDir>
-    <IntDir>..\..\..\obj\windows\vs2013\x32\Release\gmock_main\</IntDir>
-    <TargetName>gmock_main</TargetName>
+    <IntDir>..\..\..\obj\windows\vs2013\x32\Release\cppspec\</IntDir>
+    <TargetName>cppspec</TargetName>
     <TargetExt>.lib</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <OutDir>..\..\..\bin\windows\vs2013\x64\Release\</OutDir>
-    <IntDir>..\..\..\obj\windows\vs2013\x64\Release\gmock_main\</IntDir>
-    <TargetName>gmock_main</TargetName>
+    <IntDir>..\..\..\obj\windows\vs2013\x64\Release\cppspec\</IntDir>
+    <TargetName>cppspec</TargetName>
     <TargetExt>.lib</TargetExt>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -172,7 +172,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\deps\gmock\fused-src\gmock_main.cc" />
+    <ClCompile Include="..\..\..\deps\cucumber-cpp\cppspec\src\BoostTimer.cpp" />
+    <ClCompile Include="..\..\..\deps\cucumber-cpp\cppspec\src\ConsoleOutputStream.cpp" />
+    <ClCompile Include="..\..\..\deps\cucumber-cpp\cppspec\src\FileOutputStream.cpp" />
+    <ClCompile Include="..\..\..\deps\cucumber-cpp\cppspec\src\JUnitReporter.cpp" />
+    <ClCompile Include="..\..\..\deps\cucumber-cpp\cppspec\src\Matcher.cpp" />
+    <ClCompile Include="..\..\..\deps\cucumber-cpp\cppspec\src\SpecDoxReporter.cpp" />
+    <ClCompile Include="..\..\..\deps\cucumber-cpp\cppspec\src\SpecResult.cpp" />
+    <ClCompile Include="..\..\..\deps\cucumber-cpp\cppspec\src\SpecRunner.cpp" />
+    <ClCompile Include="..\..\..\deps\cucumber-cpp\cppspec\src\SpecificationRegistry.cpp" />
+    <ClCompile Include="..\..\..\deps\cucumber-cpp\cppspec\src\Timer.cpp" />
+    <ClCompile Include="..\..\..\deps\cucumber-cpp\cppspec\src\Util.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
