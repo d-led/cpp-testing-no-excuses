@@ -9,7 +9,7 @@ See the config for details: [.travis.yml](.travis.yml)
 
 ## outline
 
-see [commits](commits/master) and:
+see [commits](https://github.com/d-led/cpp-testing-no-excuses/commits/master) and:
 
 - simple [premake](industriousone.com/premake)-based build config: [premake4.lua](premake4.lua)
 - lightweight testing based on [catch](http://catch-lib.net): [src/catch/simple.cpp](src/catch/simple.cpp)
