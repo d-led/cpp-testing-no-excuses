@@ -19,32 +19,32 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{7389C425-DF49-405C-A884-89D914048538}</ProjectGuid>
+    <ProjectGuid>{3AB0C7A4-2668-09F2-8F6F-E24D7B46A4E2}</ProjectGuid>
     <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>catch_example</RootNamespace>
+    <RootNamespace>gmock_main</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <CharacterSet>MultiByte</CharacterSet>
     <PlatformToolset>v120</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <CharacterSet>MultiByte</CharacterSet>
     <PlatformToolset>v120</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <CharacterSet>MultiByte</CharacterSet>
     <PlatformToolset>v120</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <CharacterSet>MultiByte</CharacterSet>
     <PlatformToolset>v120</PlatformToolset>
@@ -66,32 +66,28 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <LinkIncremental>true</LinkIncremental>
     <OutDir>..\..\..\bin\windows\vs2013\x32\Debug\</OutDir>
-    <IntDir>..\..\..\obj\windows\vs2013\x32\Debug\catch_example\</IntDir>
-    <TargetName>catch_example</TargetName>
-    <TargetExt>.exe</TargetExt>
+    <IntDir>..\..\..\obj\windows\vs2013\x32\Debug\gmock_main\</IntDir>
+    <TargetName>gmock_main</TargetName>
+    <TargetExt>.lib</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <LinkIncremental>true</LinkIncremental>
     <OutDir>..\..\..\bin\windows\vs2013\x64\Debug\</OutDir>
-    <IntDir>..\..\..\obj\windows\vs2013\x64\Debug\catch_example\</IntDir>
-    <TargetName>catch_example</TargetName>
-    <TargetExt>.exe</TargetExt>
+    <IntDir>..\..\..\obj\windows\vs2013\x64\Debug\gmock_main\</IntDir>
+    <TargetName>gmock_main</TargetName>
+    <TargetExt>.lib</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <LinkIncremental>false</LinkIncremental>
     <OutDir>..\..\..\bin\windows\vs2013\x32\Release\</OutDir>
-    <IntDir>..\..\..\obj\windows\vs2013\x32\Release\catch_example\</IntDir>
-    <TargetName>catch_example</TargetName>
-    <TargetExt>.exe</TargetExt>
+    <IntDir>..\..\..\obj\windows\vs2013\x32\Release\gmock_main\</IntDir>
+    <TargetName>gmock_main</TargetName>
+    <TargetExt>.lib</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <LinkIncremental>false</LinkIncremental>
     <OutDir>..\..\..\bin\windows\vs2013\x64\Release\</OutDir>
-    <IntDir>..\..\..\obj\windows\vs2013\x64\Release\catch_example\</IntDir>
-    <TargetName>catch_example</TargetName>
-    <TargetExt>.exe</TargetExt>
+    <IntDir>..\..\..\obj\windows\vs2013\x64\Release\gmock_main\</IntDir>
+    <TargetName>gmock_main</TargetName>
+    <TargetExt>.lib</TargetExt>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -107,13 +103,9 @@
       <AdditionalIncludeDirectories>..\..\..\deps\Catch\single_include;..\..\..\deps\gmock\fused-src;..\..\..\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
     </Link>
-    <PostBuildEvent>
-      <Command>"$(TargetPath)"</Command>
-    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -129,13 +121,9 @@
       <AdditionalIncludeDirectories>..\..\..\deps\Catch\single_include;..\..\..\deps\gmock\fused-src;..\..\..\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
     </Link>
-    <PostBuildEvent>
-      <Command>"$(TargetPath)"</Command>
-    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -154,15 +142,11 @@
       <AdditionalIncludeDirectories>..\..\..\deps\Catch\single_include;..\..\..\deps\gmock\fused-src;..\..\..\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
     </Link>
-    <PostBuildEvent>
-      <Command>"$(TargetPath)"</Command>
-    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -181,21 +165,14 @@
       <AdditionalIncludeDirectories>..\..\..\deps\Catch\single_include;..\..\..\deps\gmock\fused-src;..\..\..\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
     </Link>
-    <PostBuildEvent>
-      <Command>"$(TargetPath)"</Command>
-    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\src\counter\counter.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\..\src\catch\simple.cpp" />
+    <ClCompile Include="..\..\..\deps\gmock\fused-src\gmock_main.cc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

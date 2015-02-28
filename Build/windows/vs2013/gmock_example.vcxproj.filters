@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="counter">
+      <UniqueIdentifier>{6539F5D3-D118-746F-DA30-FF45468FDAD0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="element">
+      <UniqueIdentifier>{EFE5C765-5BC5-4601-64DD-D1D7D03BAD62}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gmock">
+      <UniqueIdentifier>{B686840F-229B-ACC0-EB1C-502057F0A8F1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\src\counter\counter.h">
+      <Filter>counter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\element\element.h">
+      <Filter>element</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\element\factory.h">
+      <Filter>element</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\element\id_source.h">
+      <Filter>element</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\src\gmock\mocks.cpp">
+      <Filter>gmock</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
