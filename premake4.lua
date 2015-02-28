@@ -14,4 +14,4 @@ make_console_app('catch_example', {
 }) 
 
 run_target_after_build()
-use_standard 'c++11'
+use_standard 'c++0x'
