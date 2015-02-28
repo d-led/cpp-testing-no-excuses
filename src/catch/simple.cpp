@@ -2,5 +2,5 @@
 #include <catch.hpp>
 
 TEST_CASE("adding basics","[basics]") {
-	CHECK( (0+1) == 0 );
+	CHECK( (0+1) == 1 );
 }
