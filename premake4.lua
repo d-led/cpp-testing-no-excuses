@@ -27,11 +27,28 @@ run_target_after_build()
 use_standard 'c++0x'
 
 -----------------------------------
+function gmock_config() --global
+	configuration 'vs*'
+        defines {
+            '_VARIADIC_MAX=10'
+        }
+
+	configuration 'macosx'
+		defines { 
+			'GTEST_USE_OWN_TR1_TUPLE=1'
+		}
+
+	configuration 'linux'
+		links 'pthread'
+
+	configuration '*'
+end
 make_static_lib('gmock',{'deps/gmock/fused-src/gmock-gtest-all.cc'})
+gmock_config()
 use_standard 'c++0x'
 make_static_lib('gmock_main',{'deps/gmock/fused-src/gmock_main.cc'})
+gmock_config()
 use_standard 'c++0x'
-
 -----------------------------------
 make_console_app('gmock_example', {
 	'src/counter/*.h',
@@ -41,10 +58,7 @@ make_console_app('gmock_example', {
 run_target_after_build()
 use_standard 'c++0x'
 links { 'gmock', 'gmock_main' }
-configuration 'linux'
-	links 'pthread'
-configuration '*'
-
+gmock_config()
 
 ------------------------------------
 
