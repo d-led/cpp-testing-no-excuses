@@ -10,3 +10,6 @@
 [submodule "deps/hayai"]
 	path = deps/hayai
 	url = https://github.com/nickbruun/hayai.git
+[submodule "deps/cucumber-cpp"]
+	path = deps/cucumber-cpp
+	url = https://github.com/d-led/cucumber-cpp.git
