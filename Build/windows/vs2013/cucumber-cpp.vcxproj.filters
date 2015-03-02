@@ -9,23 +9,23 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\deps\cucumber-cpp\cucumber-cpp\src\ContextManager.cpp" />
-    <ClCompile Include="..\..\..\deps\cucumber-cpp\cucumber-cpp\src\CukeCommands.cpp" />
-    <ClCompile Include="..\..\..\deps\cucumber-cpp\cucumber-cpp\src\CukeEngine.cpp" />
-    <ClCompile Include="..\..\..\deps\cucumber-cpp\cucumber-cpp\src\CukeEngineImpl.cpp" />
-    <ClCompile Include="..\..\..\deps\cucumber-cpp\cucumber-cpp\src\HookRegistrar.cpp" />
-    <ClCompile Include="..\..\..\deps\cucumber-cpp\cucumber-cpp\src\Regex.cpp" />
-    <ClCompile Include="..\..\..\deps\cucumber-cpp\cucumber-cpp\src\Scenario.cpp" />
-    <ClCompile Include="..\..\..\deps\cucumber-cpp\cucumber-cpp\src\StepManager.cpp" />
-    <ClCompile Include="..\..\..\deps\cucumber-cpp\cucumber-cpp\src\Table.cpp" />
-    <ClCompile Include="..\..\..\deps\cucumber-cpp\cucumber-cpp\src\Tag.cpp" />
-    <ClCompile Include="..\..\..\deps\cucumber-cpp\cucumber-cpp\src\connectors\wire\WireProtocol.cpp">
+    <ClCompile Include="..\..\..\deps\cucumber-cpp-orig\src\ContextManager.cpp" />
+    <ClCompile Include="..\..\..\deps\cucumber-cpp-orig\src\CukeCommands.cpp" />
+    <ClCompile Include="..\..\..\deps\cucumber-cpp-orig\src\CukeEngine.cpp" />
+    <ClCompile Include="..\..\..\deps\cucumber-cpp-orig\src\CukeEngineImpl.cpp" />
+    <ClCompile Include="..\..\..\deps\cucumber-cpp-orig\src\HookRegistrar.cpp" />
+    <ClCompile Include="..\..\..\deps\cucumber-cpp-orig\src\Regex.cpp" />
+    <ClCompile Include="..\..\..\deps\cucumber-cpp-orig\src\Scenario.cpp" />
+    <ClCompile Include="..\..\..\deps\cucumber-cpp-orig\src\StepManager.cpp" />
+    <ClCompile Include="..\..\..\deps\cucumber-cpp-orig\src\Table.cpp" />
+    <ClCompile Include="..\..\..\deps\cucumber-cpp-orig\src\Tag.cpp" />
+    <ClCompile Include="..\..\..\deps\cucumber-cpp-orig\src\connectors\wire\WireProtocol.cpp">
       <Filter>connectors\wire</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\deps\cucumber-cpp\cucumber-cpp\src\connectors\wire\WireProtocolCommands.cpp">
+    <ClCompile Include="..\..\..\deps\cucumber-cpp-orig\src\connectors\wire\WireProtocolCommands.cpp">
       <Filter>connectors\wire</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\deps\cucumber-cpp\cucumber-cpp\src\connectors\wire\WireServer.cpp">
+    <ClCompile Include="..\..\..\deps\cucumber-cpp-orig\src\connectors\wire\WireServer.cpp">
       <Filter>connectors\wire</Filter>
     </ClCompile>
   </ItemGroup>
