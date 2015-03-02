@@ -28,7 +28,7 @@ use_standard 'c++0x'
 
 -----------------------------------
 local gmock = require 'premake_recipes/gmock'
-
+gmock.generate_build 'deps/gmock'
 -----------------------------------
 make_console_app('gmock_example', {
 	'src/counter/*.h',
@@ -73,7 +73,9 @@ make_console_app('hayai_benchmark', {
 	'src/hayai/*.cpp',
 	'deps/hayai/src/*.cpp'
 })
-run_target_after_build()
+if os.get() ~= 'windows' then
+	run_target_after_build()
+end
 use_standard 'c++0x'
 boost:set_links()
 configuration 'linux'
