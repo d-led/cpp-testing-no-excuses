@@ -2,7 +2,7 @@ include 'premake'
 
 make_solution 'no_excuses'
 
-boost = assert(dofile 'premake/recipes/boost.lua')
+boost = dofile 'premake/recipes/boost.lua'
 
 boost:set_defines()
 boost:set_includedirs()
@@ -11,7 +11,7 @@ boost:set_libdirs()
 includedirs {
 	'deps/Catch/single_include',
 	'deps/gmock/fused-src',
-	'deps/cucumber-cpp/include',
+	'deps/cucumber-cpp-orig/include',
 	'deps/cppspec/include',
 	'deps/hayai/src',
 	'src'
@@ -42,7 +42,7 @@ gmock.gmock_config()
 
 ------------------------------------
 local cucumber_cpp = require 'premake_recipes/cucumber-cpp'
-cucumber_cpp.generate_build('./deps/cucumber-cpp','./deps/cppspec')
+cucumber_cpp.generate_build('./deps/cucumber-cpp-orig','./deps/cppspec')
 
 local cucumber_steps = require 'premake_recipes/cucumber-steps'
 cucumber_steps.make_cppspec_steps (

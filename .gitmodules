@@ -13,3 +13,6 @@
 [submodule "deps/cppspec"]
 	path = deps/cppspec
 	url = https://github.com/d-led/cppspec.git
+[submodule "deps/cucumber-cpp-orig"]
+	path = deps/cucumber-cpp-orig
+	url = https://github.com/d-led/cucumber-cpp.git
