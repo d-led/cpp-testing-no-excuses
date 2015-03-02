@@ -24,7 +24,7 @@ ifeq ($(config),debug32)
   TARGETDIR  = ../../../bin/macosx/gmake/x32/Debug
   TARGET     = $(TARGETDIR)/libcucumber-cpp-cppspec-driver.a
   DEFINES   += -DDEBUG -D_DEBUG
-  INCLUDES  += -I/usr/local/include -I../../../deps/Catch/single_include -I../../../deps/gmock/fused-src -I../../../deps/cucumber-cpp/cucumber-cpp/include -I../../../deps/cucumber-cpp/cppspec/include -I../../../deps/hayai/src -I../../../src
+  INCLUDES  += -I/usr/local/include -I../../../deps/Catch/single_include -I../../../deps/gmock/fused-src -I../../../deps/cucumber-cpp-orig/include -I../../../deps/cppspec/include -I../../../deps/hayai/src -I../../../src
   ALL_CPPFLAGS  += $(CPPFLAGS) -MMD -MP $(DEFINES) $(INCLUDES)
   ALL_CFLAGS    += $(CFLAGS) $(ALL_CPPFLAGS) $(ARCH) -g -m32
   ALL_CXXFLAGS  += $(CXXFLAGS) $(ALL_CFLAGS)
@@ -46,7 +46,7 @@ ifeq ($(config),release32)
   TARGETDIR  = ../../../bin/macosx/gmake/x32/Release
   TARGET     = $(TARGETDIR)/libcucumber-cpp-cppspec-driver.a
   DEFINES   += -DRELEASE
-  INCLUDES  += -I/usr/local/include -I../../../deps/Catch/single_include -I../../../deps/gmock/fused-src -I../../../deps/cucumber-cpp/cucumber-cpp/include -I../../../deps/cucumber-cpp/cppspec/include -I../../../deps/hayai/src -I../../../src
+  INCLUDES  += -I/usr/local/include -I../../../deps/Catch/single_include -I../../../deps/gmock/fused-src -I../../../deps/cucumber-cpp-orig/include -I../../../deps/cppspec/include -I../../../deps/hayai/src -I../../../src
   ALL_CPPFLAGS  += $(CPPFLAGS) -MMD -MP $(DEFINES) $(INCLUDES)
   ALL_CFLAGS    += $(CFLAGS) $(ALL_CPPFLAGS) $(ARCH) -O2 -m32
   ALL_CXXFLAGS  += $(CXXFLAGS) $(ALL_CFLAGS)
@@ -68,7 +68,7 @@ ifeq ($(config),debug64)
   TARGETDIR  = ../../../bin/macosx/gmake/x64/Debug
   TARGET     = $(TARGETDIR)/libcucumber-cpp-cppspec-driver.a
   DEFINES   += -DDEBUG -D_DEBUG
-  INCLUDES  += -I/usr/local/include -I../../../deps/Catch/single_include -I../../../deps/gmock/fused-src -I../../../deps/cucumber-cpp/cucumber-cpp/include -I../../../deps/cucumber-cpp/cppspec/include -I../../../deps/hayai/src -I../../../src
+  INCLUDES  += -I/usr/local/include -I../../../deps/Catch/single_include -I../../../deps/gmock/fused-src -I../../../deps/cucumber-cpp-orig/include -I../../../deps/cppspec/include -I../../../deps/hayai/src -I../../../src
   ALL_CPPFLAGS  += $(CPPFLAGS) -MMD -MP $(DEFINES) $(INCLUDES)
   ALL_CFLAGS    += $(CFLAGS) $(ALL_CPPFLAGS) $(ARCH) -g -m64
   ALL_CXXFLAGS  += $(CXXFLAGS) $(ALL_CFLAGS)
@@ -90,7 +90,7 @@ ifeq ($(config),release64)
   TARGETDIR  = ../../../bin/macosx/gmake/x64/Release
   TARGET     = $(TARGETDIR)/libcucumber-cpp-cppspec-driver.a
   DEFINES   += -DRELEASE
-  INCLUDES  += -I/usr/local/include -I../../../deps/Catch/single_include -I../../../deps/gmock/fused-src -I../../../deps/cucumber-cpp/cucumber-cpp/include -I../../../deps/cucumber-cpp/cppspec/include -I../../../deps/hayai/src -I../../../src
+  INCLUDES  += -I/usr/local/include -I../../../deps/Catch/single_include -I../../../deps/gmock/fused-src -I../../../deps/cucumber-cpp-orig/include -I../../../deps/cppspec/include -I../../../deps/hayai/src -I../../../src
   ALL_CPPFLAGS  += $(CPPFLAGS) -MMD -MP $(DEFINES) $(INCLUDES)
   ALL_CFLAGS    += $(CFLAGS) $(ALL_CPPFLAGS) $(ARCH) -O2 -m64
   ALL_CXXFLAGS  += $(CXXFLAGS) $(ALL_CFLAGS)
@@ -163,12 +163,13 @@ prelink:
 	$(PRELINKCMDS)
 
 ifneq (,$(PCH))
+.NOTPARALLEL: $(GCH) $(PCH)
 $(GCH): $(PCH)
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) -x c++-header $(ALL_CXXFLAGS) -MMD -MP $(DEFINES) $(INCLUDES) -o "$@" -MF "$(@:%.gch=%.d)" -c "$<"
 endif
 
-$(OBJDIR)/CppSpecDriver.o: ../../../deps/cucumber-cpp/cucumber-cpp/src/drivers/CppSpecDriver.cpp
+$(OBJDIR)/CppSpecDriver.o: ../../../deps/cucumber-cpp-orig/src/drivers/CppSpecDriver.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 
