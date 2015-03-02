@@ -11,8 +11,8 @@ boost:set_libdirs()
 includedirs {
 	'deps/Catch/single_include',
 	'deps/gmock/fused-src',
-	'deps/cucumber-cpp/cucumber-cpp/include',
-	'deps/cucumber-cpp/cppspec/include',
+	'deps/cucumber-cpp/include',
+	'deps/cppspec/include',
 	'deps/hayai/src',
 	'src'
 }
@@ -27,28 +27,8 @@ run_target_after_build()
 use_standard 'c++0x'
 
 -----------------------------------
-function gmock_config() --global
-	configuration 'vs*'
-        defines {
-            '_VARIADIC_MAX=10'
-        }
+local gmock = require 'premake_recipes/gmock'
 
-	configuration 'macosx'
-		defines { 
-			'GTEST_USE_OWN_TR1_TUPLE=1'
-		}
-
-	configuration 'linux'
-		links 'pthread'
-
-	configuration '*'
-end
-make_static_lib('gmock',{'deps/gmock/fused-src/gmock-gtest-all.cc'})
-gmock_config()
-use_standard 'c++0x'
-make_static_lib('gmock_main',{'deps/gmock/fused-src/gmock_main.cc'})
-gmock_config()
-use_standard 'c++0x'
 -----------------------------------
 make_console_app('gmock_example', {
 	'src/counter/*.h',
@@ -58,13 +38,13 @@ make_console_app('gmock_example', {
 run_target_after_build()
 use_standard 'c++0x'
 links { 'gmock', 'gmock_main' }
-gmock_config()
+gmock.gmock_config()
 
 ------------------------------------
+local cucumber_cpp = require 'premake_recipes/cucumber-cpp'
+cucumber_cpp.generate_build('./deps/cucumber-cpp','./deps/cppspec')
 
-cucumber_cpp_root = 'deps/cucumber-cpp'
-dofile 'cucumber-cpp.lua'
-local cucumber_steps = require ( path.join(cucumber_cpp_root, 'recipes/cucumber-steps') )
+local cucumber_steps = require 'premake_recipes/cucumber-steps'
 cucumber_steps.make_cppspec_steps (
 	'cucumber_example',
 	{
@@ -75,29 +55,18 @@ cucumber_steps.make_cppspec_steps (
 use_standard 'c++0x'
 boost:set_links()
 
-
------------
-newaction {
-	trigger     = 'prepare',
-	description = 'prepare submodules',
-	execute     = function ()
-		os.execute 'git submodule update --init --recursive'
-	end	
-}
 -----------
 newaction {
 	trigger     = 'cucumber',
 	description = 'run cucumber tests',
 	execute     = function ()
-		local util = require ( path.join(cucumber_cpp_root, 'recipes/util') )
+		local util = require 'premake_recipes/cucumber'
 		util.start_cucumber {
 			start_in = '.' ,
 			executable = 'cucumber_example'
 		}
 	end
 }
------------
-
 
 -----------------------------------
 make_console_app('hayai_benchmark', {

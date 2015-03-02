@@ -24,14 +24,14 @@ ifeq ($(config),debug32)
   TARGETDIR  = ../../../bin/linux/gmake/x32/Debug
   TARGET     = $(TARGETDIR)/libgmock_main.a
   DEFINES   += -DDEBUG -D_DEBUG
-  INCLUDES  += -I../../../deps/Catch/single_include -I../../../deps/gmock/fused-src -I../../../deps/cucumber-cpp/cucumber-cpp/include -I../../../deps/cucumber-cpp/cppspec/include -I../../../deps/hayai/src -I../../../src
+  INCLUDES  += -I../../../deps/Catch/single_include -I../../../deps/gmock/fused-src -I../../../deps/cucumber-cpp/include -I../../../deps/cppspec/include -I../../../deps/hayai/src -I../../../src
   ALL_CPPFLAGS  += $(CPPFLAGS) -MMD -MP $(DEFINES) $(INCLUDES)
   ALL_CFLAGS    += $(CFLAGS) $(ALL_CPPFLAGS) $(ARCH) -g -m32 -std=c++0x
   ALL_CXXFLAGS  += $(CXXFLAGS) $(ALL_CFLAGS)
   ALL_RESFLAGS  += $(RESFLAGS) $(DEFINES) $(INCLUDES)
-  ALL_LDFLAGS   += $(LDFLAGS) -m32 -L/usr/lib32
+  ALL_LDFLAGS   += $(LDFLAGS) -L. -m32 -L/usr/lib32
   LDDEPS    +=
-  LIBS      += $(LDDEPS)
+  LIBS      += $(LDDEPS) -lpthread
   LINKCMD    = $(AR) -rcs $(TARGET) $(OBJECTS)
   define PREBUILDCMDS
   endef
@@ -46,14 +46,14 @@ ifeq ($(config),release32)
   TARGETDIR  = ../../../bin/linux/gmake/x32/Release
   TARGET     = $(TARGETDIR)/libgmock_main.a
   DEFINES   += -DRELEASE
-  INCLUDES  += -I../../../deps/Catch/single_include -I../../../deps/gmock/fused-src -I../../../deps/cucumber-cpp/cucumber-cpp/include -I../../../deps/cucumber-cpp/cppspec/include -I../../../deps/hayai/src -I../../../src
+  INCLUDES  += -I../../../deps/Catch/single_include -I../../../deps/gmock/fused-src -I../../../deps/cucumber-cpp/include -I../../../deps/cppspec/include -I../../../deps/hayai/src -I../../../src
   ALL_CPPFLAGS  += $(CPPFLAGS) -MMD -MP $(DEFINES) $(INCLUDES)
   ALL_CFLAGS    += $(CFLAGS) $(ALL_CPPFLAGS) $(ARCH) -O2 -m32 -std=c++0x
   ALL_CXXFLAGS  += $(CXXFLAGS) $(ALL_CFLAGS)
   ALL_RESFLAGS  += $(RESFLAGS) $(DEFINES) $(INCLUDES)
-  ALL_LDFLAGS   += $(LDFLAGS) -s -m32 -L/usr/lib32
+  ALL_LDFLAGS   += $(LDFLAGS) -L. -s -m32 -L/usr/lib32
   LDDEPS    +=
-  LIBS      += $(LDDEPS)
+  LIBS      += $(LDDEPS) -lpthread
   LINKCMD    = $(AR) -rcs $(TARGET) $(OBJECTS)
   define PREBUILDCMDS
   endef
@@ -68,14 +68,14 @@ ifeq ($(config),debug64)
   TARGETDIR  = ../../../bin/linux/gmake/x64/Debug
   TARGET     = $(TARGETDIR)/libgmock_main.a
   DEFINES   += -DDEBUG -D_DEBUG
-  INCLUDES  += -I../../../deps/Catch/single_include -I../../../deps/gmock/fused-src -I../../../deps/cucumber-cpp/cucumber-cpp/include -I../../../deps/cucumber-cpp/cppspec/include -I../../../deps/hayai/src -I../../../src
+  INCLUDES  += -I../../../deps/Catch/single_include -I../../../deps/gmock/fused-src -I../../../deps/cucumber-cpp/include -I../../../deps/cppspec/include -I../../../deps/hayai/src -I../../../src
   ALL_CPPFLAGS  += $(CPPFLAGS) -MMD -MP $(DEFINES) $(INCLUDES)
   ALL_CFLAGS    += $(CFLAGS) $(ALL_CPPFLAGS) $(ARCH) -g -m64 -std=c++0x
   ALL_CXXFLAGS  += $(CXXFLAGS) $(ALL_CFLAGS)
   ALL_RESFLAGS  += $(RESFLAGS) $(DEFINES) $(INCLUDES)
-  ALL_LDFLAGS   += $(LDFLAGS) -m64 -L/usr/lib64
+  ALL_LDFLAGS   += $(LDFLAGS) -L. -m64 -L/usr/lib64
   LDDEPS    +=
-  LIBS      += $(LDDEPS)
+  LIBS      += $(LDDEPS) -lpthread
   LINKCMD    = $(AR) -rcs $(TARGET) $(OBJECTS)
   define PREBUILDCMDS
   endef
@@ -90,14 +90,14 @@ ifeq ($(config),release64)
   TARGETDIR  = ../../../bin/linux/gmake/x64/Release
   TARGET     = $(TARGETDIR)/libgmock_main.a
   DEFINES   += -DRELEASE
-  INCLUDES  += -I../../../deps/Catch/single_include -I../../../deps/gmock/fused-src -I../../../deps/cucumber-cpp/cucumber-cpp/include -I../../../deps/cucumber-cpp/cppspec/include -I../../../deps/hayai/src -I../../../src
+  INCLUDES  += -I../../../deps/Catch/single_include -I../../../deps/gmock/fused-src -I../../../deps/cucumber-cpp/include -I../../../deps/cppspec/include -I../../../deps/hayai/src -I../../../src
   ALL_CPPFLAGS  += $(CPPFLAGS) -MMD -MP $(DEFINES) $(INCLUDES)
   ALL_CFLAGS    += $(CFLAGS) $(ALL_CPPFLAGS) $(ARCH) -O2 -m64 -std=c++0x
   ALL_CXXFLAGS  += $(CXXFLAGS) $(ALL_CFLAGS)
   ALL_RESFLAGS  += $(RESFLAGS) $(DEFINES) $(INCLUDES)
-  ALL_LDFLAGS   += $(LDFLAGS) -s -m64 -L/usr/lib64
+  ALL_LDFLAGS   += $(LDFLAGS) -L. -s -m64 -L/usr/lib64
   LDDEPS    +=
-  LIBS      += $(LDDEPS)
+  LIBS      += $(LDDEPS) -lpthread
   LINKCMD    = $(AR) -rcs $(TARGET) $(OBJECTS)
   define PREBUILDCMDS
   endef

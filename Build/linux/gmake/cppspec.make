@@ -24,7 +24,7 @@ ifeq ($(config),debug32)
   TARGETDIR  = ../../../bin/linux/gmake/x32/Debug
   TARGET     = $(TARGETDIR)/libcppspec.a
   DEFINES   += -DDEBUG -D_DEBUG
-  INCLUDES  += -I../../../deps/Catch/single_include -I../../../deps/gmock/fused-src -I../../../deps/cucumber-cpp/cucumber-cpp/include -I../../../deps/cucumber-cpp/cppspec/include -I../../../deps/hayai/src -I../../../src
+  INCLUDES  += -I../../../deps/Catch/single_include -I../../../deps/gmock/fused-src -I../../../deps/cucumber-cpp/include -I../../../deps/cppspec/include -I../../../deps/hayai/src -I../../../src
   ALL_CPPFLAGS  += $(CPPFLAGS) -MMD -MP $(DEFINES) $(INCLUDES)
   ALL_CFLAGS    += $(CFLAGS) $(ALL_CPPFLAGS) $(ARCH) -g -m32
   ALL_CXXFLAGS  += $(CXXFLAGS) $(ALL_CFLAGS)
@@ -46,7 +46,7 @@ ifeq ($(config),release32)
   TARGETDIR  = ../../../bin/linux/gmake/x32/Release
   TARGET     = $(TARGETDIR)/libcppspec.a
   DEFINES   += -DRELEASE
-  INCLUDES  += -I../../../deps/Catch/single_include -I../../../deps/gmock/fused-src -I../../../deps/cucumber-cpp/cucumber-cpp/include -I../../../deps/cucumber-cpp/cppspec/include -I../../../deps/hayai/src -I../../../src
+  INCLUDES  += -I../../../deps/Catch/single_include -I../../../deps/gmock/fused-src -I../../../deps/cucumber-cpp/include -I../../../deps/cppspec/include -I../../../deps/hayai/src -I../../../src
   ALL_CPPFLAGS  += $(CPPFLAGS) -MMD -MP $(DEFINES) $(INCLUDES)
   ALL_CFLAGS    += $(CFLAGS) $(ALL_CPPFLAGS) $(ARCH) -O2 -m32
   ALL_CXXFLAGS  += $(CXXFLAGS) $(ALL_CFLAGS)
@@ -68,7 +68,7 @@ ifeq ($(config),debug64)
   TARGETDIR  = ../../../bin/linux/gmake/x64/Debug
   TARGET     = $(TARGETDIR)/libcppspec.a
   DEFINES   += -DDEBUG -D_DEBUG
-  INCLUDES  += -I../../../deps/Catch/single_include -I../../../deps/gmock/fused-src -I../../../deps/cucumber-cpp/cucumber-cpp/include -I../../../deps/cucumber-cpp/cppspec/include -I../../../deps/hayai/src -I../../../src
+  INCLUDES  += -I../../../deps/Catch/single_include -I../../../deps/gmock/fused-src -I../../../deps/cucumber-cpp/include -I../../../deps/cppspec/include -I../../../deps/hayai/src -I../../../src
   ALL_CPPFLAGS  += $(CPPFLAGS) -MMD -MP $(DEFINES) $(INCLUDES)
   ALL_CFLAGS    += $(CFLAGS) $(ALL_CPPFLAGS) $(ARCH) -g -m64
   ALL_CXXFLAGS  += $(CXXFLAGS) $(ALL_CFLAGS)
@@ -90,7 +90,7 @@ ifeq ($(config),release64)
   TARGETDIR  = ../../../bin/linux/gmake/x64/Release
   TARGET     = $(TARGETDIR)/libcppspec.a
   DEFINES   += -DRELEASE
-  INCLUDES  += -I../../../deps/Catch/single_include -I../../../deps/gmock/fused-src -I../../../deps/cucumber-cpp/cucumber-cpp/include -I../../../deps/cucumber-cpp/cppspec/include -I../../../deps/hayai/src -I../../../src
+  INCLUDES  += -I../../../deps/Catch/single_include -I../../../deps/gmock/fused-src -I../../../deps/cucumber-cpp/include -I../../../deps/cppspec/include -I../../../deps/hayai/src -I../../../src
   ALL_CPPFLAGS  += $(CPPFLAGS) -MMD -MP $(DEFINES) $(INCLUDES)
   ALL_CFLAGS    += $(CFLAGS) $(ALL_CPPFLAGS) $(ARCH) -O2 -m64
   ALL_CXXFLAGS  += $(CXXFLAGS) $(ALL_CFLAGS)
@@ -178,47 +178,47 @@ $(GCH): $(PCH)
 	$(SILENT) $(CXX) -x c++-header $(ALL_CXXFLAGS) -MMD -MP $(DEFINES) $(INCLUDES) -o "$@" -MF "$(@:%.gch=%.d)" -c "$<"
 endif
 
-$(OBJDIR)/Timer.o: ../../../deps/cucumber-cpp/cppspec/src/Timer.cpp
+$(OBJDIR)/Timer.o: ../../../deps/cppspec/src/Timer.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 
-$(OBJDIR)/Util.o: ../../../deps/cucumber-cpp/cppspec/src/Util.cpp
+$(OBJDIR)/Util.o: ../../../deps/cppspec/src/Util.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 
-$(OBJDIR)/Matcher.o: ../../../deps/cucumber-cpp/cppspec/src/Matcher.cpp
+$(OBJDIR)/Matcher.o: ../../../deps/cppspec/src/Matcher.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 
-$(OBJDIR)/SpecRunner.o: ../../../deps/cucumber-cpp/cppspec/src/SpecRunner.cpp
+$(OBJDIR)/SpecRunner.o: ../../../deps/cppspec/src/SpecRunner.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 
-$(OBJDIR)/JUnitReporter.o: ../../../deps/cucumber-cpp/cppspec/src/JUnitReporter.cpp
+$(OBJDIR)/JUnitReporter.o: ../../../deps/cppspec/src/JUnitReporter.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 
-$(OBJDIR)/SpecResult.o: ../../../deps/cucumber-cpp/cppspec/src/SpecResult.cpp
+$(OBJDIR)/SpecResult.o: ../../../deps/cppspec/src/SpecResult.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 
-$(OBJDIR)/FileOutputStream.o: ../../../deps/cucumber-cpp/cppspec/src/FileOutputStream.cpp
+$(OBJDIR)/FileOutputStream.o: ../../../deps/cppspec/src/FileOutputStream.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 
-$(OBJDIR)/BoostTimer.o: ../../../deps/cucumber-cpp/cppspec/src/BoostTimer.cpp
+$(OBJDIR)/BoostTimer.o: ../../../deps/cppspec/src/BoostTimer.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 
-$(OBJDIR)/ConsoleOutputStream.o: ../../../deps/cucumber-cpp/cppspec/src/ConsoleOutputStream.cpp
+$(OBJDIR)/ConsoleOutputStream.o: ../../../deps/cppspec/src/ConsoleOutputStream.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 
-$(OBJDIR)/SpecificationRegistry.o: ../../../deps/cucumber-cpp/cppspec/src/SpecificationRegistry.cpp
+$(OBJDIR)/SpecificationRegistry.o: ../../../deps/cppspec/src/SpecificationRegistry.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 
-$(OBJDIR)/SpecDoxReporter.o: ../../../deps/cucumber-cpp/cppspec/src/SpecDoxReporter.cpp
+$(OBJDIR)/SpecDoxReporter.o: ../../../deps/cppspec/src/SpecDoxReporter.cpp
 	@echo $(notdir $<)
 	$(SILENT) $(CXX) $(ALL_CXXFLAGS) $(FORCE_INCLUDE) -o "$@" -MF $(@:%.o=%.d) -c "$<"
 
