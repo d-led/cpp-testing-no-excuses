@@ -1,6 +1,9 @@
-local pldir = assert( require 'pl.dir' )
-
 if _PREMAKE_VERSION then
+	pldir = {
+		getallfiles = function(dir,what)
+			return os.matchfiles(dir..'/**/'..what)
+		end
+	}
 	plpath = {
 		abspath = path.getabsolute,
 		currentdir = os.getcwd,
@@ -8,6 +11,7 @@ if _PREMAKE_VERSION then
 	}
 else
 	plpath = assert( require 'pl.path' )
+	pldir = assert( require 'pl.dir' )
 end
 
 function string.starts_with(self,what)
