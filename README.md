@@ -30,6 +30,6 @@ in [premake4.lua](premake4.lua) prior to `boost:set_*` calls, the paths to BOOST
 
 ## running cucumber steps
 
-prerequisite: [cucumber](https://cukes.info) should be installed, and the submodules of the [cucumber-cpp-premake](https://github.com/d-led/cucumber-cpp-premake) project should be checked out: `[path_to]/premake4 prepare`
+prerequisite: [cucumber](https://cukes.info) should be installed, and the submodules of the [cucumber-cpp-premake](https://github.com/d-led/cucumber-cpp-premake) project should be checked out: `[path_to]/premake4 prepare` before generating the build.
 
-start cucumber and the steps runner using `[path_to]/premake4 cucumber`
+If you have Lua Penlight library installed and working, start cucumber and the steps runner using `[path_to]/premake4 cucumber`, in any other case, the actual command line is `bin/[path_to]/cucumber_example && cucumber` on *X, and `start bin\[path_to]\cucumber_example & cucumber` on MS Windows.
