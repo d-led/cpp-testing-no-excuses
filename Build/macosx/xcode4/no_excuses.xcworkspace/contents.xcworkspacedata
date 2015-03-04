@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+	version = "1.0">
+	<FileRef
+		location = "group:catch_example.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:gmock.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:gmock_main.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:gmock_example.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:cucumber-cpp.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:cucumber-cpp-main.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:cppspec.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:cucumber-cpp-cppspec-driver.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:cucumber_example.xcodeproj">
+	</FileRef>
+	<FileRef
+		location = "group:hayai_benchmark.xcodeproj">
+	</FileRef>
+</Workspace>

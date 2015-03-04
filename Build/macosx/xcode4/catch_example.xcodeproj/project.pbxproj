@@ -1,0 +1,377 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1B0A68B97A8538E56070687F /* simple.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46A3014B6768177508FF3066 /* simple.cpp */; };
+		7A5A556B0FAF671D53A8747D /* bdd_style.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6FE2188B683838E906C0487A /* bdd_style.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		02A538E7558A18381382604A /* id_source.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = id_source.h; path = ../../../src/element/id_source.h; sourceTree = "<group>"; };
+		0F0F4CAE5F4B465B211A36C0 /* element.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = element.h; path = ../../../src/element/element.h; sourceTree = "<group>"; };
+		1395470B575B4F880F9A5750 /* factory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = factory.h; path = ../../../src/element/factory.h; sourceTree = "<group>"; };
+		3A3038DA70826868281E072D /* catch_example */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = catch_example; sourceTree = BUILT_PRODUCTS_DIR; };
+		46A3014B6768177508FF3066 /* simple.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = simple.cpp; path = ../../../src/catch/simple.cpp; sourceTree = "<group>"; };
+		59E15B7F7B96677C0CB62F2F /* counter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = counter.h; path = ../../../src/counter/counter.h; sourceTree = "<group>"; };
+		6FE2188B683838E906C0487A /* bdd_style.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = bdd_style.cpp; path = ../../../src/catch/bdd_style.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6131596172B02C567E7F73B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00271F3F704E2470541804ED /* catch */ = {
+			isa = PBXGroup;
+			children = (
+				6FE2188B683838E906C0487A /* bdd_style.cpp */,
+				46A3014B6768177508FF3066 /* simple.cpp */,
+			);
+			name = catch;
+			sourceTree = "<group>";
+		};
+		141A76C12F672C95292D718E /* counter */ = {
+			isa = PBXGroup;
+			children = (
+				59E15B7F7B96677C0CB62F2F /* counter.h */,
+			);
+			name = counter;
+			sourceTree = "<group>";
+		};
+		218C029A591D116735024150 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3A3038DA70826868281E072D /* catch_example */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		237101ED15A70C985D550FAA /* src */ = {
+			isa = PBXGroup;
+			children = (
+				00271F3F704E2470541804ED /* catch */,
+				141A76C12F672C95292D718E /* counter */,
+				4E2711C9519463B526BA0D06 /* element */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		32395FDF4D6A1D406FB1097F /* catch_example */ = {
+			isa = PBXGroup;
+			children = (
+				237101ED15A70C985D550FAA /* src */,
+				218C029A591D116735024150 /* Products */,
+			);
+			name = catch_example;
+			sourceTree = "<group>";
+		};
+		4E2711C9519463B526BA0D06 /* element */ = {
+			isa = PBXGroup;
+			children = (
+				0F0F4CAE5F4B465B211A36C0 /* element.h */,
+				1395470B575B4F880F9A5750 /* factory.h */,
+				02A538E7558A18381382604A /* id_source.h */,
+			);
+			name = element;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2C7A02AF5D0931B716DB0C5A /* catch_example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1A9C03163A4A5F500EC34050 /* Build configuration list for PBXNativeTarget "catch_example" */;
+			buildPhases = (
+				7E525640388F61207CE12269 /* Resources */,
+				2C6D646D5096691849525C28 /* Sources */,
+				6131596172B02C567E7F73B0 /* Frameworks */,
+				9607AE3710C85E8F00CD1376 /* Postbuild */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = catch_example;
+			productInstallPath = "$(HOME)/bin";
+			productName = catch_example;
+			productReference = 3A3038DA70826868281E072D /* catch_example */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+			};
+			buildConfigurationList = 1DEB928908733DD80010E9CD /* Build configuration list for PBXProject "catch_example" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 32395FDF4D6A1D406FB1097F /* catch_example */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2C7A02AF5D0931B716DB0C5A /* catch_example */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7E525640388F61207CE12269 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9607AE3710C85E8F00CD1376 /* Postbuild */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Postbuild;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = $TARGET_BUILD_DIR/$TARGET_NAME;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2C6D646D5096691849525C28 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A5A556B0FAF671D53A8747D /* bdd_style.cpp in Sources */,
+				1B0A68B97A8538E56070687F /* simple.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		0AF51A30795D758307840D95 /* Release Native 32-bit */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CONFIGURATION_BUILD_DIR = ../../../bin/macosx/xcode4/x32/Release;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = catch_example;
+			};
+			name = "Release Native 32-bit";
+		};
+		216F061F0F8918F50D1D0C91 /* Debug Native 32-bit */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(SYMROOT)";
+				CONFIGURATION_TEMP_DIR = "$(OBJROOT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					DEBUG,
+					_DEBUG,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					../../../deps/Catch/single_include,
+					"../../../deps/gmock/fused-src",
+					"../../../deps/cucumber-cpp-orig/include",
+					../../../deps/cppspec/include,
+					../../../deps/hayai/src,
+					../../../src,
+				);
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				OBJROOT = ../../../obj/macosx/xcode4/x32/Debug/catch_example/x32;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "-std=c++0x";
+				OTHER_LDFLAGS = "-stdlib=libc++";
+				SYMROOT = ../../../bin/macosx/xcode4/x32/Debug;
+			};
+			name = "Debug Native 32-bit";
+		};
+		29ED31FC2D2C62A906B90168 /* Release Native 64-bit */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CONFIGURATION_BUILD_DIR = ../../../bin/macosx/xcode4/x64/Release;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = catch_example;
+			};
+			name = "Release Native 64-bit";
+		};
+		2A3668674AE5024C7AF44A60 /* Debug Native 64-bit */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CONFIGURATION_BUILD_DIR = ../../../bin/macosx/xcode4/x64/Debug;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = catch_example;
+			};
+			name = "Debug Native 64-bit";
+		};
+		397C068877D97C10322E02D7 /* Release Native 32-bit */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(SYMROOT)";
+				CONFIGURATION_TEMP_DIR = "$(OBJROOT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = RELEASE;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					../../../deps/Catch/single_include,
+					"../../../deps/gmock/fused-src",
+					"../../../deps/cucumber-cpp-orig/include",
+					../../../deps/cppspec/include,
+					../../../deps/hayai/src,
+					../../../src,
+				);
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				OBJROOT = ../../../obj/macosx/xcode4/x32/Release/catch_example/x32;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "-std=c++0x";
+				OTHER_LDFLAGS = "-stdlib=libc++";
+				SYMROOT = ../../../bin/macosx/xcode4/x32/Release;
+			};
+			name = "Release Native 32-bit";
+		};
+		451030836A855B960DB5189B /* Debug Native 32-bit */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CONFIGURATION_BUILD_DIR = ../../../bin/macosx/xcode4/x32/Debug;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = catch_example;
+			};
+			name = "Debug Native 32-bit";
+		};
+		67CF6E167B1961C1784D11F9 /* Release Native 64-bit */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(SYMROOT)";
+				CONFIGURATION_TEMP_DIR = "$(OBJROOT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = RELEASE;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					../../../deps/Catch/single_include,
+					"../../../deps/gmock/fused-src",
+					"../../../deps/cucumber-cpp-orig/include",
+					../../../deps/cppspec/include,
+					../../../deps/hayai/src,
+					../../../src,
+				);
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				OBJROOT = ../../../obj/macosx/xcode4/x64/Release/catch_example/x64;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "-std=c++0x";
+				OTHER_LDFLAGS = "-stdlib=libc++";
+				SYMROOT = ../../../bin/macosx/xcode4/x64/Release;
+			};
+			name = "Release Native 64-bit";
+		};
+		6FFF69EE146B223009013B3E /* Debug Native 64-bit */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(SYMROOT)";
+				CONFIGURATION_TEMP_DIR = "$(OBJROOT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					DEBUG,
+					_DEBUG,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					../../../deps/Catch/single_include,
+					"../../../deps/gmock/fused-src",
+					"../../../deps/cucumber-cpp-orig/include",
+					../../../deps/cppspec/include,
+					../../../deps/hayai/src,
+					../../../src,
+				);
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				OBJROOT = ../../../obj/macosx/xcode4/x64/Debug/catch_example/x64;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "-std=c++0x";
+				OTHER_LDFLAGS = "-stdlib=libc++";
+				SYMROOT = ../../../bin/macosx/xcode4/x64/Debug;
+			};
+			name = "Debug Native 64-bit";
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1A9C03163A4A5F500EC34050 /* Build configuration list for PBXNativeTarget "catch_example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				451030836A855B960DB5189B /* Debug Native 32-bit */,
+				2A3668674AE5024C7AF44A60 /* Debug Native 64-bit */,
+				0AF51A30795D758307840D95 /* Release Native 32-bit */,
+				29ED31FC2D2C62A906B90168 /* Release Native 64-bit */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Debug Native 32-bit";
+		};
+		1DEB928908733DD80010E9CD /* Build configuration list for PBXProject "catch_example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				216F061F0F8918F50D1D0C91 /* Debug Native 32-bit */,
+				6FFF69EE146B223009013B3E /* Debug Native 64-bit */,
+				397C068877D97C10322E02D7 /* Release Native 32-bit */,
+				67CF6E167B1961C1784D11F9 /* Release Native 64-bit */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Debug Native 32-bit";
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}

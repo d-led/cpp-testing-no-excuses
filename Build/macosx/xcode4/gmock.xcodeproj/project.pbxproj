@@ -1,0 +1,350 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5907768803460C20295A07A5 /* gmock-gtest-all.cc in Sources */ = {isa = PBXBuildFile; fileRef = 34D7356521EA3C4564CA30BD /* gmock-gtest-all.cc */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		095D758F16134E4935061DDB /* libgmock.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libgmock.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		34D7356521EA3C4564CA30BD /* gmock-gtest-all.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "gmock-gtest-all.cc"; path = "../../../deps/gmock/fused-src/gmock-gtest-all.cc"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0A4278D51A077D90002C718D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1ADB51D25F97616F63DC0FC9 /* gmock */ = {
+			isa = PBXGroup;
+			children = (
+				5A4F38C93F4B670321DB553D /* fused-src */,
+			);
+			name = gmock;
+			sourceTree = "<group>";
+		};
+		4D00718C46921B787AB061F3 /* deps */ = {
+			isa = PBXGroup;
+			children = (
+				1ADB51D25F97616F63DC0FC9 /* gmock */,
+			);
+			name = deps;
+			sourceTree = "<group>";
+		};
+		5A4F38C93F4B670321DB553D /* fused-src */ = {
+			isa = PBXGroup;
+			children = (
+				34D7356521EA3C4564CA30BD /* gmock-gtest-all.cc */,
+			);
+			name = "fused-src";
+			sourceTree = "<group>";
+		};
+		6E7630323F4447C81F7A436B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				095D758F16134E4935061DDB /* libgmock.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7D4F05DF34B969137F9A03D9 /* gmock */ = {
+			isa = PBXGroup;
+			children = (
+				4D00718C46921B787AB061F3 /* deps */,
+				6E7630323F4447C81F7A436B /* Products */,
+			);
+			name = gmock;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		203F4495241639D97D772FF7 /* gmock */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27907F6E2B684F2D330E077B /* Build configuration list for PBXNativeTarget "gmock" */;
+			buildPhases = (
+				25A93B933FB139D024BB2FAA /* Resources */,
+				5C697C324F42763F2B646BDF /* Sources */,
+				0A4278D51A077D90002C718D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = gmock;
+			productName = gmock;
+			productReference = 095D758F16134E4935061DDB /* libgmock.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+			};
+			buildConfigurationList = 1DEB928908733DD80010E9CD /* Build configuration list for PBXProject "gmock" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7D4F05DF34B969137F9A03D9 /* gmock */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				203F4495241639D97D772FF7 /* gmock */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		25A93B933FB139D024BB2FAA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5C697C324F42763F2B646BDF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5907768803460C20295A07A5 /* gmock-gtest-all.cc in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		2A1E4DFC671677665ED85893 /* Release Native 32-bit */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = ../../../bin/macosx/xcode4/x32/Release;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = gmock;
+			};
+			name = "Release Native 32-bit";
+		};
+		33115E953DCA274C1D6D6A64 /* Release Native 32-bit */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(SYMROOT)";
+				CONFIGURATION_TEMP_DIR = "$(OBJROOT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					RELEASE,
+					"GTEST_USE_OWN_TR1_TUPLE=1",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					../../../deps/Catch/single_include,
+					"../../../deps/gmock/fused-src",
+					"../../../deps/cucumber-cpp-orig/include",
+					../../../deps/cppspec/include,
+					../../../deps/hayai/src,
+					../../../src,
+				);
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				OBJROOT = ../../../obj/macosx/xcode4/x32/Release/gmock/x32;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "-std=c++0x";
+				OTHER_LDFLAGS = "-stdlib=libc++";
+				SYMROOT = ../../../bin/macosx/xcode4/x32/Release;
+			};
+			name = "Release Native 32-bit";
+		};
+		3757648C59FE6F36479801E8 /* Debug Native 32-bit */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = ../../../bin/macosx/xcode4/x32/Debug;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = gmock;
+			};
+			name = "Debug Native 32-bit";
+		};
+		47A945977CA83B0362830E46 /* Debug Native 64-bit */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(SYMROOT)";
+				CONFIGURATION_TEMP_DIR = "$(OBJROOT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					DEBUG,
+					_DEBUG,
+					"GTEST_USE_OWN_TR1_TUPLE=1",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					../../../deps/Catch/single_include,
+					"../../../deps/gmock/fused-src",
+					"../../../deps/cucumber-cpp-orig/include",
+					../../../deps/cppspec/include,
+					../../../deps/hayai/src,
+					../../../src,
+				);
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				OBJROOT = ../../../obj/macosx/xcode4/x64/Debug/gmock/x64;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "-std=c++0x";
+				OTHER_LDFLAGS = "-stdlib=libc++";
+				SYMROOT = ../../../bin/macosx/xcode4/x64/Debug;
+			};
+			name = "Debug Native 64-bit";
+		};
+		545B2D4A0BD157E176A50AC0 /* Debug Native 64-bit */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = ../../../bin/macosx/xcode4/x64/Debug;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = gmock;
+			};
+			name = "Debug Native 64-bit";
+		};
+		6681288C1F9E460E632A6494 /* Debug Native 32-bit */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(SYMROOT)";
+				CONFIGURATION_TEMP_DIR = "$(OBJROOT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					DEBUG,
+					_DEBUG,
+					"GTEST_USE_OWN_TR1_TUPLE=1",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					../../../deps/Catch/single_include,
+					"../../../deps/gmock/fused-src",
+					"../../../deps/cucumber-cpp-orig/include",
+					../../../deps/cppspec/include,
+					../../../deps/hayai/src,
+					../../../src,
+				);
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				OBJROOT = ../../../obj/macosx/xcode4/x32/Debug/gmock/x32;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "-std=c++0x";
+				OTHER_LDFLAGS = "-stdlib=libc++";
+				SYMROOT = ../../../bin/macosx/xcode4/x32/Debug;
+			};
+			name = "Debug Native 32-bit";
+		};
+		6E20777D4B974426574851F8 /* Release Native 64-bit */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = ../../../bin/macosx/xcode4/x64/Release;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = gmock;
+			};
+			name = "Release Native 64-bit";
+		};
+		7D861B7D40F3317E024D1857 /* Release Native 64-bit */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(SYMROOT)";
+				CONFIGURATION_TEMP_DIR = "$(OBJROOT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					RELEASE,
+					"GTEST_USE_OWN_TR1_TUPLE=1",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					../../../deps/Catch/single_include,
+					"../../../deps/gmock/fused-src",
+					"../../../deps/cucumber-cpp-orig/include",
+					../../../deps/cppspec/include,
+					../../../deps/hayai/src,
+					../../../src,
+				);
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				OBJROOT = ../../../obj/macosx/xcode4/x64/Release/gmock/x64;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "-std=c++0x";
+				OTHER_LDFLAGS = "-stdlib=libc++";
+				SYMROOT = ../../../bin/macosx/xcode4/x64/Release;
+			};
+			name = "Release Native 64-bit";
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB928908733DD80010E9CD /* Build configuration list for PBXProject "gmock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6681288C1F9E460E632A6494 /* Debug Native 32-bit */,
+				47A945977CA83B0362830E46 /* Debug Native 64-bit */,
+				33115E953DCA274C1D6D6A64 /* Release Native 32-bit */,
+				7D861B7D40F3317E024D1857 /* Release Native 64-bit */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Debug Native 32-bit";
+		};
+		27907F6E2B684F2D330E077B /* Build configuration list for PBXNativeTarget "gmock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3757648C59FE6F36479801E8 /* Debug Native 32-bit */,
+				545B2D4A0BD157E176A50AC0 /* Debug Native 64-bit */,
+				2A1E4DFC671677665ED85893 /* Release Native 32-bit */,
+				6E20777D4B974426574851F8 /* Release Native 64-bit */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Debug Native 32-bit";
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}

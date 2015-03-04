@@ -1,0 +1,343 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		21D76A1D388766CF34745E7A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DAB29781DCC4F555CF8466D /* main.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3DAB29781DCC4F555CF8466D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "main.cpp"; path = "../../../deps/cucumber-cpp-orig/src/main.cpp"; sourceTree = "<group>"; };
+		6C682DD062B16C0F05A11AF8 /* libcucumber-cpp-main.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libcucumber-cpp-main.a"; path = "libcucumber-cpp-main.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1F5A653C5F4A139728B84EF4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3CAA51C30E7E125B245575C5 /* cucumber-cpp-main */ = {
+			isa = PBXGroup;
+			children = (
+				0FCF70815D3848007BC807B1 /* deps */,
+				284951055B975007100C0B68 /* Products */,
+			);
+			name = "cucumber-cpp-main";
+			sourceTree = "<group>";
+		};
+		0FCF70815D3848007BC807B1 /* deps */ = {
+			isa = PBXGroup;
+			children = (
+				122D6A0F0B4B7CD10952256A /* cucumber-cpp-orig */,
+			);
+			name = "deps";
+			sourceTree = "<group>";
+		};
+		122D6A0F0B4B7CD10952256A /* cucumber-cpp-orig */ = {
+			isa = PBXGroup;
+			children = (
+				5DFB2F4306BA30E723EB4F4E /* src */,
+			);
+			name = "cucumber-cpp-orig";
+			sourceTree = "<group>";
+		};
+		5DFB2F4306BA30E723EB4F4E /* src */ = {
+			isa = PBXGroup;
+			children = (
+				3DAB29781DCC4F555CF8466D /* main.cpp */,
+			);
+			name = "src";
+			sourceTree = "<group>";
+		};
+		284951055B975007100C0B68 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6C682DD062B16C0F05A11AF8 /* libcucumber-cpp-main.a */,
+			);
+			name = "Products";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		266737A13A0A7CB83DAE7047 /* cucumber-cpp-main */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 12966C31418B40654F873730 /* Build configuration list for PBXNativeTarget "cucumber-cpp-main" */;
+			buildPhases = (
+				35C4672F735A594625090B59 /* Resources */,
+				414A75BF728648F03E2F098D /* Sources */,
+				1F5A653C5F4A139728B84EF4 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "cucumber-cpp-main";
+			productName = "cucumber-cpp-main";
+			productReference = 6C682DD062B16C0F05A11AF8 /* libcucumber-cpp-main.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB928908733DD80010E9CD /* Build configuration list for PBXProject "cucumber-cpp-main" */;
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 1;
+			mainGroup = 3CAA51C30E7E125B245575C5 /* cucumber-cpp-main */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				266737A13A0A7CB83DAE7047 /* libcucumber-cpp-main.a */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		35C4672F735A594625090B59 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		414A75BF728648F03E2F098D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21D76A1D388766CF34745E7A /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4ECF0B985550168D1339102D /* Debug Native 32-bit */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CONFIGURATION_BUILD_DIR = ../../../bin/macosx/xcode4/x32/Debug;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = "cucumber-cpp-main";
+			};
+			name = "Debug Native 32-bit";
+		};
+		678C1FA531827D1C74AE4EF0 /* Debug Native 64-bit */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CONFIGURATION_BUILD_DIR = ../../../bin/macosx/xcode4/x64/Debug;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = "cucumber-cpp-main";
+			};
+			name = "Debug Native 64-bit";
+		};
+		125A6871777A21313D8B1E97 /* Release Native 32-bit */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				CONFIGURATION_BUILD_DIR = ../../../bin/macosx/xcode4/x32/Release;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = "cucumber-cpp-main";
+			};
+			name = "Release Native 32-bit";
+		};
+		556B67A1330743E31F21317D /* Release Native 64-bit */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				CONFIGURATION_BUILD_DIR = ../../../bin/macosx/xcode4/x64/Release;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = "cucumber-cpp-main";
+			};
+			name = "Release Native 64-bit";
+		};
+		1BCC204A6F7A4F3C220C729C /* Debug Native 32-bit */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "i386";
+				CONFIGURATION_BUILD_DIR = "$(SYMROOT)";
+				CONFIGURATION_TEMP_DIR = "$(OBJROOT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG",
+					"_DEBUG",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"/usr/local/include",
+					"../../../deps/Catch/single_include",
+					"../../../deps/gmock/fused-src",
+					"../../../deps/cucumber-cpp-orig/include",
+					"../../../deps/cppspec/include",
+					"../../../deps/hayai/src",
+					"../../../src",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"/usr/local/lib",
+				);
+				OBJROOT = "../../../obj/macosx/xcode4/x32/Debug/cucumber-cpp-main/x32";
+				ONLY_ACTIVE_ARCH = YES;
+				SYMROOT = "../../../bin/macosx/xcode4/x32/Debug";
+			};
+			name = "Debug Native 32-bit";
+		};
+		73A55F987CDD354A2D23009E /* Debug Native 64-bit */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "x86_64";
+				CONFIGURATION_BUILD_DIR = "$(SYMROOT)";
+				CONFIGURATION_TEMP_DIR = "$(OBJROOT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG",
+					"_DEBUG",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"/usr/local/include",
+					"../../../deps/Catch/single_include",
+					"../../../deps/gmock/fused-src",
+					"../../../deps/cucumber-cpp-orig/include",
+					"../../../deps/cppspec/include",
+					"../../../deps/hayai/src",
+					"../../../src",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"/usr/local/lib",
+				);
+				OBJROOT = "../../../obj/macosx/xcode4/x64/Debug/cucumber-cpp-main/x64";
+				ONLY_ACTIVE_ARCH = YES;
+				SYMROOT = "../../../bin/macosx/xcode4/x64/Debug";
+			};
+			name = "Debug Native 64-bit";
+		};
+		0B3433CB110634041B5D3550 /* Release Native 32-bit */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "i386";
+				CONFIGURATION_BUILD_DIR = "$(SYMROOT)";
+				CONFIGURATION_TEMP_DIR = "$(OBJROOT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"RELEASE",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"/usr/local/include",
+					"../../../deps/Catch/single_include",
+					"../../../deps/gmock/fused-src",
+					"../../../deps/cucumber-cpp-orig/include",
+					"../../../deps/cppspec/include",
+					"../../../deps/hayai/src",
+					"../../../src",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"/usr/local/lib",
+				);
+				OBJROOT = "../../../obj/macosx/xcode4/x32/Release/cucumber-cpp-main/x32";
+				ONLY_ACTIVE_ARCH = NO;
+				SYMROOT = "../../../bin/macosx/xcode4/x32/Release";
+			};
+			name = "Release Native 32-bit";
+		};
+		12B063523A6C0A994F0621D1 /* Release Native 64-bit */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "x86_64";
+				CONFIGURATION_BUILD_DIR = "$(SYMROOT)";
+				CONFIGURATION_TEMP_DIR = "$(OBJROOT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"RELEASE",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"/usr/local/include",
+					"../../../deps/Catch/single_include",
+					"../../../deps/gmock/fused-src",
+					"../../../deps/cucumber-cpp-orig/include",
+					"../../../deps/cppspec/include",
+					"../../../deps/hayai/src",
+					"../../../src",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"/usr/local/lib",
+				);
+				OBJROOT = "../../../obj/macosx/xcode4/x64/Release/cucumber-cpp-main/x64";
+				ONLY_ACTIVE_ARCH = NO;
+				SYMROOT = "../../../bin/macosx/xcode4/x64/Release";
+			};
+			name = "Release Native 64-bit";
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		12966C31418B40654F873730 /* Build configuration list for PBXNativeTarget "libcucumber-cpp-main.a" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4ECF0B985550168D1339102D /* Debug Native 32-bit */,
+				678C1FA531827D1C74AE4EF0 /* Debug Native 64-bit */,
+				125A6871777A21313D8B1E97 /* Release Native 32-bit */,
+				556B67A1330743E31F21317D /* Release Native 64-bit */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Debug Native 32-bit";
+		};
+		1DEB928908733DD80010E9CD /* Build configuration list for PBXProject "cucumber-cpp-main" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1BCC204A6F7A4F3C220C729C /* Debug Native 32-bit */,
+				73A55F987CDD354A2D23009E /* Debug Native 64-bit */,
+				0B3433CB110634041B5D3550 /* Release Native 32-bit */,
+				12B063523A6C0A994F0621D1 /* Release Native 64-bit */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Debug Native 32-bit";
+		};
+/* End XCConfigurationList section */
+
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}
