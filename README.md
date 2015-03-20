@@ -17,6 +17,7 @@ see [commits](https://github.com/d-led/cpp-testing-no-excuses/commits/master) an
 - lightweight bdd-style tests using [catch](http://catch-lib.net): [src/catch/bdd_style.cpp](src/catch/bdd_style.cpp)
 - [cucumber-cpp](https://github.com/cucumber/cucumber-cpp)-based behavior-style [spec/tests](https://cukes.info): [features/elements.feature](features/elements.feature), [src/cucumber/cppspec_steps.cpp](src/cucumber/cppspec_steps.cpp)
 - [hayai](https://github.com/nickbruun/hayai)-based simple and informative microbenchmarking: [src/hayai/to_string_benchmark.cpp](src/hayai/to_string_benchmark.cpp)
+- scripted testing without recompiles (i.e. for data-driven tests) using a [lua binding](src/lua/bindings.cpp) via [LuaBridge](https://github.com/vinniefalco/LuaBridge), and a [behavior spec](spec/counter_spec.lua) for testing with [busted](https://github.com/Olivine-Labs/busted)
 
 ## generating build files
 
