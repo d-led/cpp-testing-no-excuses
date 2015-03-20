@@ -88,6 +88,7 @@ configuration '*'
 make_shared_lib('test_bindings',{
 	'src/lua/bindings.cpp'
 })
+use_standard 'c++0x'
 
 lua:set_includedirs()
 lua:set_libdirs()
