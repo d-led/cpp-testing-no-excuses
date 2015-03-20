@@ -3,6 +3,7 @@ include 'premake'
 make_solution 'no_excuses'
 
 boost = dofile 'premake/recipes/boost.lua'
+lua = dofile 'premake/recipes/lua.lua'
 
 boost:set_defines()
 boost:set_includedirs()
@@ -80,4 +81,27 @@ use_standard 'c++0x'
 boost:set_links()
 configuration 'linux'
 	links 'rt'
+configuration '*'
+
+
+-----------------------------------
+make_shared_lib('test_bindings',{
+	'src/lua/bindings.cpp'
+})
+use_standard 'c++0x'
+
+lua:set_includedirs()
+lua:set_libdirs()
+lua:set_links()
+
+includedirs {
+	'deps/LuaBridge-1.0.2'
+}
+
+targetdir 'bin'
+configuration 'linux'
+	targetprefix ''
+configuration 'macosx'
+	targetprefix ''
+	targetextension '.so'
 configuration '*'

@@ -31,6 +31,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cucumber_example", "cucumbe
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "hayai_benchmark", "hayai_benchmark.vcxproj", "{3B273C74-A7B2-A938-B0C3-2C2D1CCE0539}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test_bindings", "test_bindings.vcxproj", "{B27F67B7-1E40-E3ED-E77A-2C6B53FA27CA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -119,6 +121,14 @@ Global
 		{3B273C74-A7B2-A938-B0C3-2C2D1CCE0539}.Release|Win32.Build.0 = Release|Win32
 		{3B273C74-A7B2-A938-B0C3-2C2D1CCE0539}.Release|x64.ActiveCfg = Release|x64
 		{3B273C74-A7B2-A938-B0C3-2C2D1CCE0539}.Release|x64.Build.0 = Release|x64
+		{B27F67B7-1E40-E3ED-E77A-2C6B53FA27CA}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B27F67B7-1E40-E3ED-E77A-2C6B53FA27CA}.Debug|Win32.Build.0 = Debug|Win32
+		{B27F67B7-1E40-E3ED-E77A-2C6B53FA27CA}.Debug|x64.ActiveCfg = Debug|x64
+		{B27F67B7-1E40-E3ED-E77A-2C6B53FA27CA}.Debug|x64.Build.0 = Debug|x64
+		{B27F67B7-1E40-E3ED-E77A-2C6B53FA27CA}.Release|Win32.ActiveCfg = Release|Win32
+		{B27F67B7-1E40-E3ED-E77A-2C6B53FA27CA}.Release|Win32.Build.0 = Release|Win32
+		{B27F67B7-1E40-E3ED-E77A-2C6B53FA27CA}.Release|x64.ActiveCfg = Release|x64
+		{B27F67B7-1E40-E3ED-E77A-2C6B53FA27CA}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

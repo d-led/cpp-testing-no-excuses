@@ -6,7 +6,7 @@ ifndef config
 endif
 export config
 
-PROJECTS := catch_example gmock gmock_main gmock_example cucumber-cpp cucumber-cpp-main cppspec cucumber-cpp-cppspec-driver cucumber_example hayai_benchmark
+PROJECTS := catch_example gmock gmock_main gmock_example cucumber-cpp cucumber-cpp-main cppspec cucumber-cpp-cppspec-driver cucumber_example hayai_benchmark test_bindings
 
 .PHONY: all clean help $(PROJECTS)
 
@@ -52,6 +52,10 @@ hayai_benchmark:
 	@echo "==== Building hayai_benchmark ($(config)) ===="
 	@${MAKE} --no-print-directory -C . -f hayai_benchmark.make
 
+test_bindings: 
+	@echo "==== Building test_bindings ($(config)) ===="
+	@${MAKE} --no-print-directory -C . -f test_bindings.make
+
 clean:
 	@${MAKE} --no-print-directory -C . -f catch_example.make clean
 	@${MAKE} --no-print-directory -C . -f gmock.make clean
@@ -63,6 +67,7 @@ clean:
 	@${MAKE} --no-print-directory -C . -f cucumber-cpp-cppspec-driver.make clean
 	@${MAKE} --no-print-directory -C . -f cucumber_example.make clean
 	@${MAKE} --no-print-directory -C . -f hayai_benchmark.make clean
+	@${MAKE} --no-print-directory -C . -f test_bindings.make clean
 
 help:
 	@echo "Usage: make [config=name] [target]"
@@ -86,5 +91,6 @@ help:
 	@echo "   cucumber-cpp-cppspec-driver"
 	@echo "   cucumber_example"
 	@echo "   hayai_benchmark"
+	@echo "   test_bindings"
 	@echo ""
 	@echo "For more information, see http://industriousone.com/premake/quick-start"
