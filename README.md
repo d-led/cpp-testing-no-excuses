@@ -26,10 +26,18 @@ run `[path_to]/premake5 --help` to find a suitable `[build_target]`
 
 ### customizing BOOST location (MS Windows)
 
-in [premake4.lua](premake4.lua) prior to `boost:set_*` calls, the paths to BOOST can be customized. Either the environment variable `BOOST` should be set to the BOOST root, or it can be set directly, i.e. `boost.includedirs.windows = [[d:\\my_boost\1.55]]`. The library paths are typically more complex, thus `boost:set_libdirs()` uses a pattern (see [boost.lua](https://github.com/d-led/cpp-testing-no-excuses/blob/master/premake/recipes/boost.lua#L60-L72), based on [BOOST binaries](http://sourceforge.net/projects/boost/files/boost-binaries/)). Thus, `boost.libdirs_pattern.windows` can be modified according to the installation. 
+in [premake4.lua](premake4.lua) prior to `boost:set_*` calls, the paths to BOOST can be customized.
+
+Either the environment variable `BOOST` should be set to the BOOST root, or it can be set directly, i.e. `boost.includedirs.windows = [[d:\\my_boost\1.55]]`. The library paths are typically more complex, thus `boost:set_libdirs()` uses a pattern (see [boost.lua](https://github.com/d-led/cpp-testing-no-excuses/blob/master/premake/recipes/boost.lua#L60-L72), based on [BOOST binaries](http://sourceforge.net/projects/boost/files/boost-binaries/)). Thus, `boost.libdirs_pattern.windows` can be modified according to the installation. 
 
 ## running cucumber steps
 
 prerequisite: [cucumber](https://cukes.info) should be installed
 
 Start cucumber and the steps runner using `[path_to]/premake4 cucumber`, in any other case, the actual command line is `bin/[path_to]/cucumber_example && cucumber` on *X, and `start bin\[path_to]\cucumber_example & cucumber` on MS Windows.
+
+## running busted tests
+
+prerequisite: [busted](https://github.com/Olivine-Labs/busted), i.e. installed via [luarocks](https://rocks.moonscript.org/)
+
+`busted`
