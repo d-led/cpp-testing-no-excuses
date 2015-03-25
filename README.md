@@ -35,7 +35,7 @@ Either the environment variable `BOOST` should be set to the BOOST root, or it c
 
 prerequisite: [cucumber](https://cukes.info) should be installed
 
-Start cucumber and the steps runner using `[path_to]/premake4 cucumber`, in any other case, the actual command line is `bin/[path_to]/cucumber_example && cucumber` on *X, and `start bin\[path_to]\cucumber_example & cucumber` on MS Windows.
+Start cucumber and the steps runner using `[path_to]/premake4 cucumber`. The actual command line is `bin/[path_to]/cucumber_example && cucumber` on *X, and `start bin\[path_to]\cucumber_example & cucumber` on MS Windows.
 
 ## running busted tests
 
