@@ -29,7 +29,21 @@ run `[path_to]/premake5 --help` to find a suitable `[build_target]`
 
 in [premake4.lua](premake4.lua) prior to `boost:set_*` calls, the paths to BOOST can be customized.
 
-Either the environment variable `BOOST` should be set to the BOOST root, or it can be set directly, i.e. `boost.includedirs.windows = [[d:\\my_boost\1.55]]`. The library paths are typically more complex, thus `boost:set_libdirs()` uses a pattern (see [boost.lua](https://github.com/d-led/premake-meta-cpp/blob/master/recipes/boost.lua#L60-L72), based on [BOOST binaries](http://sourceforge.net/projects/boost/files/boost-binaries/)). Thus, `boost.libdirs_pattern.windows` can be modified according to the installation. 
+Either the environment variable `BOOST` should be set to the BOOST root, or it can be set directly, i.e. `boost.includedirs.windows = [[d:\\my_boost\1.55]]`.
+
+The library paths are typically more complex, thus `boost:set_libdirs()` uses a pattern (see substitutions [boost.lua](https://github.com/d-led/premake-meta-cpp/blob/master/recipes/boost.lua#L60-L73), based on [BOOST binaries](http://sourceforge.net/projects/boost/files/boost-binaries/)). `boost.libdirs_pattern.windows` can be modified according to the installation, i.e.
+
+```lua
+boost.libdirs_pattern.windows = path.join(boost.includedirs.windows,'lib/$(PlatformTarget)')
+```
+
+If you use boost in a custom configuration and you have to set defines, you can add defines in similar fashion:
+
+```lua
+local d = boost.defines.windows
+d[#d+1] = 'BOOST_REGEX_...'
+d[#d+1] = 'BOOST_....WHATEVER'
+```
 
 ## running cucumber steps
 
