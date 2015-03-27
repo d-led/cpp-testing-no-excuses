@@ -56,3 +56,7 @@ Start cucumber and the steps runner using `[path_to]/premake4 cucumber`. The act
 prerequisite: [busted](https://github.com/Olivine-Labs/busted), i.e. installed via [luarocks](https://rocks.moonscript.org/)
 
 `busted`
+
+## presentation
+
+- [26.03.2015 MUC++ Meetup @ TU-München](doc/2015_03_26_dled_no_excuses_meetup_at_tum.pdf)
