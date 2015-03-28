@@ -27,7 +27,7 @@ namespace My.Spec
         [Then(@"wisdom is apparent")]
         public void ThenWisdomIsApparent()
         {
-            Assert.AreNotEqual("bla", answer);
+            Assert.AreEqual("bla", answer);
         }
     }
 }
