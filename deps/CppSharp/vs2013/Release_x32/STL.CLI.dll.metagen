@@ -1,0 +1,88 @@
+ImageRuntimeVersion: v4.0.30319
+Assembly STL.CLI, Version=0.0.*, Culture=Invariant Language (Invariant Country): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly STL.Gen, Version=0.0.*, Culture=Invariant Language (Invariant Country): 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Interface ICppInstance: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, BeforeFieldInit
+  Properties:
+    IntPtr __Instance 'get set' : 
+  Methods:
+    get___Instance(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set___Instance(IntPtr): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Class STL.IntWrapper: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(IntWrapper*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    ICppInstance
+  Properties:
+    Int32 Value 'get set' : 
+    IntPtr __Instance 'get set' : 
+    IntWrapper* NativePtr 'get set' : 
+  Methods:
+    get_NativePtr(): PrivateScope, Public, HideBySig, SpecialName
+    set_NativePtr(IntWrapper*): PrivateScope, Public, HideBySig, SpecialName
+    get___Instance(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set___Instance(IntPtr): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    __CreateInstance(IntPtr): PrivateScope, Public, Static, HideBySig
+    get_Value(): PrivateScope, Public, HideBySig, SpecialName
+    set_Value(Int32): PrivateScope, Public, HideBySig, SpecialName
+Struct STL.IntWrapperValueType: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+    Void .ctor(IntWrapperValueType*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Int32 Value 'get set' : 
+  Methods:
+    __CreateInstance(IntPtr): PrivateScope, Public, Static, HideBySig
+    get_Value(): PrivateScope, Public, HideBySig, SpecialName
+    set_Value(Int32): PrivateScope, Public, HideBySig, SpecialName
+Class STL.TestVectors: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(TestVectors*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    ICppInstance
+  Properties:
+    System.Collections.Generic.List`1[STL.IntWrapperValueType] IntWrapperValueTypeVector 'get set' : 
+    System.Collections.Generic.List`1[STL.IntWrapper] IntWrapperPtrVector 'get set' : 
+    System.Collections.Generic.List`1[STL.IntWrapper] IntWrapperVector 'get set' : 
+    System.Collections.Generic.List`1[System.IntPtr] IntPtrVector 'get set' : 
+    System.Collections.Generic.List`1[System.Int32] IntVector 'get set' : 
+    IntPtr __Instance 'get set' : 
+    TestVectors* NativePtr 'get set' : 
+  Methods:
+    get_NativePtr(): PrivateScope, Public, HideBySig, SpecialName
+    set_NativePtr(TestVectors*): PrivateScope, Public, HideBySig, SpecialName
+    get___Instance(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set___Instance(IntPtr): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    __CreateInstance(IntPtr): PrivateScope, Public, Static, HideBySig
+    get_IntVector(): PrivateScope, Public, HideBySig, SpecialName
+    set_IntVector(List`1): PrivateScope, Public, HideBySig, SpecialName
+    get_IntPtrVector(): PrivateScope, Public, HideBySig, SpecialName
+    set_IntPtrVector(List`1): PrivateScope, Public, HideBySig, SpecialName
+    get_IntWrapperVector(): PrivateScope, Public, HideBySig, SpecialName
+    set_IntWrapperVector(List`1): PrivateScope, Public, HideBySig, SpecialName
+    get_IntWrapperPtrVector(): PrivateScope, Public, HideBySig, SpecialName
+    set_IntWrapperPtrVector(List`1): PrivateScope, Public, HideBySig, SpecialName
+    get_IntWrapperValueTypeVector(): PrivateScope, Public, HideBySig, SpecialName
+    set_IntWrapperValueTypeVector(List`1): PrivateScope, Public, HideBySig, SpecialName
+    GetIntVector(): PrivateScope, Public, HideBySig
+    SumIntVector(List`1): PrivateScope, Public, HideBySig
+Class STL.OStreamTest: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(OStreamTest*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    ICppInstance
+  Properties:
+    IntPtr __Instance 'get set' : 
+    OStreamTest* NativePtr 'get set' : 
+  Methods:
+    get_NativePtr(): PrivateScope, Public, HideBySig, SpecialName
+    set_NativePtr(OStreamTest*): PrivateScope, Public, HideBySig, SpecialName
+    get___Instance(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set___Instance(IntPtr): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    __CreateInstance(IntPtr): PrivateScope, Public, Static, HideBySig
+    WriteToOStream(TextWriter, String): PrivateScope, Public, Static, HideBySig
+    WriteToOStreamPtr(TextWriter, String): PrivateScope, Public, Static, HideBySig
