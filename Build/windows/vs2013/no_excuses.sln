@@ -35,6 +35,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test_bindings", "test_bindi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "make_bindings", "make_bindings.csproj", "{B09C7C60-1C5D-F896-E597-411451173D73}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cppcli", "cppcli.vcxproj", "{6091F7F6-4C33-22CD-35EE-3521212FA91D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -139,6 +141,14 @@ Global
 		{B09C7C60-1C5D-F896-E597-411451173D73}.Release|x64.Build.0 = Release|x64
 		{B09C7C60-1C5D-F896-E597-411451173D73}.Release|x86.ActiveCfg = Release|x86
 		{B09C7C60-1C5D-F896-E597-411451173D73}.Release|x86.Build.0 = Release|x86
+		{6091F7F6-4C33-22CD-35EE-3521212FA91D}.Debug|x64.ActiveCfg = Debug|x64
+		{6091F7F6-4C33-22CD-35EE-3521212FA91D}.Debug|x64.Build.0 = Debug|x64
+		{6091F7F6-4C33-22CD-35EE-3521212FA91D}.Debug|x86.ActiveCfg = Debug|Win32
+		{6091F7F6-4C33-22CD-35EE-3521212FA91D}.Debug|x86.Build.0 = Debug|Win32
+		{6091F7F6-4C33-22CD-35EE-3521212FA91D}.Release|x64.ActiveCfg = Release|x64
+		{6091F7F6-4C33-22CD-35EE-3521212FA91D}.Release|x64.Build.0 = Release|x64
+		{6091F7F6-4C33-22CD-35EE-3521212FA91D}.Release|x86.ActiveCfg = Release|Win32
+		{6091F7F6-4C33-22CD-35EE-3521212FA91D}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

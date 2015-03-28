@@ -25,8 +25,8 @@ namespace make_bindings
             options.GeneratorKind = generator;
             options.LibraryName = "My";
             options.addIncludeDirs("../../../../../src");
-            options.Headers.Add("counter/counter.h");
-            options.OutputDir = "../../../../../src/cppcli";
+            options.Headers.Add("cppcli/oracle.h");
+            options.OutputDir = "../../../../../src/cppcli/bindings";
         }
 
         public void Preprocess(Driver driver, ASTContext ctx)
