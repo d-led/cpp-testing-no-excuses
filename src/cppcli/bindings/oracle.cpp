@@ -13,6 +13,12 @@ My::oracle^ My::oracle::__CreateInstance(::System::IntPtr native)
     return gcnew My::oracle((::oracle*) native.ToPointer());
 }
 
+System::String^ My::oracle::speak()
+{
+    auto __ret = ((::oracle*)NativePtr)->speak();
+    return clix::marshalString<clix::E_UTF8>(__ret);
+}
+
 My::oracle::oracle()
 {
     NativePtr = new ::oracle();

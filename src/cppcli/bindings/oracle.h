@@ -24,5 +24,7 @@ namespace My
         oracle(::oracle* native);
         static oracle^ __CreateInstance(::System::IntPtr native);
         oracle();
+
+        System::String^ speak();
     };
 }
