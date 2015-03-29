@@ -31,7 +31,8 @@ namespace My.Spec
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "oracle", "", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "oracle", "In order to simplify my life\nAs an earthling\nI want to be able to ask people vari" +
+                    "ous things", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -74,13 +75,13 @@ namespace My.Spec
         public virtual void AcquiringWisdom()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("acquiring wisdom", ((string[])(null)));
-#line 3
+#line 7
 this.ScenarioSetup(scenarioInfo);
-#line 4
+#line 8
  testRunner.Given("an oracle", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 5
+#line 9
  testRunner.When("I ask it to speak", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 6
+#line 10
  testRunner.Then("wisdom is apparent", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
