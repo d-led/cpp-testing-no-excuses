@@ -17,7 +17,7 @@
     <DebugType>pdbonly</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>..\..\..\bin\windows\vs2013\x32\Debug\</OutputPath>
-    <BaseIntermediateOutputPath>obj\x32\Debug\make_bindings\</BaseIntermediateOutputPath>
+    <BaseIntermediateOutputPath>obj\x32\Debug\</BaseIntermediateOutputPath>
     <IntermediateOutputPath>$(BaseIntermediateOutputPath)</IntermediateOutputPath>
     <DefineConstants>_WIN32_WINNT=0x0501;WIN32</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
@@ -28,7 +28,7 @@
     <DebugType>pdbonly</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>..\..\..\bin\windows\vs2013\x64\Debug\</OutputPath>
-    <BaseIntermediateOutputPath>obj\x64\Debug\make_bindings\</BaseIntermediateOutputPath>
+    <BaseIntermediateOutputPath>obj\x64\Debug\</BaseIntermediateOutputPath>
     <IntermediateOutputPath>$(BaseIntermediateOutputPath)</IntermediateOutputPath>
     <DefineConstants>_WIN32_WINNT=0x0501;WIN32</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
@@ -39,7 +39,7 @@
     <DebugType>pdbonly</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>..\..\..\bin\windows\vs2013\x32\Release\</OutputPath>
-    <BaseIntermediateOutputPath>obj\x32\Release\make_bindings\</BaseIntermediateOutputPath>
+    <BaseIntermediateOutputPath>obj\x32\Release\</BaseIntermediateOutputPath>
     <IntermediateOutputPath>$(BaseIntermediateOutputPath)</IntermediateOutputPath>
     <DefineConstants>_WIN32_WINNT=0x0501;WIN32</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
@@ -50,7 +50,7 @@
     <DebugType>pdbonly</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>..\..\..\bin\windows\vs2013\x64\Release\</OutputPath>
-    <BaseIntermediateOutputPath>obj\x64\Release\make_bindings\</BaseIntermediateOutputPath>
+    <BaseIntermediateOutputPath>obj\x64\Release\</BaseIntermediateOutputPath>
     <IntermediateOutputPath>$(BaseIntermediateOutputPath)</IntermediateOutputPath>
     <DefineConstants>_WIN32_WINNT=0x0501;WIN32</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
