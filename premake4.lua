@@ -105,3 +105,11 @@ configuration 'macosx'
 	targetprefix ''
 	targetextension '.so'
 configuration '*'
+
+
+-----------------------------------
+
+if os.get() == 'windows' then
+	local cppcli = dofile 'premake_recipes/cppcli.lua'
+	cppcli.generate_build '.'
+end

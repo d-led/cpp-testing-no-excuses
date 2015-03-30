@@ -1,0 +1,40 @@
+ImageRuntimeVersion: v4.0.30319
+Assembly TypeMaps.CLI, Version=0.0.*, Culture=Invariant Language (Invariant Country): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly TypeMaps.Gen, Version=0.0.*, Culture=Invariant Language (Invariant Country): 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Interface ICppInstance: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, BeforeFieldInit
+  Properties:
+    IntPtr __Instance 'get set' : 
+  Methods:
+    get___Instance(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set___Instance(IntPtr): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Class TypeMaps.QList: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(QList*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    ICppInstance
+  Properties:
+    Int32 i    'get set' : 
+    IntPtr __Instance 'get set' : 
+    QList* NativePtr 'get set' : 
+  Methods:
+    get_NativePtr(): PrivateScope, Public, HideBySig, SpecialName
+    set_NativePtr(QList*): PrivateScope, Public, HideBySig, SpecialName
+    get___Instance(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set___Instance(IntPtr): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    __CreateInstance(IntPtr): PrivateScope, Public, Static, HideBySig
+    get_i(): PrivateScope, Public, HideBySig, SpecialName
+    set_i(Int32): PrivateScope, Public, HideBySig, SpecialName
+Struct TypeMaps.HasQList: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+    Void .ctor(HasQList*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    TypeMaps.QList List 'get ' : 
+  Methods:
+    __CreateInstance(IntPtr): PrivateScope, Public, Static, HideBySig
+    get_List(): PrivateScope, Public, HideBySig, SpecialName

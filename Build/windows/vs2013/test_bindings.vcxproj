@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -102,10 +102,6 @@
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
     </ClCompile>
-    <ResourceCompile>
-      <PreprocessorDefinitions>_WIN32_WINNT=0x0501;WIN32;DEBUG;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\Software\boost\boost_1_56_0;..\..\..\deps\Catch\single_include;..\..\..\deps\gmock\fused-src;..\..\..\deps\cucumber-cpp-orig\include;..\..\..\deps\cppspec\include;..\..\..\deps\hayai\src;..\..\..\src;C:\luarocks\2.1\include;..\..\..\deps\LuaBridge-1.0.2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-    </ResourceCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -123,10 +119,6 @@
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
     </ClCompile>
-    <ResourceCompile>
-      <PreprocessorDefinitions>_WIN32_WINNT=0x0501;WIN32;DEBUG;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\Software\boost\boost_1_56_0;..\..\..\deps\Catch\single_include;..\..\..\deps\gmock\fused-src;..\..\..\deps\cucumber-cpp-orig\include;..\..\..\deps\cppspec\include;..\..\..\deps\hayai\src;..\..\..\src;C:\luarocks\2.1\include;..\..\..\deps\LuaBridge-1.0.2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-    </ResourceCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -147,10 +139,6 @@
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
     </ClCompile>
-    <ResourceCompile>
-      <PreprocessorDefinitions>_WIN32_WINNT=0x0501;WIN32;RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\Software\boost\boost_1_56_0;..\..\..\deps\Catch\single_include;..\..\..\deps\gmock\fused-src;..\..\..\deps\cucumber-cpp-orig\include;..\..\..\deps\cppspec\include;..\..\..\deps\hayai\src;..\..\..\src;C:\luarocks\2.1\include;..\..\..\deps\LuaBridge-1.0.2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-    </ResourceCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>false</GenerateDebugInformation>
@@ -173,10 +161,6 @@
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
     </ClCompile>
-    <ResourceCompile>
-      <PreprocessorDefinitions>_WIN32_WINNT=0x0501;WIN32;RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\Software\boost\boost_1_56_0;..\..\..\deps\Catch\single_include;..\..\..\deps\gmock\fused-src;..\..\..\deps\cucumber-cpp-orig\include;..\..\..\deps\cppspec\include;..\..\..\deps\hayai\src;..\..\..\src;C:\luarocks\2.1\include;..\..\..\deps\LuaBridge-1.0.2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-    </ResourceCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>false</GenerateDebugInformation>

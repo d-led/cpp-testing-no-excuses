@@ -1,0 +1,1688 @@
+ImageRuntimeVersion: v4.0.30319
+Assembly CppSharp.Parser.CLI, Version=0.0.*, Culture=Invariant Language (Invariant Country): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Interface ICppInstance: AutoLayout, AnsiClass, Class, Public, ClassSemanticsMask, Abstract, BeforeFieldInit
+  Properties:
+    IntPtr __Instance 'get set' : 
+  Methods:
+    get___Instance(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set___Instance(IntPtr): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+Struct CppSharp.Parser.SourceLocation: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+    Void .ctor(UInt32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(CppSharp.CppParser.SourceLocation*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    UInt32 ID  'get set' : 
+  Methods:
+    __CreateInstance(IntPtr): PrivateScope, Public, Static, HideBySig
+    get_ID(): PrivateScope, Public, HideBySig, SpecialName
+    set_ID(UInt32): PrivateScope, Public, HideBySig, SpecialName
+Class CppSharp.Parser.AST.Type: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(CppSharp.Parser.AST.TypeKind): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(CppSharp.CppParser.AST.Type*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    ICppInstance
+  Properties:
+    Boolean IsDependent 'get set' : 
+    CppSharp.Parser.AST.TypeKind Kind 'get set' : 
+    IntPtr __Instance 'get set' : 
+    CppSharp.CppParser.AST.Type* NativePtr 'get set' : 
+  Methods:
+    get_NativePtr(): PrivateScope, Public, HideBySig, SpecialName
+    set_NativePtr(Type*): PrivateScope, Public, HideBySig, SpecialName
+    get___Instance(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set___Instance(IntPtr): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    __CreateInstance(IntPtr): PrivateScope, Public, Static, HideBySig
+    get_Kind(): PrivateScope, Public, HideBySig, SpecialName
+    set_Kind(TypeKind): PrivateScope, Public, HideBySig, SpecialName
+    get_IsDependent(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsDependent(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig, SpecialName
+Class CppSharp.Parser.AST.TypeQualifiers: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(CppSharp.CppParser.AST.TypeQualifiers*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    ICppInstance
+  Properties:
+    Boolean IsRestrict 'get set' : 
+    Boolean IsVolatile 'get set' : 
+    Boolean IsConst 'get set' : 
+    IntPtr __Instance 'get set' : 
+    CppSharp.CppParser.AST.TypeQualifiers* NativePtr 'get set' : 
+  Methods:
+    get_NativePtr(): PrivateScope, Public, HideBySig, SpecialName
+    set_NativePtr(TypeQualifiers*): PrivateScope, Public, HideBySig, SpecialName
+    get___Instance(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set___Instance(IntPtr): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    __CreateInstance(IntPtr): PrivateScope, Public, Static, HideBySig
+    get_IsConst(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsConst(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig, SpecialName
+    get_IsVolatile(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsVolatile(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig, SpecialName
+    get_IsRestrict(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsRestrict(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig, SpecialName
+Class CppSharp.Parser.AST.QualifiedType: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(CppSharp.CppParser.AST.QualifiedType*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    ICppInstance
+  Properties:
+    CppSharp.Parser.AST.TypeQualifiers Qualifiers 'get set' : 
+    CppSharp.Parser.AST.Type Type 'get set' : 
+    IntPtr __Instance 'get set' : 
+    CppSharp.CppParser.AST.QualifiedType* NativePtr 'get set' : 
+  Methods:
+    get_NativePtr(): PrivateScope, Public, HideBySig, SpecialName
+    set_NativePtr(QualifiedType*): PrivateScope, Public, HideBySig, SpecialName
+    get___Instance(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set___Instance(IntPtr): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    __CreateInstance(IntPtr): PrivateScope, Public, Static, HideBySig
+    get_Type(): PrivateScope, Public, HideBySig, SpecialName
+    set_Type(Type): PrivateScope, Public, HideBySig, SpecialName
+    get_Qualifiers(): PrivateScope, Public, HideBySig, SpecialName
+    set_Qualifiers(TypeQualifiers): PrivateScope, Public, HideBySig, SpecialName
+Class CppSharp.Parser.AST.TagType: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :CppSharp.Parser.AST.Type
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(CppSharp.CppParser.AST.TagType*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    CppSharp.Parser.AST.Declaration Declaration 'get set' : 
+  Methods:
+    __CreateInstance(IntPtr): PrivateScope, Public, Static, HideBySig
+    get_Declaration(): PrivateScope, Public, HideBySig, SpecialName
+    set_Declaration(Declaration): PrivateScope, Public, HideBySig, SpecialName
+Class CppSharp.Parser.AST.ArrayType: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :CppSharp.Parser.AST.Type
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(CppSharp.CppParser.AST.ArrayType*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Int32 Size 'get set' IsLong : 
+    ArraySize SizeType 'get set' : 
+    CppSharp.Parser.AST.QualifiedType QualifiedType 'get set' : 
+  Methods:
+    __CreateInstance(IntPtr): PrivateScope, Public, Static, HideBySig
+    get_QualifiedType(): PrivateScope, Public, HideBySig, SpecialName
+    set_QualifiedType(QualifiedType): PrivateScope, Public, HideBySig, SpecialName
+    get_SizeType(): PrivateScope, Public, HideBySig, SpecialName
+    set_SizeType(ArraySize): PrivateScope, Public, HideBySig, SpecialName
+    get_Size(): PrivateScope, Public, HideBySig, SpecialName
+    set_Size(Int32 IsLong): PrivateScope, Public, HideBySig, SpecialName
+Struct CppSharp.Parser.AST.ArrayType+ArraySize: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    ArraySize Constant = 0 : Public, Static, Literal, HasDefault
+    ArraySize Variable = 1 : Public, Static, Literal, HasDefault
+    ArraySize Dependent = 2 : Public, Static, Literal, HasDefault
+    ArraySize Incomplete = 3 : Public, Static, Literal, HasDefault
+Class CppSharp.Parser.AST.FunctionType: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :CppSharp.Parser.AST.Type
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(CppSharp.CppParser.AST.FunctionType*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    CppSharp.Parser.AST.CallingConvention CallingConvention 'get set' : 
+    CppSharp.Parser.AST.QualifiedType ReturnType 'get set' : 
+    UInt32 ParametersCount 'get ' : 
+  Methods:
+    __CreateInstance(IntPtr): PrivateScope, Public, Static, HideBySig
+    get_ParametersCount(): PrivateScope, Public, HideBySig, SpecialName
+    get_ReturnType(): PrivateScope, Public, HideBySig, SpecialName
+    set_ReturnType(QualifiedType): PrivateScope, Public, HideBySig, SpecialName
+    get_CallingConvention(): PrivateScope, Public, HideBySig, SpecialName
+    set_CallingConvention(CallingConvention): PrivateScope, Public, HideBySig, SpecialName
+    getParameters(UInt32): PrivateScope, Public, HideBySig
+    addParameters(Parameter): PrivateScope, Public, HideBySig
+    clearParameters(): PrivateScope, Public, HideBySig
+Class CppSharp.Parser.AST.PointerType: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :CppSharp.Parser.AST.Type
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(CppSharp.CppParser.AST.PointerType*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    TypeModifier Modifier 'get set' : 
+    CppSharp.Parser.AST.QualifiedType QualifiedPointee 'get set' : 
+  Methods:
+    __CreateInstance(IntPtr): PrivateScope, Public, Static, HideBySig
+    get_QualifiedPointee(): PrivateScope, Public, HideBySig, SpecialName
+    set_QualifiedPointee(QualifiedType): PrivateScope, Public, HideBySig, SpecialName
+    get_Modifier(): PrivateScope, Public, HideBySig, SpecialName
+    set_Modifier(TypeModifier): PrivateScope, Public, HideBySig, SpecialName
+Struct CppSharp.Parser.AST.PointerType+TypeModifier: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    TypeModifier Value = 0 : Public, Static, Literal, HasDefault
+    TypeModifier Pointer = 1 : Public, Static, Literal, HasDefault
+    TypeModifier LVReference = 2 : Public, Static, Literal, HasDefault
+    TypeModifier RVReference = 3 : Public, Static, Literal, HasDefault
+Class CppSharp.Parser.AST.MemberPointerType: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :CppSharp.Parser.AST.Type
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(CppSharp.CppParser.AST.MemberPointerType*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    CppSharp.Parser.AST.QualifiedType Pointee 'get set' : 
+  Methods:
+    __CreateInstance(IntPtr): PrivateScope, Public, Static, HideBySig
+    get_Pointee(): PrivateScope, Public, HideBySig, SpecialName
+    set_Pointee(QualifiedType): PrivateScope, Public, HideBySig, SpecialName
+Class CppSharp.Parser.AST.TypedefType: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :CppSharp.Parser.AST.Type
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(CppSharp.CppParser.AST.TypedefType*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    CppSharp.Parser.AST.TypedefDecl Declaration 'get set' : 
+  Methods:
+    __CreateInstance(IntPtr): PrivateScope, Public, Static, HideBySig
+    get_Declaration(): PrivateScope, Public, HideBySig, SpecialName
+    set_Declaration(TypedefDecl): PrivateScope, Public, HideBySig, SpecialName
+Class CppSharp.Parser.AST.AttributedType: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :CppSharp.Parser.AST.Type
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(CppSharp.CppParser.AST.AttributedType*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    CppSharp.Parser.AST.QualifiedType Equivalent 'get set' : 
+    CppSharp.Parser.AST.QualifiedType Modified 'get set' : 
+  Methods:
+    __CreateInstance(IntPtr): PrivateScope, Public, Static, HideBySig
+    get_Modified(): PrivateScope, Public, HideBySig, SpecialName
+    set_Modified(QualifiedType): PrivateScope, Public, HideBySig, SpecialName
+    get_Equivalent(): PrivateScope, Public, HideBySig, SpecialName
+    set_Equivalent(QualifiedType): PrivateScope, Public, HideBySig, SpecialName
+Class CppSharp.Parser.AST.DecayedType: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :CppSharp.Parser.AST.Type
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(CppSharp.CppParser.AST.DecayedType*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    CppSharp.Parser.AST.QualifiedType Pointee 'get set' : 
+    CppSharp.Parser.AST.QualifiedType Original 'get set' : 
+    CppSharp.Parser.AST.QualifiedType Decayed 'get set' : 
+  Methods:
+    __CreateInstance(IntPtr): PrivateScope, Public, Static, HideBySig
+    get_Decayed(): PrivateScope, Public, HideBySig, SpecialName
+    set_Decayed(QualifiedType): PrivateScope, Public, HideBySig, SpecialName
+    get_Original(): PrivateScope, Public, HideBySig, SpecialName
+    set_Original(QualifiedType): PrivateScope, Public, HideBySig, SpecialName
+    get_Pointee(): PrivateScope, Public, HideBySig, SpecialName
+    set_Pointee(QualifiedType): PrivateScope, Public, HideBySig, SpecialName
+Class CppSharp.Parser.AST.TemplateArgument: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(CppSharp.CppParser.AST.TemplateArgument*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    ICppInstance
+  Properties:
+    Int32 Integral 'get set' IsLong : 
+    CppSharp.Parser.AST.Declaration Declaration 'get set' : 
+    CppSharp.Parser.AST.QualifiedType Type 'get set' : 
+    ArgumentKind Kind 'get set' : 
+    IntPtr __Instance 'get set' : 
+    CppSharp.CppParser.AST.TemplateArgument* NativePtr 'get set' : 
+  Methods:
+    get_NativePtr(): PrivateScope, Public, HideBySig, SpecialName
+    set_NativePtr(TemplateArgument*): PrivateScope, Public, HideBySig, SpecialName
+    get___Instance(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set___Instance(IntPtr): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    __CreateInstance(IntPtr): PrivateScope, Public, Static, HideBySig
+    get_Kind(): PrivateScope, Public, HideBySig, SpecialName
+    set_Kind(ArgumentKind): PrivateScope, Public, HideBySig, SpecialName
+    get_Type(): PrivateScope, Public, HideBySig, SpecialName
+    set_Type(QualifiedType): PrivateScope, Public, HideBySig, SpecialName
+    get_Declaration(): PrivateScope, Public, HideBySig, SpecialName
+    set_Declaration(Declaration): PrivateScope, Public, HideBySig, SpecialName
+    get_Integral(): PrivateScope, Public, HideBySig, SpecialName
+    set_Integral(Int32 IsLong): PrivateScope, Public, HideBySig, SpecialName
+Struct CppSharp.Parser.AST.TemplateArgument+ArgumentKind: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    ArgumentKind Type = 0 : Public, Static, Literal, HasDefault
+    ArgumentKind Declaration = 1 : Public, Static, Literal, HasDefault
+    ArgumentKind NullPtr = 2 : Public, Static, Literal, HasDefault
+    ArgumentKind Integral = 3 : Public, Static, Literal, HasDefault
+    ArgumentKind Template = 4 : Public, Static, Literal, HasDefault
+    ArgumentKind TemplateExpansion = 5 : Public, Static, Literal, HasDefault
+    ArgumentKind Expression = 6 : Public, Static, Literal, HasDefault
+    ArgumentKind Pack = 7 : Public, Static, Literal, HasDefault
+Class CppSharp.Parser.AST.TemplateSpecializationType: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :CppSharp.Parser.AST.Type
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(CppSharp.CppParser.AST.TemplateSpecializationType*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    CppSharp.Parser.AST.Type Desugared 'get set' : 
+    CppSharp.Parser.AST.Template Template 'get set' : 
+    UInt32 ArgumentsCount 'get ' : 
+  Methods:
+    __CreateInstance(IntPtr): PrivateScope, Public, Static, HideBySig
+    get_ArgumentsCount(): PrivateScope, Public, HideBySig, SpecialName
+    get_Template(): PrivateScope, Public, HideBySig, SpecialName
+    set_Template(Template): PrivateScope, Public, HideBySig, SpecialName
+    get_Desugared(): PrivateScope, Public, HideBySig, SpecialName
+    set_Desugared(Type): PrivateScope, Public, HideBySig, SpecialName
+    getArguments(UInt32): PrivateScope, Public, HideBySig
+    addArguments(TemplateArgument): PrivateScope, Public, HideBySig
+    clearArguments(): PrivateScope, Public, HideBySig
+Class CppSharp.Parser.AST.TemplateParameter: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(CppSharp.CppParser.AST.TemplateParameter*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    ICppInstance
+  Properties:
+    Boolean IsTypeParameter 'get set' : 
+    System.String Name 'get set' : 
+    IntPtr __Instance 'get set' : 
+    CppSharp.CppParser.AST.TemplateParameter* NativePtr 'get set' : 
+  Methods:
+    get_NativePtr(): PrivateScope, Public, HideBySig, SpecialName
+    set_NativePtr(TemplateParameter*): PrivateScope, Public, HideBySig, SpecialName
+    get___Instance(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set___Instance(IntPtr): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    __CreateInstance(IntPtr): PrivateScope, Public, Static, HideBySig
+    get_Name(): PrivateScope, Public, HideBySig, SpecialName
+    set_Name(String): PrivateScope, Public, HideBySig, SpecialName
+    get_IsTypeParameter(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsTypeParameter(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig, SpecialName
+    op_Equality(TemplateParameter, TemplateParameter): PrivateScope, Public, Static, HideBySig, SpecialName
+    Equals(Object): PrivateScope, Public, Virtual, HideBySig
+Class CppSharp.Parser.AST.TemplateParameterType: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :CppSharp.Parser.AST.Type
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(CppSharp.CppParser.AST.TemplateParameterType*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Boolean IsParameterPack 'get set' : 
+    UInt32 Index 'get set' : 
+    UInt32 Depth 'get set' : 
+    CppSharp.Parser.AST.TemplateParameter Parameter 'get set' : 
+  Methods:
+    __CreateInstance(IntPtr): PrivateScope, Public, Static, HideBySig
+    get_Parameter(): PrivateScope, Public, HideBySig, SpecialName
+    set_Parameter(TemplateParameter): PrivateScope, Public, HideBySig, SpecialName
+    get_Depth(): PrivateScope, Public, HideBySig, SpecialName
+    set_Depth(UInt32): PrivateScope, Public, HideBySig, SpecialName
+    get_Index(): PrivateScope, Public, HideBySig, SpecialName
+    set_Index(UInt32): PrivateScope, Public, HideBySig, SpecialName
+    get_IsParameterPack(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsParameterPack(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig, SpecialName
+Class CppSharp.Parser.AST.TemplateParameterSubstitutionType: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :CppSharp.Parser.AST.Type
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(CppSharp.CppParser.AST.TemplateParameterSubstitutionType*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    CppSharp.Parser.AST.QualifiedType Replacement 'get set' : 
+  Methods:
+    __CreateInstance(IntPtr): PrivateScope, Public, Static, HideBySig
+    get_Replacement(): PrivateScope, Public, HideBySig, SpecialName
+    set_Replacement(QualifiedType): PrivateScope, Public, HideBySig, SpecialName
+Class CppSharp.Parser.AST.InjectedClassNameType: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :CppSharp.Parser.AST.Type
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(CppSharp.CppParser.AST.InjectedClassNameType*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    CppSharp.Parser.AST.Class Class 'get set' : 
+    CppSharp.Parser.AST.TemplateSpecializationType TemplateSpecialization 'get set' : 
+  Methods:
+    __CreateInstance(IntPtr): PrivateScope, Public, Static, HideBySig
+    get_TemplateSpecialization(): PrivateScope, Public, HideBySig, SpecialName
+    set_TemplateSpecialization(TemplateSpecializationType): PrivateScope, Public, HideBySig, SpecialName
+    get_Class(): PrivateScope, Public, HideBySig, SpecialName
+    set_Class(Class): PrivateScope, Public, HideBySig, SpecialName
+Class CppSharp.Parser.AST.DependentNameType: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :CppSharp.Parser.AST.Type
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(CppSharp.CppParser.AST.DependentNameType*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    __CreateInstance(IntPtr): PrivateScope, Public, Static, HideBySig
+Class CppSharp.Parser.AST.PackExpansionType: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :CppSharp.Parser.AST.Type
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(CppSharp.CppParser.AST.PackExpansionType*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    __CreateInstance(IntPtr): PrivateScope, Public, Static, HideBySig
+Class CppSharp.Parser.AST.BuiltinType: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :CppSharp.Parser.AST.Type
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(CppSharp.CppParser.AST.BuiltinType*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    CppSharp.Parser.AST.PrimitiveType Type 'get set' : 
+  Methods:
+    __CreateInstance(IntPtr): PrivateScope, Public, Static, HideBySig
+    get_Type(): PrivateScope, Public, HideBySig, SpecialName
+    set_Type(PrimitiveType): PrivateScope, Public, HideBySig, SpecialName
+Class CppSharp.Parser.AST.VTableComponent: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(CppSharp.CppParser.AST.VTableComponent*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    ICppInstance
+  Properties:
+    CppSharp.Parser.AST.Declaration Declaration 'get set' : 
+    UInt32 Offset 'get set' : 
+    CppSharp.Parser.AST.VTableComponentKind Kind 'get set' : 
+    IntPtr __Instance 'get set' : 
+    CppSharp.CppParser.AST.VTableComponent* NativePtr 'get set' : 
+  Methods:
+    get_NativePtr(): PrivateScope, Public, HideBySig, SpecialName
+    set_NativePtr(VTableComponent*): PrivateScope, Public, HideBySig, SpecialName
+    get___Instance(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set___Instance(IntPtr): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    __CreateInstance(IntPtr): PrivateScope, Public, Static, HideBySig
+    get_Kind(): PrivateScope, Public, HideBySig, SpecialName
+    set_Kind(VTableComponentKind): PrivateScope, Public, HideBySig, SpecialName
+    get_Offset(): PrivateScope, Public, HideBySig, SpecialName
+    set_Offset(UInt32): PrivateScope, Public, HideBySig, SpecialName
+    get_Declaration(): PrivateScope, Public, HideBySig, SpecialName
+    set_Declaration(Declaration): PrivateScope, Public, HideBySig, SpecialName
+Class CppSharp.Parser.AST.VTableLayout: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(CppSharp.CppParser.AST.VTableLayout*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    ICppInstance
+  Properties:
+    UInt32 ComponentsCount 'get ' : 
+    IntPtr __Instance 'get set' : 
+    CppSharp.CppParser.AST.VTableLayout* NativePtr 'get set' : 
+  Methods:
+    get_NativePtr(): PrivateScope, Public, HideBySig, SpecialName
+    set_NativePtr(VTableLayout*): PrivateScope, Public, HideBySig, SpecialName
+    get___Instance(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set___Instance(IntPtr): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    __CreateInstance(IntPtr): PrivateScope, Public, Static, HideBySig
+    get_ComponentsCount(): PrivateScope, Public, HideBySig, SpecialName
+    getComponents(UInt32): PrivateScope, Public, HideBySig
+    addComponents(VTableComponent): PrivateScope, Public, HideBySig
+    clearComponents(): PrivateScope, Public, HideBySig
+Class CppSharp.Parser.AST.VFTableInfo: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(CppSharp.CppParser.AST.VFTableInfo*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    ICppInstance
+  Properties:
+    CppSharp.Parser.AST.VTableLayout Layout 'get set' : 
+    UInt32 VFPtrFullOffset 'get set' : 
+    UInt32 VFPtrOffset 'get set' : 
+    UInt64 VBTableIndex 'get set' : 
+    IntPtr __Instance 'get set' : 
+    CppSharp.CppParser.AST.VFTableInfo* NativePtr 'get set' : 
+  Methods:
+    get_NativePtr(): PrivateScope, Public, HideBySig, SpecialName
+    set_NativePtr(VFTableInfo*): PrivateScope, Public, HideBySig, SpecialName
+    get___Instance(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set___Instance(IntPtr): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    __CreateInstance(IntPtr): PrivateScope, Public, Static, HideBySig
+    get_VBTableIndex(): PrivateScope, Public, HideBySig, SpecialName
+    set_VBTableIndex(UInt64): PrivateScope, Public, HideBySig, SpecialName
+    get_VFPtrOffset(): PrivateScope, Public, HideBySig, SpecialName
+    set_VFPtrOffset(UInt32): PrivateScope, Public, HideBySig, SpecialName
+    get_VFPtrFullOffset(): PrivateScope, Public, HideBySig, SpecialName
+    set_VFPtrFullOffset(UInt32): PrivateScope, Public, HideBySig, SpecialName
+    get_Layout(): PrivateScope, Public, HideBySig, SpecialName
+    set_Layout(VTableLayout): PrivateScope, Public, HideBySig, SpecialName
+Class CppSharp.Parser.AST.ClassLayout: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(CppSharp.CppParser.AST.ClassLayout*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    ICppInstance
+  Properties:
+    Int32 DataSize 'get set' : 
+    Int32 Size 'get set' : 
+    Int32 Alignment 'get set' : 
+    Int32 VBPtrOffset 'get set' IsLong : 
+    Boolean HasOwnVFPtr 'get set' : 
+    CppSharp.Parser.AST.VTableLayout Layout 'get set' : 
+    CppSharp.Parser.AST.CppAbi ABI 'get set' : 
+    UInt32 VFTablesCount 'get ' : 
+    IntPtr __Instance 'get set' : 
+    CppSharp.CppParser.AST.ClassLayout* NativePtr 'get set' : 
+  Methods:
+    get_NativePtr(): PrivateScope, Public, HideBySig, SpecialName
+    set_NativePtr(ClassLayout*): PrivateScope, Public, HideBySig, SpecialName
+    get___Instance(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set___Instance(IntPtr): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    __CreateInstance(IntPtr): PrivateScope, Public, Static, HideBySig
+    get_VFTablesCount(): PrivateScope, Public, HideBySig, SpecialName
+    get_ABI(): PrivateScope, Public, HideBySig, SpecialName
+    set_ABI(CppAbi): PrivateScope, Public, HideBySig, SpecialName
+    get_Layout(): PrivateScope, Public, HideBySig, SpecialName
+    set_Layout(VTableLayout): PrivateScope, Public, HideBySig, SpecialName
+    get_HasOwnVFPtr(): PrivateScope, Public, HideBySig, SpecialName
+    set_HasOwnVFPtr(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig, SpecialName
+    get_VBPtrOffset(): PrivateScope, Public, HideBySig, SpecialName
+    set_VBPtrOffset(Int32 IsLong): PrivateScope, Public, HideBySig, SpecialName
+    get_Alignment(): PrivateScope, Public, HideBySig, SpecialName
+    set_Alignment(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_Size(): PrivateScope, Public, HideBySig, SpecialName
+    set_Size(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_DataSize(): PrivateScope, Public, HideBySig, SpecialName
+    set_DataSize(Int32): PrivateScope, Public, HideBySig, SpecialName
+    getVFTables(UInt32): PrivateScope, Public, HideBySig
+    addVFTables(VFTableInfo): PrivateScope, Public, HideBySig
+    clearVFTables(): PrivateScope, Public, HideBySig
+Class CppSharp.Parser.AST.Declaration: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(CppSharp.Parser.AST.DeclarationKind): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(CppSharp.CppParser.AST.Declaration*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    ICppInstance
+  Properties:
+    IntPtr OriginalPtr 'get set' : 
+    UInt32 DefinitionOrder 'get set' : 
+    CppSharp.Parser.AST.Declaration CompleteDeclaration 'get set' : 
+    Boolean IsDependent 'get set' : 
+    Boolean IsIncomplete 'get set' : 
+    CppSharp.Parser.AST.RawComment Comment 'get set' : 
+    Int32 LineNumber 'get set' : 
+    CppSharp.Parser.SourceLocation Location 'get set' : 
+    CppSharp.Parser.AST.DeclarationContext _Namespace 'get set' : 
+    CppSharp.Parser.AST.AccessSpecifier Access 'get set' : 
+    CppSharp.Parser.AST.DeclarationKind Kind 'get set' : 
+    UInt32 PreprocessedEntitiesCount 'get ' : 
+    System.String DebugText 'get set' : 
+    System.String Name 'get set' : 
+    IntPtr __Instance 'get set' : 
+    CppSharp.CppParser.AST.Declaration* NativePtr 'get set' : 
+  Methods:
+    get_NativePtr(): PrivateScope, Public, HideBySig, SpecialName
+    set_NativePtr(Declaration*): PrivateScope, Public, HideBySig, SpecialName
+    get___Instance(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set___Instance(IntPtr): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    __CreateInstance(IntPtr): PrivateScope, Public, Static, HideBySig
+    get_Name(): PrivateScope, Public, HideBySig, SpecialName
+    set_Name(String): PrivateScope, Public, HideBySig, SpecialName
+    get_DebugText(): PrivateScope, Public, HideBySig, SpecialName
+    set_DebugText(String): PrivateScope, Public, HideBySig, SpecialName
+    get_PreprocessedEntitiesCount(): PrivateScope, Public, HideBySig, SpecialName
+    get_Kind(): PrivateScope, Public, HideBySig, SpecialName
+    set_Kind(DeclarationKind): PrivateScope, Public, HideBySig, SpecialName
+    get_Access(): PrivateScope, Public, HideBySig, SpecialName
+    set_Access(AccessSpecifier): PrivateScope, Public, HideBySig, SpecialName
+    get__Namespace(): PrivateScope, Public, HideBySig, SpecialName
+    set__Namespace(DeclarationContext): PrivateScope, Public, HideBySig, SpecialName
+    get_Location(): PrivateScope, Public, HideBySig, SpecialName
+    set_Location(SourceLocation): PrivateScope, Public, HideBySig, SpecialName
+    get_LineNumber(): PrivateScope, Public, HideBySig, SpecialName
+    set_LineNumber(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_Comment(): PrivateScope, Public, HideBySig, SpecialName
+    set_Comment(RawComment): PrivateScope, Public, HideBySig, SpecialName
+    get_IsIncomplete(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsIncomplete(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig, SpecialName
+    get_IsDependent(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsDependent(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig, SpecialName
+    get_CompleteDeclaration(): PrivateScope, Public, HideBySig, SpecialName
+    set_CompleteDeclaration(Declaration): PrivateScope, Public, HideBySig, SpecialName
+    get_DefinitionOrder(): PrivateScope, Public, HideBySig, SpecialName
+    set_DefinitionOrder(UInt32): PrivateScope, Public, HideBySig, SpecialName
+    get_OriginalPtr(): PrivateScope, Public, HideBySig, SpecialName
+    set_OriginalPtr(IntPtr): PrivateScope, Public, HideBySig, SpecialName
+    getPreprocessedEntities(UInt32): PrivateScope, Public, HideBySig
+    addPreprocessedEntities(PreprocessedEntity): PrivateScope, Public, HideBySig
+    clearPreprocessedEntities(): PrivateScope, Public, HideBySig
+Class CppSharp.Parser.AST.DeclarationContext: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :CppSharp.Parser.AST.Declaration
+    Void .ctor(CppSharp.Parser.AST.DeclarationKind): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(CppSharp.CppParser.AST.DeclarationContext*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Boolean IsAnonymous 'get set' : 
+    UInt32 FriendsCount 'get ' : 
+    UInt32 VariablesCount 'get ' : 
+    UInt32 TypedefsCount 'get ' : 
+    UInt32 TemplatesCount 'get ' : 
+    UInt32 ClassesCount 'get ' : 
+    UInt32 FunctionsCount 'get ' : 
+    UInt32 EnumsCount 'get ' : 
+    UInt32 NamespacesCount 'get ' : 
+  Methods:
+    __CreateInstance(IntPtr): PrivateScope, Public, Static, HideBySig
+    get_NamespacesCount(): PrivateScope, Public, HideBySig, SpecialName
+    get_EnumsCount(): PrivateScope, Public, HideBySig, SpecialName
+    get_FunctionsCount(): PrivateScope, Public, HideBySig, SpecialName
+    get_ClassesCount(): PrivateScope, Public, HideBySig, SpecialName
+    get_TemplatesCount(): PrivateScope, Public, HideBySig, SpecialName
+    get_TypedefsCount(): PrivateScope, Public, HideBySig, SpecialName
+    get_VariablesCount(): PrivateScope, Public, HideBySig, SpecialName
+    get_FriendsCount(): PrivateScope, Public, HideBySig, SpecialName
+    get_IsAnonymous(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsAnonymous(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig, SpecialName
+    getNamespaces(UInt32): PrivateScope, Public, HideBySig
+    addNamespaces(Namespace): PrivateScope, Public, HideBySig
+    clearNamespaces(): PrivateScope, Public, HideBySig
+    getEnums(UInt32): PrivateScope, Public, HideBySig
+    addEnums(Enumeration): PrivateScope, Public, HideBySig
+    clearEnums(): PrivateScope, Public, HideBySig
+    getFunctions(UInt32): PrivateScope, Public, HideBySig
+    addFunctions(Function): PrivateScope, Public, HideBySig
+    clearFunctions(): PrivateScope, Public, HideBySig
+    getClasses(UInt32): PrivateScope, Public, HideBySig
+    addClasses(Class): PrivateScope, Public, HideBySig
+    clearClasses(): PrivateScope, Public, HideBySig
+    getTemplates(UInt32): PrivateScope, Public, HideBySig
+    addTemplates(Template): PrivateScope, Public, HideBySig
+    clearTemplates(): PrivateScope, Public, HideBySig
+    getTypedefs(UInt32): PrivateScope, Public, HideBySig
+    addTypedefs(TypedefDecl): PrivateScope, Public, HideBySig
+    clearTypedefs(): PrivateScope, Public, HideBySig
+    getVariables(UInt32): PrivateScope, Public, HideBySig
+    addVariables(Variable): PrivateScope, Public, HideBySig
+    clearVariables(): PrivateScope, Public, HideBySig
+    getFriends(UInt32): PrivateScope, Public, HideBySig
+    addFriends(Friend): PrivateScope, Public, HideBySig
+    clearFriends(): PrivateScope, Public, HideBySig
+Class CppSharp.Parser.AST.TypedefDecl: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :CppSharp.Parser.AST.Declaration
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(CppSharp.CppParser.AST.TypedefDecl*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    CppSharp.Parser.AST.QualifiedType QualifiedType 'get set' : 
+  Methods:
+    __CreateInstance(IntPtr): PrivateScope, Public, Static, HideBySig
+    get_QualifiedType(): PrivateScope, Public, HideBySig, SpecialName
+    set_QualifiedType(QualifiedType): PrivateScope, Public, HideBySig, SpecialName
+Class CppSharp.Parser.AST.Friend: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :CppSharp.Parser.AST.Declaration
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(CppSharp.CppParser.AST.Friend*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    CppSharp.Parser.AST.Declaration Declaration 'get set' : 
+  Methods:
+    __CreateInstance(IntPtr): PrivateScope, Public, Static, HideBySig
+    get_Declaration(): PrivateScope, Public, HideBySig, SpecialName
+    set_Declaration(Declaration): PrivateScope, Public, HideBySig, SpecialName
+Class CppSharp.Parser.AST.Statement: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(CppSharp.CppParser.AST.Statement*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    ICppInstance
+  Properties:
+    CppSharp.Parser.AST.Declaration Decl 'get set' : 
+    CppSharp.Parser.AST.StatementClass Class 'get set' : 
+    System.String String 'get set' : 
+    IntPtr __Instance 'get set' : 
+    CppSharp.CppParser.AST.Statement* NativePtr 'get set' : 
+  Methods:
+    get_NativePtr(): PrivateScope, Public, HideBySig, SpecialName
+    set_NativePtr(Statement*): PrivateScope, Public, HideBySig, SpecialName
+    get___Instance(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set___Instance(IntPtr): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    __CreateInstance(IntPtr): PrivateScope, Public, Static, HideBySig
+    get_String(): PrivateScope, Public, HideBySig, SpecialName
+    set_String(String): PrivateScope, Public, HideBySig, SpecialName
+    get_Class(): PrivateScope, Public, HideBySig, SpecialName
+    set_Class(StatementClass): PrivateScope, Public, HideBySig, SpecialName
+    get_Decl(): PrivateScope, Public, HideBySig, SpecialName
+    set_Decl(Declaration): PrivateScope, Public, HideBySig, SpecialName
+Class CppSharp.Parser.AST.Expression: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :CppSharp.Parser.AST.Statement
+    Void .ctor(CppSharp.CppParser.AST.Expression*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    CppSharp.Parser.AST.Expression Subexpression 'get set' : 
+  Methods:
+    __CreateInstance(IntPtr): PrivateScope, Public, Static, HideBySig
+    get_Subexpression(): PrivateScope, Public, HideBySig, SpecialName
+    set_Subexpression(Expression): PrivateScope, Public, HideBySig, SpecialName
+Class CppSharp.Parser.AST.Parameter: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :CppSharp.Parser.AST.Declaration
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(CppSharp.CppParser.AST.Parameter*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    CppSharp.Parser.AST.Expression DefaultArgument 'get set' : 
+    UInt32 Index 'get set' : 
+    Boolean HasDefaultValue 'get set' : 
+    Boolean IsIndirect 'get set' : 
+    CppSharp.Parser.AST.QualifiedType QualifiedType 'get set' : 
+  Methods:
+    __CreateInstance(IntPtr): PrivateScope, Public, Static, HideBySig
+    get_QualifiedType(): PrivateScope, Public, HideBySig, SpecialName
+    set_QualifiedType(QualifiedType): PrivateScope, Public, HideBySig, SpecialName
+    get_IsIndirect(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsIndirect(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig, SpecialName
+    get_HasDefaultValue(): PrivateScope, Public, HideBySig, SpecialName
+    set_HasDefaultValue(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig, SpecialName
+    get_Index(): PrivateScope, Public, HideBySig, SpecialName
+    set_Index(UInt32): PrivateScope, Public, HideBySig, SpecialName
+    get_DefaultArgument(): PrivateScope, Public, HideBySig, SpecialName
+    set_DefaultArgument(Expression): PrivateScope, Public, HideBySig, SpecialName
+Class CppSharp.Parser.AST.Function: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :CppSharp.Parser.AST.Declaration
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(CppSharp.CppParser.AST.Function*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    CppSharp.Parser.AST.FunctionTemplateSpecialization SpecializationInfo 'get set' : 
+    CppSharp.Parser.AST.CallingConvention CallingConvention 'get set' : 
+    CppSharp.Parser.AST.CXXOperatorKind OperatorKind 'get set' : 
+    Boolean IsDeleted 'get set' : 
+    Boolean IsPure 'get set' : 
+    Boolean IsInline 'get set' : 
+    Boolean IsVariadic 'get set' : 
+    Boolean HasThisReturn 'get set' : 
+    Boolean IsReturnIndirect 'get set' : 
+    CppSharp.Parser.AST.QualifiedType ReturnType 'get set' : 
+    UInt32 ParametersCount 'get ' : 
+    System.String Signature 'get set' : 
+    System.String Mangled 'get set' : 
+  Methods:
+    __CreateInstance(IntPtr): PrivateScope, Public, Static, HideBySig
+    get_Mangled(): PrivateScope, Public, HideBySig, SpecialName
+    set_Mangled(String): PrivateScope, Public, HideBySig, SpecialName
+    get_Signature(): PrivateScope, Public, HideBySig, SpecialName
+    set_Signature(String): PrivateScope, Public, HideBySig, SpecialName
+    get_ParametersCount(): PrivateScope, Public, HideBySig, SpecialName
+    get_ReturnType(): PrivateScope, Public, HideBySig, SpecialName
+    set_ReturnType(QualifiedType): PrivateScope, Public, HideBySig, SpecialName
+    get_IsReturnIndirect(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsReturnIndirect(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig, SpecialName
+    get_HasThisReturn(): PrivateScope, Public, HideBySig, SpecialName
+    set_HasThisReturn(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig, SpecialName
+    get_IsVariadic(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsVariadic(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig, SpecialName
+    get_IsInline(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsInline(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig, SpecialName
+    get_IsPure(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsPure(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig, SpecialName
+    get_IsDeleted(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsDeleted(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig, SpecialName
+    get_OperatorKind(): PrivateScope, Public, HideBySig, SpecialName
+    set_OperatorKind(CXXOperatorKind): PrivateScope, Public, HideBySig, SpecialName
+    get_CallingConvention(): PrivateScope, Public, HideBySig, SpecialName
+    set_CallingConvention(CallingConvention): PrivateScope, Public, HideBySig, SpecialName
+    get_SpecializationInfo(): PrivateScope, Public, HideBySig, SpecialName
+    set_SpecializationInfo(FunctionTemplateSpecialization): PrivateScope, Public, HideBySig, SpecialName
+    getParameters(UInt32): PrivateScope, Public, HideBySig
+    addParameters(Parameter): PrivateScope, Public, HideBySig
+    clearParameters(): PrivateScope, Public, HideBySig
+Class CppSharp.Parser.AST.Method: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :CppSharp.Parser.AST.Function
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(CppSharp.CppParser.AST.Method*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    CppSharp.Parser.AST.QualifiedType ConversionType 'get set' : 
+    Boolean IsMoveConstructor 'get set' : 
+    Boolean IsCopyConstructor 'get set' : 
+    Boolean IsDefaultConstructor 'get set' : 
+    CppSharp.Parser.AST.CXXMethodKind MethodKind 'get set' : 
+    Boolean IsOverride 'get set' : 
+    Boolean IsExplicit 'get set' : 
+    Boolean IsImplicit 'get set' : 
+    Boolean IsConst 'get set' : 
+    Boolean IsStatic 'get set' : 
+    Boolean IsVirtual 'get set' : 
+    CppSharp.Parser.AST.AccessSpecifierDecl AccessDecl 'get set' : 
+  Methods:
+    __CreateInstance(IntPtr): PrivateScope, Public, Static, HideBySig
+    get_AccessDecl(): PrivateScope, Public, HideBySig, SpecialName
+    set_AccessDecl(AccessSpecifierDecl): PrivateScope, Public, HideBySig, SpecialName
+    get_IsVirtual(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsVirtual(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig, SpecialName
+    get_IsStatic(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsStatic(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig, SpecialName
+    get_IsConst(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsConst(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig, SpecialName
+    get_IsImplicit(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsImplicit(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig, SpecialName
+    get_IsExplicit(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsExplicit(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig, SpecialName
+    get_IsOverride(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsOverride(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig, SpecialName
+    get_MethodKind(): PrivateScope, Public, HideBySig, SpecialName
+    set_MethodKind(CXXMethodKind): PrivateScope, Public, HideBySig, SpecialName
+    get_IsDefaultConstructor(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsDefaultConstructor(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig, SpecialName
+    get_IsCopyConstructor(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsCopyConstructor(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig, SpecialName
+    get_IsMoveConstructor(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsMoveConstructor(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig, SpecialName
+    get_ConversionType(): PrivateScope, Public, HideBySig, SpecialName
+    set_ConversionType(QualifiedType): PrivateScope, Public, HideBySig, SpecialName
+Class CppSharp.Parser.AST.Enumeration: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :CppSharp.Parser.AST.DeclarationContext
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(CppSharp.CppParser.AST.Enumeration*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    CppSharp.Parser.AST.BuiltinType BuiltinType 'get set' : 
+    CppSharp.Parser.AST.Type Type 'get set' : 
+    EnumModifiers Modifiers 'get set' : 
+    UInt32 ItemsCount 'get ' : 
+  Methods:
+    __CreateInstance(IntPtr): PrivateScope, Public, Static, HideBySig
+    get_ItemsCount(): PrivateScope, Public, HideBySig, SpecialName
+    get_Modifiers(): PrivateScope, Public, HideBySig, SpecialName
+    set_Modifiers(EnumModifiers): PrivateScope, Public, HideBySig, SpecialName
+    get_Type(): PrivateScope, Public, HideBySig, SpecialName
+    set_Type(Type): PrivateScope, Public, HideBySig, SpecialName
+    get_BuiltinType(): PrivateScope, Public, HideBySig, SpecialName
+    set_BuiltinType(BuiltinType): PrivateScope, Public, HideBySig, SpecialName
+    getItems(UInt32): PrivateScope, Public, HideBySig
+    addItems(Item): PrivateScope, Public, HideBySig
+    clearItems(): PrivateScope, Public, HideBySig
+Struct CppSharp.Parser.AST.Enumeration+EnumModifiers: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    EnumModifiers Anonymous = 1 : Public, Static, Literal, HasDefault
+    EnumModifiers Scoped = 2 : Public, Static, Literal, HasDefault
+    EnumModifiers Flags = 4 : Public, Static, Literal, HasDefault
+Class CppSharp.Parser.AST.Enumeration+Item: AutoLayout, AnsiClass, Class, NestedPublic, BeforeFieldInit
+  :CppSharp.Parser.AST.Declaration
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Item*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    UInt64 Value 'get set' : 
+    System.String Expression 'get set' : 
+  Methods:
+    __CreateInstance(IntPtr): PrivateScope, Public, Static, HideBySig
+    get_Expression(): PrivateScope, Public, HideBySig, SpecialName
+    set_Expression(String): PrivateScope, Public, HideBySig, SpecialName
+    get_Value(): PrivateScope, Public, HideBySig, SpecialName
+    set_Value(UInt64): PrivateScope, Public, HideBySig, SpecialName
+Class CppSharp.Parser.AST.Variable: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :CppSharp.Parser.AST.Declaration
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(CppSharp.CppParser.AST.Variable*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    CppSharp.Parser.AST.QualifiedType QualifiedType 'get set' : 
+    System.String Mangled 'get set' : 
+  Methods:
+    __CreateInstance(IntPtr): PrivateScope, Public, Static, HideBySig
+    get_Mangled(): PrivateScope, Public, HideBySig, SpecialName
+    set_Mangled(String): PrivateScope, Public, HideBySig, SpecialName
+    get_QualifiedType(): PrivateScope, Public, HideBySig, SpecialName
+    set_QualifiedType(QualifiedType): PrivateScope, Public, HideBySig, SpecialName
+Class CppSharp.Parser.AST.BaseClassSpecifier: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(CppSharp.CppParser.AST.BaseClassSpecifier*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    ICppInstance
+  Properties:
+    Int32 Offset 'get set' : 
+    CppSharp.Parser.AST.Type Type 'get set' : 
+    Boolean IsVirtual 'get set' : 
+    CppSharp.Parser.AST.AccessSpecifier Access 'get set' : 
+    IntPtr __Instance 'get set' : 
+    CppSharp.CppParser.AST.BaseClassSpecifier* NativePtr 'get set' : 
+  Methods:
+    get_NativePtr(): PrivateScope, Public, HideBySig, SpecialName
+    set_NativePtr(BaseClassSpecifier*): PrivateScope, Public, HideBySig, SpecialName
+    get___Instance(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set___Instance(IntPtr): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    __CreateInstance(IntPtr): PrivateScope, Public, Static, HideBySig
+    get_Access(): PrivateScope, Public, HideBySig, SpecialName
+    set_Access(AccessSpecifier): PrivateScope, Public, HideBySig, SpecialName
+    get_IsVirtual(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsVirtual(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig, SpecialName
+    get_Type(): PrivateScope, Public, HideBySig, SpecialName
+    set_Type(Type): PrivateScope, Public, HideBySig, SpecialName
+    get_Offset(): PrivateScope, Public, HideBySig, SpecialName
+    set_Offset(Int32): PrivateScope, Public, HideBySig, SpecialName
+Class CppSharp.Parser.AST.Field: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :CppSharp.Parser.AST.Declaration
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(CppSharp.CppParser.AST.Field*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    UInt32 BitWidth 'get set' : 
+    Boolean IsBitField 'get set' : 
+    CppSharp.Parser.AST.Class Class 'get set' : 
+    UInt32 Offset 'get set' : 
+    CppSharp.Parser.AST.QualifiedType QualifiedType 'get set' : 
+  Methods:
+    __CreateInstance(IntPtr): PrivateScope, Public, Static, HideBySig
+    get_QualifiedType(): PrivateScope, Public, HideBySig, SpecialName
+    set_QualifiedType(QualifiedType): PrivateScope, Public, HideBySig, SpecialName
+    get_Offset(): PrivateScope, Public, HideBySig, SpecialName
+    set_Offset(UInt32): PrivateScope, Public, HideBySig, SpecialName
+    get_Class(): PrivateScope, Public, HideBySig, SpecialName
+    set_Class(Class): PrivateScope, Public, HideBySig, SpecialName
+    get_IsBitField(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsBitField(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig, SpecialName
+    get_BitWidth(): PrivateScope, Public, HideBySig, SpecialName
+    set_BitWidth(UInt32): PrivateScope, Public, HideBySig, SpecialName
+Class CppSharp.Parser.AST.AccessSpecifierDecl: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :CppSharp.Parser.AST.Declaration
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(CppSharp.CppParser.AST.AccessSpecifierDecl*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    __CreateInstance(IntPtr): PrivateScope, Public, Static, HideBySig
+Class CppSharp.Parser.AST.Class: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :CppSharp.Parser.AST.DeclarationContext
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(CppSharp.CppParser.AST.Class*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    CppSharp.Parser.AST.ClassLayout Layout 'get set' : 
+    Boolean IsExternCContext 'get set' : 
+    Boolean HasNonTrivialDestructor 'get set' : 
+    Boolean HasNonTrivialCopyConstructor 'get set' : 
+    Boolean HasNonTrivialDefaultConstructor 'get set' : 
+    Boolean IsPolymorphic 'get set' : 
+    Boolean IsDynamic 'get set' : 
+    Boolean IsUnion 'get set' : 
+    Boolean IsAbstract 'get set' : 
+    Boolean IsPOD 'get set' : 
+    UInt32 SpecifiersCount 'get ' : 
+    UInt32 MethodsCount 'get ' : 
+    UInt32 FieldsCount 'get ' : 
+    UInt32 BasesCount 'get ' : 
+  Methods:
+    __CreateInstance(IntPtr): PrivateScope, Public, Static, HideBySig
+    get_BasesCount(): PrivateScope, Public, HideBySig, SpecialName
+    get_FieldsCount(): PrivateScope, Public, HideBySig, SpecialName
+    get_MethodsCount(): PrivateScope, Public, HideBySig, SpecialName
+    get_SpecifiersCount(): PrivateScope, Public, HideBySig, SpecialName
+    get_IsPOD(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsPOD(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig, SpecialName
+    get_IsAbstract(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsAbstract(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig, SpecialName
+    get_IsUnion(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsUnion(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig, SpecialName
+    get_IsDynamic(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsDynamic(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig, SpecialName
+    get_IsPolymorphic(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsPolymorphic(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig, SpecialName
+    get_HasNonTrivialDefaultConstructor(): PrivateScope, Public, HideBySig, SpecialName
+    set_HasNonTrivialDefaultConstructor(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig, SpecialName
+    get_HasNonTrivialCopyConstructor(): PrivateScope, Public, HideBySig, SpecialName
+    set_HasNonTrivialCopyConstructor(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig, SpecialName
+    get_HasNonTrivialDestructor(): PrivateScope, Public, HideBySig, SpecialName
+    set_HasNonTrivialDestructor(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig, SpecialName
+    get_IsExternCContext(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsExternCContext(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig, SpecialName
+    get_Layout(): PrivateScope, Public, HideBySig, SpecialName
+    set_Layout(ClassLayout): PrivateScope, Public, HideBySig, SpecialName
+    getBases(UInt32): PrivateScope, Public, HideBySig
+    addBases(BaseClassSpecifier): PrivateScope, Public, HideBySig
+    clearBases(): PrivateScope, Public, HideBySig
+    getFields(UInt32): PrivateScope, Public, HideBySig
+    addFields(Field): PrivateScope, Public, HideBySig
+    clearFields(): PrivateScope, Public, HideBySig
+    getMethods(UInt32): PrivateScope, Public, HideBySig
+    addMethods(Method): PrivateScope, Public, HideBySig
+    clearMethods(): PrivateScope, Public, HideBySig
+    getSpecifiers(UInt32): PrivateScope, Public, HideBySig
+    addSpecifiers(AccessSpecifierDecl): PrivateScope, Public, HideBySig
+    clearSpecifiers(): PrivateScope, Public, HideBySig
+Class CppSharp.Parser.AST.Template: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :CppSharp.Parser.AST.Declaration
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(CppSharp.Parser.AST.DeclarationKind): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(CppSharp.CppParser.AST.Template*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    CppSharp.Parser.AST.Declaration TemplatedDecl 'get set' : 
+    UInt32 ParametersCount 'get ' : 
+  Methods:
+    __CreateInstance(IntPtr): PrivateScope, Public, Static, HideBySig
+    get_ParametersCount(): PrivateScope, Public, HideBySig, SpecialName
+    get_TemplatedDecl(): PrivateScope, Public, HideBySig, SpecialName
+    set_TemplatedDecl(Declaration): PrivateScope, Public, HideBySig, SpecialName
+    getParameters(UInt32): PrivateScope, Public, HideBySig
+    addParameters(TemplateParameter): PrivateScope, Public, HideBySig
+    clearParameters(): PrivateScope, Public, HideBySig
+Class CppSharp.Parser.AST.ClassTemplate: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :CppSharp.Parser.AST.Template
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(CppSharp.CppParser.AST.ClassTemplate*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    UInt32 SpecializationsCount 'get ' : 
+  Methods:
+    __CreateInstance(IntPtr): PrivateScope, Public, Static, HideBySig
+    get_SpecializationsCount(): PrivateScope, Public, HideBySig, SpecialName
+    getSpecializations(UInt32): PrivateScope, Public, HideBySig
+    addSpecializations(ClassTemplateSpecialization): PrivateScope, Public, HideBySig
+    clearSpecializations(): PrivateScope, Public, HideBySig
+Class CppSharp.Parser.AST.ClassTemplateSpecialization: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :CppSharp.Parser.AST.Class
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(CppSharp.CppParser.AST.ClassTemplateSpecialization*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    CppSharp.Parser.AST.TemplateSpecializationKind SpecializationKind 'get set' : 
+    CppSharp.Parser.AST.ClassTemplate TemplatedDecl 'get set' : 
+    UInt32 ArgumentsCount 'get ' : 
+  Methods:
+    __CreateInstance(IntPtr): PrivateScope, Public, Static, HideBySig
+    get_ArgumentsCount(): PrivateScope, Public, HideBySig, SpecialName
+    get_TemplatedDecl(): PrivateScope, Public, HideBySig, SpecialName
+    set_TemplatedDecl(ClassTemplate): PrivateScope, Public, HideBySig, SpecialName
+    get_SpecializationKind(): PrivateScope, Public, HideBySig, SpecialName
+    set_SpecializationKind(TemplateSpecializationKind): PrivateScope, Public, HideBySig, SpecialName
+    getArguments(UInt32): PrivateScope, Public, HideBySig
+    addArguments(TemplateArgument): PrivateScope, Public, HideBySig
+    clearArguments(): PrivateScope, Public, HideBySig
+Class CppSharp.Parser.AST.ClassTemplatePartialSpecialization: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :CppSharp.Parser.AST.ClassTemplateSpecialization
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(CppSharp.CppParser.AST.ClassTemplatePartialSpecialization*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    __CreateInstance(IntPtr): PrivateScope, Public, Static, HideBySig
+Class CppSharp.Parser.AST.FunctionTemplate: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :CppSharp.Parser.AST.Template
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(CppSharp.CppParser.AST.FunctionTemplate*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    UInt32 SpecializationsCount 'get ' : 
+  Methods:
+    __CreateInstance(IntPtr): PrivateScope, Public, Static, HideBySig
+    get_SpecializationsCount(): PrivateScope, Public, HideBySig, SpecialName
+    getSpecializations(UInt32): PrivateScope, Public, HideBySig
+    addSpecializations(FunctionTemplateSpecialization): PrivateScope, Public, HideBySig
+    clearSpecializations(): PrivateScope, Public, HideBySig
+Class CppSharp.Parser.AST.FunctionTemplateSpecialization: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(CppSharp.CppParser.AST.FunctionTemplateSpecialization*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    ICppInstance
+  Properties:
+    CppSharp.Parser.AST.TemplateSpecializationKind SpecializationKind 'get set' : 
+    CppSharp.Parser.AST.Function SpecializedFunction 'get set' : 
+    CppSharp.Parser.AST.FunctionTemplate Template 'get set' : 
+    UInt32 ArgumentsCount 'get ' : 
+    IntPtr __Instance 'get set' : 
+    CppSharp.CppParser.AST.FunctionTemplateSpecialization* NativePtr 'get set' : 
+  Methods:
+    get_NativePtr(): PrivateScope, Public, HideBySig, SpecialName
+    set_NativePtr(FunctionTemplateSpecialization*): PrivateScope, Public, HideBySig, SpecialName
+    get___Instance(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set___Instance(IntPtr): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    __CreateInstance(IntPtr): PrivateScope, Public, Static, HideBySig
+    get_ArgumentsCount(): PrivateScope, Public, HideBySig, SpecialName
+    get_Template(): PrivateScope, Public, HideBySig, SpecialName
+    set_Template(FunctionTemplate): PrivateScope, Public, HideBySig, SpecialName
+    get_SpecializedFunction(): PrivateScope, Public, HideBySig, SpecialName
+    set_SpecializedFunction(Function): PrivateScope, Public, HideBySig, SpecialName
+    get_SpecializationKind(): PrivateScope, Public, HideBySig, SpecialName
+    set_SpecializationKind(TemplateSpecializationKind): PrivateScope, Public, HideBySig, SpecialName
+    getArguments(UInt32): PrivateScope, Public, HideBySig
+    addArguments(TemplateArgument): PrivateScope, Public, HideBySig
+    clearArguments(): PrivateScope, Public, HideBySig
+Class CppSharp.Parser.AST.Namespace: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :CppSharp.Parser.AST.DeclarationContext
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(CppSharp.CppParser.AST.Namespace*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Boolean IsInline 'get set' : 
+  Methods:
+    __CreateInstance(IntPtr): PrivateScope, Public, Static, HideBySig
+    get_IsInline(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsInline(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig, SpecialName
+Class CppSharp.Parser.AST.PreprocessedEntity: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :CppSharp.Parser.AST.Declaration
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(CppSharp.CppParser.AST.PreprocessedEntity*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    CppSharp.Parser.AST.MacroLocation MacroLocation 'get set' : 
+  Methods:
+    __CreateInstance(IntPtr): PrivateScope, Public, Static, HideBySig
+    get_MacroLocation(): PrivateScope, Public, HideBySig, SpecialName
+    set_MacroLocation(MacroLocation): PrivateScope, Public, HideBySig, SpecialName
+Class CppSharp.Parser.AST.MacroDefinition: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :CppSharp.Parser.AST.PreprocessedEntity
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(CppSharp.CppParser.AST.MacroDefinition*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.String Expression 'get set' : 
+  Methods:
+    __CreateInstance(IntPtr): PrivateScope, Public, Static, HideBySig
+    get_Expression(): PrivateScope, Public, HideBySig, SpecialName
+    set_Expression(String): PrivateScope, Public, HideBySig, SpecialName
+Class CppSharp.Parser.AST.MacroExpansion: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :CppSharp.Parser.AST.PreprocessedEntity
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(CppSharp.CppParser.AST.MacroExpansion*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    CppSharp.Parser.AST.MacroDefinition Definition 'get set' : 
+    System.String Text 'get set' : 
+  Methods:
+    __CreateInstance(IntPtr): PrivateScope, Public, Static, HideBySig
+    get_Text(): PrivateScope, Public, HideBySig, SpecialName
+    set_Text(String): PrivateScope, Public, HideBySig, SpecialName
+    get_Definition(): PrivateScope, Public, HideBySig, SpecialName
+    set_Definition(MacroDefinition): PrivateScope, Public, HideBySig, SpecialName
+Class CppSharp.Parser.AST.TranslationUnit: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :CppSharp.Parser.AST.Namespace
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(CppSharp.CppParser.AST.TranslationUnit*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Boolean IsSystemHeader 'get set' : 
+    UInt32 MacrosCount 'get ' : 
+    System.String FileName 'get set' : 
+  Methods:
+    __CreateInstance(IntPtr): PrivateScope, Public, Static, HideBySig
+    get_FileName(): PrivateScope, Public, HideBySig, SpecialName
+    set_FileName(String): PrivateScope, Public, HideBySig, SpecialName
+    get_MacrosCount(): PrivateScope, Public, HideBySig, SpecialName
+    get_IsSystemHeader(): PrivateScope, Public, HideBySig, SpecialName
+    set_IsSystemHeader(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig, SpecialName
+    getMacros(UInt32): PrivateScope, Public, HideBySig
+    addMacros(MacroDefinition): PrivateScope, Public, HideBySig
+    clearMacros(): PrivateScope, Public, HideBySig
+Class CppSharp.Parser.AST.NativeLibrary: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(CppSharp.CppParser.AST.NativeLibrary*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    ICppInstance
+  Properties:
+    CppSharp.Parser.AST.ArchType ArchType 'get set' : 
+    UInt32 DependenciesCount 'get ' : 
+    UInt32 SymbolsCount 'get ' : 
+    System.String FileName 'get set' : 
+    IntPtr __Instance 'get set' : 
+    CppSharp.CppParser.AST.NativeLibrary* NativePtr 'get set' : 
+  Methods:
+    get_NativePtr(): PrivateScope, Public, HideBySig, SpecialName
+    set_NativePtr(NativeLibrary*): PrivateScope, Public, HideBySig, SpecialName
+    get___Instance(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set___Instance(IntPtr): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    __CreateInstance(IntPtr): PrivateScope, Public, Static, HideBySig
+    get_FileName(): PrivateScope, Public, HideBySig, SpecialName
+    set_FileName(String): PrivateScope, Public, HideBySig, SpecialName
+    get_SymbolsCount(): PrivateScope, Public, HideBySig, SpecialName
+    get_DependenciesCount(): PrivateScope, Public, HideBySig, SpecialName
+    get_ArchType(): PrivateScope, Public, HideBySig, SpecialName
+    set_ArchType(ArchType): PrivateScope, Public, HideBySig, SpecialName
+    getSymbols(UInt32): PrivateScope, Public, HideBySig
+    addSymbols(String): PrivateScope, Public, HideBySig
+    clearSymbols(): PrivateScope, Public, HideBySig
+    getDependencies(UInt32): PrivateScope, Public, HideBySig
+    addDependencies(String): PrivateScope, Public, HideBySig
+    clearDependencies(): PrivateScope, Public, HideBySig
+Class CppSharp.Parser.AST.ASTContext: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(CppSharp.CppParser.AST.ASTContext*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    ICppInstance
+  Properties:
+    UInt32 TranslationUnitsCount 'get ' : 
+    IntPtr __Instance 'get set' : 
+    CppSharp.CppParser.AST.ASTContext* NativePtr 'get set' : 
+  Methods:
+    get_NativePtr(): PrivateScope, Public, HideBySig, SpecialName
+    set_NativePtr(ASTContext*): PrivateScope, Public, HideBySig, SpecialName
+    get___Instance(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set___Instance(IntPtr): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    __CreateInstance(IntPtr): PrivateScope, Public, Static, HideBySig
+    get_TranslationUnitsCount(): PrivateScope, Public, HideBySig, SpecialName
+    getTranslationUnits(UInt32): PrivateScope, Public, HideBySig
+    addTranslationUnits(TranslationUnit): PrivateScope, Public, HideBySig
+    clearTranslationUnits(): PrivateScope, Public, HideBySig
+Class CppSharp.Parser.AST.Comment: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(CppSharp.Parser.AST.CommentKind): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(CppSharp.CppParser.AST.Comment*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    ICppInstance
+  Properties:
+    CppSharp.Parser.AST.CommentKind Kind 'get set' : 
+    IntPtr __Instance 'get set' : 
+    CppSharp.CppParser.AST.Comment* NativePtr 'get set' : 
+  Methods:
+    get_NativePtr(): PrivateScope, Public, HideBySig, SpecialName
+    set_NativePtr(Comment*): PrivateScope, Public, HideBySig, SpecialName
+    get___Instance(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set___Instance(IntPtr): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    __CreateInstance(IntPtr): PrivateScope, Public, Static, HideBySig
+    get_Kind(): PrivateScope, Public, HideBySig, SpecialName
+    set_Kind(CommentKind): PrivateScope, Public, HideBySig, SpecialName
+Class CppSharp.Parser.AST.FullComment: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :CppSharp.Parser.AST.Comment
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(CppSharp.CppParser.AST.FullComment*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    __CreateInstance(IntPtr): PrivateScope, Public, Static, HideBySig
+Class CppSharp.Parser.AST.RawComment: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(CppSharp.CppParser.AST.RawComment*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    ICppInstance
+  Properties:
+    CppSharp.Parser.AST.FullComment FullCommentBlock 'get set' : 
+    CppSharp.Parser.AST.RawCommentKind Kind 'get set' : 
+    System.String BriefText 'get set' : 
+    System.String Text 'get set' : 
+    IntPtr __Instance 'get set' : 
+    CppSharp.CppParser.AST.RawComment* NativePtr 'get set' : 
+  Methods:
+    get_NativePtr(): PrivateScope, Public, HideBySig, SpecialName
+    set_NativePtr(RawComment*): PrivateScope, Public, HideBySig, SpecialName
+    get___Instance(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set___Instance(IntPtr): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    __CreateInstance(IntPtr): PrivateScope, Public, Static, HideBySig
+    get_Text(): PrivateScope, Public, HideBySig, SpecialName
+    set_Text(String): PrivateScope, Public, HideBySig, SpecialName
+    get_BriefText(): PrivateScope, Public, HideBySig, SpecialName
+    set_BriefText(String): PrivateScope, Public, HideBySig, SpecialName
+    get_Kind(): PrivateScope, Public, HideBySig, SpecialName
+    set_Kind(RawCommentKind): PrivateScope, Public, HideBySig, SpecialName
+    get_FullCommentBlock(): PrivateScope, Public, HideBySig, SpecialName
+    set_FullCommentBlock(FullComment): PrivateScope, Public, HideBySig, SpecialName
+Struct CppSharp.Parser.AST.TypeKind: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    CppSharp.Parser.AST.TypeKind Tag = 0 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.TypeKind Array = 1 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.TypeKind Function = 2 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.TypeKind Pointer = 3 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.TypeKind MemberPointer = 4 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.TypeKind Typedef = 5 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.TypeKind Attributed = 6 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.TypeKind Decayed = 7 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.TypeKind TemplateSpecialization = 8 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.TypeKind TemplateParameter = 9 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.TypeKind TemplateParameterSubstitution = 10 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.TypeKind InjectedClassName = 11 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.TypeKind DependentName = 12 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.TypeKind PackExpansion = 13 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.TypeKind Builtin = 14 : Public, Static, Literal, HasDefault
+Struct CppSharp.Parser.AST.DeclarationKind: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    CppSharp.Parser.AST.DeclarationKind DeclarationContext = 0 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.DeclarationKind Typedef = 1 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.DeclarationKind Parameter = 2 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.DeclarationKind Function = 3 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.DeclarationKind Method = 4 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.DeclarationKind Enumeration = 5 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.DeclarationKind EnumerationItem = 6 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.DeclarationKind Variable = 7 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.DeclarationKind Field = 8 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.DeclarationKind AccessSpecifier = 9 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.DeclarationKind Class = 10 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.DeclarationKind Template = 11 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.DeclarationKind ClassTemplate = 12 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.DeclarationKind ClassTemplateSpecialization = 13 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.DeclarationKind ClassTemplatePartialSpecialization = 14 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.DeclarationKind FunctionTemplate = 15 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.DeclarationKind Namespace = 16 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.DeclarationKind PreprocessedEntity = 17 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.DeclarationKind MacroDefinition = 18 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.DeclarationKind MacroExpansion = 19 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.DeclarationKind TranslationUnit = 20 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.DeclarationKind Friend = 21 : Public, Static, Literal, HasDefault
+Struct CppSharp.Parser.AST.AccessSpecifier: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    CppSharp.Parser.AST.AccessSpecifier Private = 0 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.AccessSpecifier Protected = 1 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.AccessSpecifier Public = 2 : Public, Static, Literal, HasDefault
+Struct CppSharp.Parser.AST.CXXMethodKind: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    CppSharp.Parser.AST.CXXMethodKind Normal = 0 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.CXXMethodKind Constructor = 1 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.CXXMethodKind Destructor = 2 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.CXXMethodKind Conversion = 3 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.CXXMethodKind Operator = 4 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.CXXMethodKind UsingDirective = 5 : Public, Static, Literal, HasDefault
+Struct CppSharp.Parser.AST.CXXOperatorKind: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    CppSharp.Parser.AST.CXXOperatorKind None = 0 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.CXXOperatorKind New = 1 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.CXXOperatorKind Delete = 2 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.CXXOperatorKind Array_New = 3 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.CXXOperatorKind Array_Delete = 4 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.CXXOperatorKind Plus = 5 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.CXXOperatorKind Minus = 6 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.CXXOperatorKind Star = 7 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.CXXOperatorKind Slash = 8 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.CXXOperatorKind Percent = 9 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.CXXOperatorKind Caret = 10 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.CXXOperatorKind Amp = 11 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.CXXOperatorKind Pipe = 12 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.CXXOperatorKind Tilde = 13 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.CXXOperatorKind Exclaim = 14 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.CXXOperatorKind Equal = 15 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.CXXOperatorKind Less = 16 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.CXXOperatorKind Greater = 17 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.CXXOperatorKind PlusEqual = 18 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.CXXOperatorKind MinusEqual = 19 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.CXXOperatorKind StarEqual = 20 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.CXXOperatorKind SlashEqual = 21 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.CXXOperatorKind PercentEqual = 22 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.CXXOperatorKind CaretEqual = 23 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.CXXOperatorKind AmpEqual = 24 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.CXXOperatorKind PipeEqual = 25 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.CXXOperatorKind LessLess = 26 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.CXXOperatorKind GreaterGreater = 27 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.CXXOperatorKind LessLessEqual = 28 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.CXXOperatorKind GreaterGreaterEqual = 29 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.CXXOperatorKind EqualEqual = 30 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.CXXOperatorKind ExclaimEqual = 31 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.CXXOperatorKind LessEqual = 32 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.CXXOperatorKind GreaterEqual = 33 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.CXXOperatorKind AmpAmp = 34 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.CXXOperatorKind PipePipe = 35 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.CXXOperatorKind PlusPlus = 36 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.CXXOperatorKind MinusMinus = 37 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.CXXOperatorKind Comma = 38 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.CXXOperatorKind ArrowStar = 39 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.CXXOperatorKind Arrow = 40 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.CXXOperatorKind Call = 41 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.CXXOperatorKind Subscript = 42 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.CXXOperatorKind Conditional = 43 : Public, Static, Literal, HasDefault
+Struct CppSharp.Parser.AST.CallingConvention: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    CppSharp.Parser.AST.CallingConvention Default = 0 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.CallingConvention C = 1 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.CallingConvention StdCall = 2 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.CallingConvention ThisCall = 3 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.CallingConvention FastCall = 4 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.CallingConvention Unknown = 5 : Public, Static, Literal, HasDefault
+Struct CppSharp.Parser.AST.StatementClass: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    CppSharp.Parser.AST.StatementClass Any = 0 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.StatementClass BinaryOperator = 1 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.StatementClass DeclRefExprClass = 2 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.StatementClass CXXConstructExprClass = 3 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.StatementClass CXXOperatorCallExpr = 4 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.StatementClass ImplicitCastExpr = 5 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.StatementClass ExplicitCastExpr = 6 : Public, Static, Literal, HasDefault
+Struct CppSharp.Parser.AST.TemplateSpecializationKind: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    CppSharp.Parser.AST.TemplateSpecializationKind Undeclared = 0 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.TemplateSpecializationKind ImplicitInstantiation = 1 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.TemplateSpecializationKind ExplicitSpecialization = 2 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.TemplateSpecializationKind ExplicitInstantiationDeclaration = 3 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.TemplateSpecializationKind ExplicitInstantiationDefinition = 4 : Public, Static, Literal, HasDefault
+Struct CppSharp.Parser.AST.CppAbi: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    CppSharp.Parser.AST.CppAbi Itanium = 0 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.CppAbi Microsoft = 1 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.CppAbi ARM = 2 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.CppAbi iOS = 3 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.CppAbi iOS64 = 4 : Public, Static, Literal, HasDefault
+Struct CppSharp.Parser.AST.VTableComponentKind: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    CppSharp.Parser.AST.VTableComponentKind VCallOffset = 0 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.VTableComponentKind VBaseOffset = 1 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.VTableComponentKind OffsetToTop = 2 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.VTableComponentKind RTTI = 3 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.VTableComponentKind FunctionPointer = 4 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.VTableComponentKind CompleteDtorPointer = 5 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.VTableComponentKind DeletingDtorPointer = 6 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.VTableComponentKind UnusedFunctionPointer = 7 : Public, Static, Literal, HasDefault
+Struct CppSharp.Parser.AST.PrimitiveType: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    CppSharp.Parser.AST.PrimitiveType Null = 0 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.PrimitiveType Void = 1 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.PrimitiveType Bool = 2 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.PrimitiveType WideChar = 3 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.PrimitiveType Char = 4 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.PrimitiveType UChar = 5 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.PrimitiveType Short = 6 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.PrimitiveType UShort = 7 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.PrimitiveType Int = 8 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.PrimitiveType UInt = 9 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.PrimitiveType Long = 10 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.PrimitiveType ULong = 11 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.PrimitiveType LongLong = 12 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.PrimitiveType ULongLong = 13 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.PrimitiveType Float = 14 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.PrimitiveType Double = 15 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.PrimitiveType IntPtr = 16 : Public, Static, Literal, HasDefault
+Struct CppSharp.Parser.AST.RawCommentKind: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    CppSharp.Parser.AST.RawCommentKind Invalid = 0 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.RawCommentKind OrdinaryBCPL = 1 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.RawCommentKind OrdinaryC = 2 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.RawCommentKind BCPLSlash = 3 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.RawCommentKind BCPLExcl = 4 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.RawCommentKind JavaDoc = 5 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.RawCommentKind Qt = 6 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.RawCommentKind Merged = 7 : Public, Static, Literal, HasDefault
+Struct CppSharp.Parser.AST.CommentKind: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    CppSharp.Parser.AST.CommentKind FullComment = 0 : Public, Static, Literal, HasDefault
+Struct CppSharp.Parser.AST.MacroLocation: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    CppSharp.Parser.AST.MacroLocation Unknown = 0 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.MacroLocation ClassHead = 1 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.MacroLocation ClassBody = 2 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.MacroLocation FunctionHead = 3 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.MacroLocation FunctionParameters = 4 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.MacroLocation FunctionBody = 5 : Public, Static, Literal, HasDefault
+Struct CppSharp.Parser.AST.ArchType: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    CppSharp.Parser.AST.ArchType UnknownArch = 0 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.ArchType x86 = 1 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.AST.ArchType x86_64 = 2 : Public, Static, Literal, HasDefault
+Class CppSharp.Parser.ParserOptions: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(CppSharp.CppParser.ParserOptions*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    ICppInstance
+  Properties:
+    CppSharp.Parser.LanguageVersion LanguageVersion 'get set' : 
+    Boolean Verbose 'get set' : 
+    Boolean MicrosoftMode 'get set' : 
+    Boolean NoBuiltinIncludes 'get set' : 
+    Boolean NoStandardIncludes 'get set' : 
+    CppSharp.Parser.AST.CppAbi Abi 'get set' : 
+    Int32 ToolSetToUse 'get set' : 
+    CppSharp.Parser.AST.ASTContext ASTContext 'get set' : 
+    System.String TargetTriple 'get set' : 
+    UInt32 LibraryDirsCount 'get ' : 
+    UInt32 UndefinesCount 'get ' : 
+    UInt32 DefinesCount 'get ' : 
+    UInt32 SystemIncludeDirsCount 'get ' : 
+    UInt32 IncludeDirsCount 'get ' : 
+    System.String FileName 'get set' : 
+    UInt32 ArgumentsCount 'get ' : 
+    IntPtr __Instance 'get set' : 
+    CppSharp.CppParser.ParserOptions* NativePtr 'get set' : 
+  Methods:
+    get_NativePtr(): PrivateScope, Public, HideBySig, SpecialName
+    set_NativePtr(ParserOptions*): PrivateScope, Public, HideBySig, SpecialName
+    get___Instance(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set___Instance(IntPtr): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    __CreateInstance(IntPtr): PrivateScope, Public, Static, HideBySig
+    get_ArgumentsCount(): PrivateScope, Public, HideBySig, SpecialName
+    get_FileName(): PrivateScope, Public, HideBySig, SpecialName
+    set_FileName(String): PrivateScope, Public, HideBySig, SpecialName
+    get_IncludeDirsCount(): PrivateScope, Public, HideBySig, SpecialName
+    get_SystemIncludeDirsCount(): PrivateScope, Public, HideBySig, SpecialName
+    get_DefinesCount(): PrivateScope, Public, HideBySig, SpecialName
+    get_UndefinesCount(): PrivateScope, Public, HideBySig, SpecialName
+    get_LibraryDirsCount(): PrivateScope, Public, HideBySig, SpecialName
+    get_TargetTriple(): PrivateScope, Public, HideBySig, SpecialName
+    set_TargetTriple(String): PrivateScope, Public, HideBySig, SpecialName
+    get_ASTContext(): PrivateScope, Public, HideBySig, SpecialName
+    set_ASTContext(ASTContext): PrivateScope, Public, HideBySig, SpecialName
+    get_ToolSetToUse(): PrivateScope, Public, HideBySig, SpecialName
+    set_ToolSetToUse(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_Abi(): PrivateScope, Public, HideBySig, SpecialName
+    set_Abi(CppAbi): PrivateScope, Public, HideBySig, SpecialName
+    get_NoStandardIncludes(): PrivateScope, Public, HideBySig, SpecialName
+    set_NoStandardIncludes(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig, SpecialName
+    get_NoBuiltinIncludes(): PrivateScope, Public, HideBySig, SpecialName
+    set_NoBuiltinIncludes(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig, SpecialName
+    get_MicrosoftMode(): PrivateScope, Public, HideBySig, SpecialName
+    set_MicrosoftMode(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig, SpecialName
+    get_Verbose(): PrivateScope, Public, HideBySig, SpecialName
+    set_Verbose(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig, SpecialName
+    get_LanguageVersion(): PrivateScope, Public, HideBySig, SpecialName
+    set_LanguageVersion(LanguageVersion): PrivateScope, Public, HideBySig, SpecialName
+    getArguments(UInt32): PrivateScope, Public, HideBySig
+    addArguments(String): PrivateScope, Public, HideBySig
+    clearArguments(): PrivateScope, Public, HideBySig
+    getIncludeDirs(UInt32): PrivateScope, Public, HideBySig
+    addIncludeDirs(String): PrivateScope, Public, HideBySig
+    clearIncludeDirs(): PrivateScope, Public, HideBySig
+    getSystemIncludeDirs(UInt32): PrivateScope, Public, HideBySig
+    addSystemIncludeDirs(String): PrivateScope, Public, HideBySig
+    clearSystemIncludeDirs(): PrivateScope, Public, HideBySig
+    getDefines(UInt32): PrivateScope, Public, HideBySig
+    addDefines(String): PrivateScope, Public, HideBySig
+    clearDefines(): PrivateScope, Public, HideBySig
+    getUndefines(UInt32): PrivateScope, Public, HideBySig
+    addUndefines(String): PrivateScope, Public, HideBySig
+    clearUndefines(): PrivateScope, Public, HideBySig
+    getLibraryDirs(UInt32): PrivateScope, Public, HideBySig
+    addLibraryDirs(String): PrivateScope, Public, HideBySig
+    clearLibraryDirs(): PrivateScope, Public, HideBySig
+Class CppSharp.Parser.ParserDiagnostic: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(CppSharp.CppParser.ParserDiagnostic*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    ICppInstance
+  Properties:
+    Int32 ColumnNumber 'get set' : 
+    Int32 LineNumber 'get set' : 
+    CppSharp.Parser.ParserDiagnosticLevel Level 'get set' : 
+    System.String Message 'get set' : 
+    System.String FileName 'get set' : 
+    IntPtr __Instance 'get set' : 
+    CppSharp.CppParser.ParserDiagnostic* NativePtr 'get set' : 
+  Methods:
+    get_NativePtr(): PrivateScope, Public, HideBySig, SpecialName
+    set_NativePtr(ParserDiagnostic*): PrivateScope, Public, HideBySig, SpecialName
+    get___Instance(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set___Instance(IntPtr): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    __CreateInstance(IntPtr): PrivateScope, Public, Static, HideBySig
+    get_FileName(): PrivateScope, Public, HideBySig, SpecialName
+    set_FileName(String): PrivateScope, Public, HideBySig, SpecialName
+    get_Message(): PrivateScope, Public, HideBySig, SpecialName
+    set_Message(String): PrivateScope, Public, HideBySig, SpecialName
+    get_Level(): PrivateScope, Public, HideBySig, SpecialName
+    set_Level(ParserDiagnosticLevel): PrivateScope, Public, HideBySig, SpecialName
+    get_LineNumber(): PrivateScope, Public, HideBySig, SpecialName
+    set_LineNumber(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_ColumnNumber(): PrivateScope, Public, HideBySig, SpecialName
+    set_ColumnNumber(Int32): PrivateScope, Public, HideBySig, SpecialName
+Class CppSharp.Parser.ParserResult: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(CppSharp.CppParser.ParserResult*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    ICppInstance
+  Properties:
+    CppSharp.Parser.AST.NativeLibrary Library 'get set' : 
+    CppSharp.Parser.AST.ASTContext ASTContext 'get set' : 
+    CppSharp.Parser.ParserResultKind Kind 'get set' : 
+    UInt32 DiagnosticsCount 'get ' : 
+    IntPtr __Instance 'get set' : 
+    CppSharp.CppParser.ParserResult* NativePtr 'get set' : 
+  Methods:
+    get_NativePtr(): PrivateScope, Public, HideBySig, SpecialName
+    set_NativePtr(ParserResult*): PrivateScope, Public, HideBySig, SpecialName
+    get___Instance(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set___Instance(IntPtr): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    __CreateInstance(IntPtr): PrivateScope, Public, Static, HideBySig
+    get_DiagnosticsCount(): PrivateScope, Public, HideBySig, SpecialName
+    get_Kind(): PrivateScope, Public, HideBySig, SpecialName
+    set_Kind(ParserResultKind): PrivateScope, Public, HideBySig, SpecialName
+    get_ASTContext(): PrivateScope, Public, HideBySig, SpecialName
+    set_ASTContext(ASTContext): PrivateScope, Public, HideBySig, SpecialName
+    get_Library(): PrivateScope, Public, HideBySig, SpecialName
+    set_Library(NativeLibrary): PrivateScope, Public, HideBySig, SpecialName
+    getDiagnostics(UInt32): PrivateScope, Public, HideBySig
+    addDiagnostics(ParserDiagnostic): PrivateScope, Public, HideBySig
+    clearDiagnostics(): PrivateScope, Public, HideBySig
+Class CppSharp.Parser.ClangParser: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(CppSharp.CppParser.ClangParser*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    ICppInstance
+  Properties:
+    IntPtr __Instance 'get set' : 
+    CppSharp.CppParser.ClangParser* NativePtr 'get set' : 
+  Methods:
+    get_NativePtr(): PrivateScope, Public, HideBySig, SpecialName
+    set_NativePtr(ClangParser*): PrivateScope, Public, HideBySig, SpecialName
+    get___Instance(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set___Instance(IntPtr): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    __CreateInstance(IntPtr): PrivateScope, Public, Static, HideBySig
+    ParseHeader(ParserOptions): PrivateScope, Public, Static, HideBySig
+    ParseLibrary(ParserOptions): PrivateScope, Public, Static, HideBySig
+    GetTargetInfo(ParserOptions): PrivateScope, Public, Static, HideBySig
+Class CppSharp.Parser.ParserTargetInfo: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(CppSharp.CppParser.ParserTargetInfo*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    ICppInstance
+  Properties:
+    UInt32 WCharWidth 'get set' : 
+    UInt32 WCharAlign 'get set' : 
+    UInt32 PointerWidth 'get set' : 
+    UInt32 PointerAlign 'get set' : 
+    UInt32 LongLongWidth 'get set' : 
+    UInt32 LongLongAlign 'get set' : 
+    UInt32 LongDoubleWidth 'get set' : 
+    UInt32 LongDoubleAlign 'get set' : 
+    UInt32 LongWidth 'get set' : 
+    UInt32 LongAlign 'get set' : 
+    UInt32 IntMaxTWidth 'get set' : 
+    UInt32 IntWidth 'get set' : 
+    UInt32 IntAlign 'get set' : 
+    UInt32 ShortWidth 'get set' : 
+    UInt32 ShortAlign 'get set' : 
+    UInt32 DoubleWidth 'get set' : 
+    UInt32 DoubleAlign 'get set' : 
+    UInt32 FloatWidth 'get set' : 
+    UInt32 FloatAlign 'get set' : 
+    UInt32 HalfWidth 'get set' : 
+    UInt32 HalfAlign 'get set' : 
+    UInt32 Char32Width 'get set' : 
+    UInt32 Char32Align 'get set' : 
+    UInt32 Char16Width 'get set' : 
+    UInt32 Char16Align 'get set' : 
+    UInt32 CharWidth 'get set' : 
+    UInt32 CharAlign 'get set' : 
+    UInt32 BoolWidth 'get set' : 
+    UInt32 BoolAlign 'get set' : 
+    CppSharp.Parser.ParserIntType WIntType 'get set' : 
+    CppSharp.Parser.ParserIntType WCharType 'get set' : 
+    CppSharp.Parser.ParserIntType UIntMaxType 'get set' : 
+    CppSharp.Parser.ParserIntType SizeType 'get set' : 
+    CppSharp.Parser.ParserIntType IntPtrType 'get set' : 
+    CppSharp.Parser.ParserIntType IntMaxType 'get set' : 
+    CppSharp.Parser.ParserIntType Int64Type 'get set' : 
+    CppSharp.Parser.ParserIntType Char32Type 'get set' : 
+    CppSharp.Parser.ParserIntType Char16Type 'get set' : 
+    System.String ABI 'get set' : 
+    IntPtr __Instance 'get set' : 
+    CppSharp.CppParser.ParserTargetInfo* NativePtr 'get set' : 
+  Methods:
+    get_NativePtr(): PrivateScope, Public, HideBySig, SpecialName
+    set_NativePtr(ParserTargetInfo*): PrivateScope, Public, HideBySig, SpecialName
+    get___Instance(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    set___Instance(IntPtr): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    __CreateInstance(IntPtr): PrivateScope, Public, Static, HideBySig
+    get_ABI(): PrivateScope, Public, HideBySig, SpecialName
+    set_ABI(String): PrivateScope, Public, HideBySig, SpecialName
+    get_Char16Type(): PrivateScope, Public, HideBySig, SpecialName
+    set_Char16Type(ParserIntType): PrivateScope, Public, HideBySig, SpecialName
+    get_Char32Type(): PrivateScope, Public, HideBySig, SpecialName
+    set_Char32Type(ParserIntType): PrivateScope, Public, HideBySig, SpecialName
+    get_Int64Type(): PrivateScope, Public, HideBySig, SpecialName
+    set_Int64Type(ParserIntType): PrivateScope, Public, HideBySig, SpecialName
+    get_IntMaxType(): PrivateScope, Public, HideBySig, SpecialName
+    set_IntMaxType(ParserIntType): PrivateScope, Public, HideBySig, SpecialName
+    get_IntPtrType(): PrivateScope, Public, HideBySig, SpecialName
+    set_IntPtrType(ParserIntType): PrivateScope, Public, HideBySig, SpecialName
+    get_SizeType(): PrivateScope, Public, HideBySig, SpecialName
+    set_SizeType(ParserIntType): PrivateScope, Public, HideBySig, SpecialName
+    get_UIntMaxType(): PrivateScope, Public, HideBySig, SpecialName
+    set_UIntMaxType(ParserIntType): PrivateScope, Public, HideBySig, SpecialName
+    get_WCharType(): PrivateScope, Public, HideBySig, SpecialName
+    set_WCharType(ParserIntType): PrivateScope, Public, HideBySig, SpecialName
+    get_WIntType(): PrivateScope, Public, HideBySig, SpecialName
+    set_WIntType(ParserIntType): PrivateScope, Public, HideBySig, SpecialName
+    get_BoolAlign(): PrivateScope, Public, HideBySig, SpecialName
+    set_BoolAlign(UInt32): PrivateScope, Public, HideBySig, SpecialName
+    get_BoolWidth(): PrivateScope, Public, HideBySig, SpecialName
+    set_BoolWidth(UInt32): PrivateScope, Public, HideBySig, SpecialName
+    get_CharAlign(): PrivateScope, Public, HideBySig, SpecialName
+    set_CharAlign(UInt32): PrivateScope, Public, HideBySig, SpecialName
+    get_CharWidth(): PrivateScope, Public, HideBySig, SpecialName
+    set_CharWidth(UInt32): PrivateScope, Public, HideBySig, SpecialName
+    get_Char16Align(): PrivateScope, Public, HideBySig, SpecialName
+    set_Char16Align(UInt32): PrivateScope, Public, HideBySig, SpecialName
+    get_Char16Width(): PrivateScope, Public, HideBySig, SpecialName
+    set_Char16Width(UInt32): PrivateScope, Public, HideBySig, SpecialName
+    get_Char32Align(): PrivateScope, Public, HideBySig, SpecialName
+    set_Char32Align(UInt32): PrivateScope, Public, HideBySig, SpecialName
+    get_Char32Width(): PrivateScope, Public, HideBySig, SpecialName
+    set_Char32Width(UInt32): PrivateScope, Public, HideBySig, SpecialName
+    get_HalfAlign(): PrivateScope, Public, HideBySig, SpecialName
+    set_HalfAlign(UInt32): PrivateScope, Public, HideBySig, SpecialName
+    get_HalfWidth(): PrivateScope, Public, HideBySig, SpecialName
+    set_HalfWidth(UInt32): PrivateScope, Public, HideBySig, SpecialName
+    get_FloatAlign(): PrivateScope, Public, HideBySig, SpecialName
+    set_FloatAlign(UInt32): PrivateScope, Public, HideBySig, SpecialName
+    get_FloatWidth(): PrivateScope, Public, HideBySig, SpecialName
+    set_FloatWidth(UInt32): PrivateScope, Public, HideBySig, SpecialName
+    get_DoubleAlign(): PrivateScope, Public, HideBySig, SpecialName
+    set_DoubleAlign(UInt32): PrivateScope, Public, HideBySig, SpecialName
+    get_DoubleWidth(): PrivateScope, Public, HideBySig, SpecialName
+    set_DoubleWidth(UInt32): PrivateScope, Public, HideBySig, SpecialName
+    get_ShortAlign(): PrivateScope, Public, HideBySig, SpecialName
+    set_ShortAlign(UInt32): PrivateScope, Public, HideBySig, SpecialName
+    get_ShortWidth(): PrivateScope, Public, HideBySig, SpecialName
+    set_ShortWidth(UInt32): PrivateScope, Public, HideBySig, SpecialName
+    get_IntAlign(): PrivateScope, Public, HideBySig, SpecialName
+    set_IntAlign(UInt32): PrivateScope, Public, HideBySig, SpecialName
+    get_IntWidth(): PrivateScope, Public, HideBySig, SpecialName
+    set_IntWidth(UInt32): PrivateScope, Public, HideBySig, SpecialName
+    get_IntMaxTWidth(): PrivateScope, Public, HideBySig, SpecialName
+    set_IntMaxTWidth(UInt32): PrivateScope, Public, HideBySig, SpecialName
+    get_LongAlign(): PrivateScope, Public, HideBySig, SpecialName
+    set_LongAlign(UInt32): PrivateScope, Public, HideBySig, SpecialName
+    get_LongWidth(): PrivateScope, Public, HideBySig, SpecialName
+    set_LongWidth(UInt32): PrivateScope, Public, HideBySig, SpecialName
+    get_LongDoubleAlign(): PrivateScope, Public, HideBySig, SpecialName
+    set_LongDoubleAlign(UInt32): PrivateScope, Public, HideBySig, SpecialName
+    get_LongDoubleWidth(): PrivateScope, Public, HideBySig, SpecialName
+    set_LongDoubleWidth(UInt32): PrivateScope, Public, HideBySig, SpecialName
+    get_LongLongAlign(): PrivateScope, Public, HideBySig, SpecialName
+    set_LongLongAlign(UInt32): PrivateScope, Public, HideBySig, SpecialName
+    get_LongLongWidth(): PrivateScope, Public, HideBySig, SpecialName
+    set_LongLongWidth(UInt32): PrivateScope, Public, HideBySig, SpecialName
+    get_PointerAlign(): PrivateScope, Public, HideBySig, SpecialName
+    set_PointerAlign(UInt32): PrivateScope, Public, HideBySig, SpecialName
+    get_PointerWidth(): PrivateScope, Public, HideBySig, SpecialName
+    set_PointerWidth(UInt32): PrivateScope, Public, HideBySig, SpecialName
+    get_WCharAlign(): PrivateScope, Public, HideBySig, SpecialName
+    set_WCharAlign(UInt32): PrivateScope, Public, HideBySig, SpecialName
+    get_WCharWidth(): PrivateScope, Public, HideBySig, SpecialName
+    set_WCharWidth(UInt32): PrivateScope, Public, HideBySig, SpecialName
+Struct CppSharp.Parser.LanguageVersion: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    CppSharp.Parser.LanguageVersion C = 0 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.LanguageVersion CPlusPlus98 = 1 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.LanguageVersion CPlusPlus11 = 2 : Public, Static, Literal, HasDefault
+Struct CppSharp.Parser.ParserDiagnosticLevel: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    CppSharp.Parser.ParserDiagnosticLevel Ignored = 0 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.ParserDiagnosticLevel Note = 1 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.ParserDiagnosticLevel Warning = 2 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.ParserDiagnosticLevel Error = 3 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.ParserDiagnosticLevel Fatal = 4 : Public, Static, Literal, HasDefault
+Struct CppSharp.Parser.ParserResultKind: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    CppSharp.Parser.ParserResultKind Success = 0 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.ParserResultKind Error = 1 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.ParserResultKind FileNotFound = 2 : Public, Static, Literal, HasDefault
+Struct CppSharp.Parser.SourceLocationKind: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    CppSharp.Parser.SourceLocationKind Invalid = 0 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.SourceLocationKind Builtin = 1 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.SourceLocationKind CommandLine = 2 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.SourceLocationKind System = 3 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.SourceLocationKind User = 4 : Public, Static, Literal, HasDefault
+Struct CppSharp.Parser.ParserIntType: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    CppSharp.Parser.ParserIntType NoInt = 0 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.ParserIntType SignedChar = 1 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.ParserIntType UnsignedChar = 2 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.ParserIntType SignedShort = 3 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.ParserIntType UnsignedShort = 4 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.ParserIntType SignedInt = 5 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.ParserIntType UnsignedInt = 6 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.ParserIntType SignedLong = 7 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.ParserIntType UnsignedLong = 8 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.ParserIntType SignedLongLong = 9 : Public, Static, Literal, HasDefault
+    CppSharp.Parser.ParserIntType UnsignedLongLong = 10 : Public, Static, Literal, HasDefault
