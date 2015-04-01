@@ -18,12 +18,15 @@ see [commits](https://github.com/d-led/cpp-testing-no-excuses/commits/master) an
 - [cucumber-cpp](https://github.com/cucumber/cucumber-cpp)-based behavior-style [spec/tests](https://cukes.info): [features/elements.feature](features/elements.feature), [src/cucumber/cppspec_steps.cpp](src/cucumber/cppspec_steps.cpp)
 - [hayai](https://github.com/nickbruun/hayai)-based simple and informative microbenchmarking: [src/hayai/to_string_benchmark.cpp](src/hayai/to_string_benchmark.cpp)
 - scripted testing without recompiles (i.e. for data-driven tests) using a [lua binding](src/lua/bindings.cpp) via [LuaBridge](https://github.com/vinniefalco/LuaBridge), and a [behavior spec](spec/counter_spec.lua) for testing with [busted](https://github.com/Olivine-Labs/busted)
+- an exploratory example for Visual Studio and [SpecFlow](www.specflow.org) can be found in [src/cppcli](src/cppcli). The SpecFlow BDD [feature spec](src/cppcli/My.Spec/oracle.feature) + [step definition](src/cppcli/My.Spec/OracleSteps.cs)  project is not generated via premake, but can be added to the solution manually, and should work out of the box in `x86`, given SpecFlow is installed.
 
 ## generating build files
 
 `[path_to]/premake5 [build_target]`
 
 run `[path_to]/premake5 --help` to find a suitable `[build_target]`
+
+if a feature is not implemented for the chosen platform in premake5, try premake4, since premake5 is still in "alpha".
 
 ### customizing BOOST location (MS Windows)
 
