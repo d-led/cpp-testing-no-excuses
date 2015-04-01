@@ -4,7 +4,7 @@ The bindings to the C++ classes are generated using [CppSharp](https://github.co
 
 ## generating the bindings ##
 
-The C++/CLI bindings are generated using a console program named `make_bindings`. See [make_bindings.cpp](make_bindings).
+The C++/CLI bindings are generated using a console program named `make_bindings`. See [make_bindings.cs](make_bindings.cs).
 
 In order for the generator to run properly, the native wrapped Clang-parser `CppSharp.CppParser.dll` should lie alongside the `make_bindings` executable.
 
