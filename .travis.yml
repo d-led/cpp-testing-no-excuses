@@ -5,7 +5,7 @@ sudo: false
 compiler:
   - clang
   - gcc
-  
+
 addons:
   apt:
     sources:
@@ -18,10 +18,10 @@ addons:
       - lua5.1
       - luarocks
       - rubygems
-      
+
 cache:
   - apt
-      
+
 before_script:
   - luarocks --local install busted
   - gem install cucumber
@@ -32,5 +32,5 @@ install:
 
 script:
   - make -C Build/linux/gmake config=release64
-  - bin/linux/gmake/x64/Release/cucumber_example && cucumber
+  - bin/linux/gmake/x64/Release/cucumber_example > /dev/null && cucumber
   - busted
