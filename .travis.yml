@@ -17,6 +17,9 @@ addons:
       - luarocks
       - rubygems
       
+cache:
+  - apt
+      
 before_script:
   - luarocks --local install busted
   - gem install cucumber
