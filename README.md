@@ -52,7 +52,7 @@ d[#d+1] = 'BOOST_....WHATEVER'
 
 prerequisite: [cucumber](https://cukes.info) should be installed
 
-Start cucumber and the steps runner using `[path_to]/premake4 cucumber`. The actual command line is `bin/[path_to]/cucumber_example > /dev/null && cucumber` on *X, and `start bin\[path_to]\cucumber_example & cucumber` on MS Windows.
+Start cucumber and the steps runner using `[path_to]/premake4 cucumber`. The actual command line is `bin/[path_to]/cucumber_example > /dev/null & cucumber` on *X, and `start bin\[path_to]\cucumber_example && cucumber` on MS Windows.
 
 ## running busted tests
 
