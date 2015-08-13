@@ -31,5 +31,5 @@ install:
 
 script:
   - make -C Build/linux/gmake config=release64
-  - bin/linux/gmake/x64/Release/cucumber_example > /dev/null && cucumber
+  - bin/linux/gmake/x64/Release/cucumber_example > /dev/null & cucumber
   - busted
