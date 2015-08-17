@@ -58,11 +58,11 @@ Start cucumber and the steps runner using `[path_to]/premake4 cucumber`. The act
 
 prerequisite: [busted](https://github.com/Olivine-Labs/busted), i.e. installed via [luarocks](https://rocks.moonscript.org/)
 
+`busted`
+
 ## todo
 
 - [ ] property based testing using [rapidcheck](https://github.com/emil-e/rapidcheck) 
-
-`busted`
 
 ## presentation
 
