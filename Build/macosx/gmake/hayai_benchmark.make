@@ -53,7 +53,7 @@ ifeq ($(config),release32)
   ALL_CFLAGS    += $(CFLAGS) $(ALL_CPPFLAGS) $(ARCH) -O2 -m32 -std=c++0x
   ALL_CXXFLAGS  += $(CXXFLAGS) $(ALL_CFLAGS)
   ALL_RESFLAGS  += $(RESFLAGS) $(DEFINES) $(INCLUDES)
-  ALL_LDFLAGS   += $(LDFLAGS) -L/usr/local/lib -L. -Wl,-x -m32 -L/usr/lib32
+  ALL_LDFLAGS   += $(LDFLAGS) -L/usr/local/lib -L. -m32 -L/usr/lib32
   LDDEPS    +=
   LIBS      += $(LDDEPS) -lboost_system
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(ALL_LDFLAGS) $(LIBS)
@@ -101,7 +101,7 @@ ifeq ($(config),release64)
   ALL_CFLAGS    += $(CFLAGS) $(ALL_CPPFLAGS) $(ARCH) -O2 -m64 -std=c++0x
   ALL_CXXFLAGS  += $(CXXFLAGS) $(ALL_CFLAGS)
   ALL_RESFLAGS  += $(RESFLAGS) $(DEFINES) $(INCLUDES)
-  ALL_LDFLAGS   += $(LDFLAGS) -L/usr/local/lib -L. -Wl,-x -m64 -L/usr/lib64
+  ALL_LDFLAGS   += $(LDFLAGS) -L/usr/local/lib -L. -m64 -L/usr/lib64
   LDDEPS    +=
   LIBS      += $(LDDEPS) -lboost_system
   LINKCMD    = $(CXX) -o $(TARGET) $(OBJECTS) $(RESOURCES) $(ARCH) $(ALL_LDFLAGS) $(LIBS)
