@@ -55,6 +55,8 @@ cucumber_steps.make_cppspec_steps (
 )
 use_standard 'c++0x'
 boost:set_links()
+configuration 'linux'
+	links 'boost_program_options'
 configuration 'macosx'
 	links 'boost_program_options'
 configuration '*'
