@@ -19,3 +19,5 @@ The SpecFlow project is not part of the premake-generated build files and can be
 Once the Visual Studio build is regenerated, the project file `src/cppcli/My.Spec.csproj` can be added to the solution and should compile and run in 32bit, given `CppSharp.CppParser.dll` is in the output folder.
 
 The feature file is [My.Spec/oracle.feature]([My.Spec/oracle.feature]) and the step definitions [My.Spec/OracleSteps.cs]([My.Spec/OracleSteps.cs]).
+
+![](specflow.png)
