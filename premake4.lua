@@ -23,7 +23,7 @@ make_console_app('catch_example', {
 	'src/counter/*.h',
 	'src/element/*.h',
 	'src/catch/*.cpp'
-}) 
+})
 run_target_after_build()
 use_standard 'c++0x'
 
@@ -55,6 +55,11 @@ cucumber_steps.make_cppspec_steps (
 )
 use_standard 'c++0x'
 boost:set_links()
+configuration 'macosx'
+	links 'boost_program_options'
+configuration '*'
+
+
 
 -----------
 newaction {
@@ -104,6 +109,9 @@ configuration 'linux'
 configuration 'macosx'
 	targetprefix ''
 	targetextension '.so'
+	includedirs {
+		'/usr/local/include/lua5.1'
+	}
 configuration '*'
 
 
