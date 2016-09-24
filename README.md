@@ -7,6 +7,12 @@ All tests are run on [travis-ci](https://travis-ci.org):
 
 See the config for details: [.travis.yml](.travis.yml)
 
+
+## presentation
+
+- [26.03.2015 MUC++ Meetup @ TU-München](doc/2015_03_26_dled_no_excuses_meetup_at_tum.pdf)
+
+
 ## outline
 
 see [commits](https://github.com/d-led/cpp-testing-no-excuses/commits/master) and:
@@ -63,7 +69,3 @@ prerequisite: [busted](https://github.com/Olivine-Labs/busted), i.e. installed v
 ## todo
 
 - [ ] property based testing using [rapidcheck](https://github.com/emil-e/rapidcheck) 
-
-## presentation
-
-- [26.03.2015 MUC++ Meetup @ TU-München](doc/2015_03_26_dled_no_excuses_meetup_at_tum.pdf)
