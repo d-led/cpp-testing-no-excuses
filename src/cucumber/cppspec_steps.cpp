@@ -1,5 +1,5 @@
 #include <CppSpec.h>
-#include <cucumber-cpp/defs.hpp>
+#include <cucumber-cpp/autodetect.hpp>
 
 #include <element/factory.h>
 #include <counter/counter.h>
