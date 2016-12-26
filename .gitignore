@@ -129,3 +129,4 @@ DerivedData
 *.xcuserstate
 *.db
 Build/windows/vs2013/no_excuses.VC.VC.opendb
+.vagrant/
